@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+
+
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Syralists Blog</title>
+        <link>https://syralist.github.io/</link>
+        <description>Syralists persöhnlicher Blog.</description>
+        <generator>Hugo 0.66.0 https://gohugo.io/</generator>
+        
+            <language>de</language>
+        
+        
+            <managingEditor>thomas.helmke@gmx.de (Thomas Helmke)</managingEditor>
+        
+        
+            <webMaster>thomas.helmke@gmx.de (Thomas Helmke)</webMaster>
+        
+        
+            <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
+        
+        <lastBuildDate>Sun, 08 Mar 2020 19:09:40 +0100</lastBuildDate>
+        
+            <atom:link rel="self" type="application/rss+xml" href="https://syralist.github.io/rss.xml" />
+        
+        
+            <item>
+                <title>Und jetzt bloggt er auch noch...</title>
+                <link>https://syralist.github.io/posts/allgemein/my-first-post/</link>
+                <guid isPermaLink="true">https://syralist.github.io/posts/allgemein/my-first-post/</guid>
+                <pubDate>Sun, 08 Mar 2020 18:11:30 +0100</pubDate>
+                
+                    <author>thomas.helmke@gmx.de (Thomas Helmke)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
+                
+                    <description><![CDATA[<h1 id="warum-ein-eigener-blog">Warum ein eigener Blog?</h1>
+<p>Frei nach Alf halte ich mich an das Motto: „Wenn Du sowieso nichts zu sagen hast, dann schreibt halt einen Blog.“</p>
+<p>Ob ich wirklich nichts zu sagen habe, wird sich zeigen.</p>
+<h1 id="worüber-schreibe-ich">Worüber schreibe ich?</h1>
+<p>Ich schreibe über Smart Home, Python und dergleichen mehr.</p>
+]]></description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                    
+                
+                
+                
+                    
+                        
+                    
+                
+            </item>
+        
+    </channel>
+</rss>
