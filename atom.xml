@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de-DE">
     <title type="text">Syralists Blog</title>
     <subtitle type="html">Syralists persöhnlicher Blog.</subtitle>
-    <updated>2020-03-21T20:33:21+01:00</updated>
+    <updated>2020-03-25T20:02:58+01:00</updated>
     <id>https://syralist.github.io/</id>
     <link rel="alternate" type="text/html" href="https://syralist.github.io/" />
     <link rel="self" type="application/atom+xml" href="https://syralist.github.io/atom.xml" />
@@ -15,12 +15,12 @@
                 <email>thomas.helmke@gmx.de</email>
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights>
-    <generator uri="https://gohugo.io/" version="0.68.0">Hugo</generator>
+    <generator uri="https://gohugo.io/" version="0.66.0">Hugo</generator>
         <entry>
             <title type="text">Mein Smarthome Setup</title>
             <link rel="alternate" type="text/html" href="https://syralist.github.io/posts/smarthome/mein_setup/" />
             <id>https://syralist.github.io/posts/smarthome/mein_setup/</id>
-            <updated>2020-03-21T20:22:17+01:00</updated>
+            <updated>2020-03-22T19:07:14+01:00</updated>
             <published>2020-03-21T18:45:02+00:00</published>
             <author>
                     <name>Thomas Helmke</name>
@@ -97,18 +97,6 @@ Neben dem Home Assistant laufen allerdings noch einige Addons auf dem Raspberry:
                     
                     
                     
-                        
-                            <category scheme="https://syralist.github.io/posts/" term="posts" label="posts" />
-                        
-                    
-                
-                    
-                    
-                    
-                        
-                            <category scheme="https://syralist.github.io/posts/smarthome/" term="smarthome" label="smarthome" />
-                        
-                    
                 
             
             
@@ -155,7 +143,7 @@ Neben dem Home Assistant laufen allerdings noch einige Addons auf dem Raspberry:
             <title type="text">Und jetzt bloggt er auch noch...</title>
             <link rel="alternate" type="text/html" href="https://syralist.github.io/posts/allgemein/my-first-post/" />
             <id>https://syralist.github.io/posts/allgemein/my-first-post/</id>
-            <updated>2020-03-21T11:29:03+01:00</updated>
+            <updated>2020-03-22T19:07:14+01:00</updated>
             <published>2020-03-08T18:11:30+01:00</published>
             <author>
                     <name>Thomas Helmke</name>
@@ -180,18 +168,6 @@ Worüber schreibe ich? Ich schreibe über Smart Home, Python und dergleichen meh
                 
                     
                     
-                    
-                        
-                            <category scheme="https://syralist.github.io/posts/" term="posts" label="posts" />
-                        
-                    
-                
-                    
-                    
-                    
-                        
-                            <category scheme="https://syralist.github.io/posts/allgemein/" term="allgemein" label="allgemein" />
-                        
                     
                 
             

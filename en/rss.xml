@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+
+
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Syralists Blog</title>
+        <link>https://syralist.github.io/en/</link>
+        <description>Syralists persöhnlicher Blog.</description>
+        <generator>Hugo 0.66.0 https://gohugo.io/</generator>
+        
+            <language>en-US</language>
+        
+        
+            <managingEditor>thomas.helmke@gmx.de (Thomas Helmke)</managingEditor>
+        
+        
+            <webMaster>thomas.helmke@gmx.de (Thomas Helmke)</webMaster>
+        
+        
+            <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
+        
+        <lastBuildDate>Wed, 25 Mar 2020 20:02:58 +0100</lastBuildDate>
+        
+            <atom:link rel="self" type="application/rss+xml" href="https://syralist.github.io/en/rss.xml" />
+        
+        
+            <item>
+                <title>My Smarthome Setup</title>
+                <link>https://syralist.github.io/en/posts/smarthome/mein_setup/</link>
+                <guid isPermaLink="true">https://syralist.github.io/en/posts/smarthome/mein_setup/</guid>
+                <pubDate>Wed, 25 Mar 2020 18:17:45 +0000</pubDate>
+                
+                    <author>thomas.helmke@gmx.de (Thomas Helmke)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
+                
+                    <description><![CDATA[<h1 id="my-smarthome-setup">My Smarthome Setup</h1>
+<p>In this post I want to give a brief overview of my Smarthome Setup. In later posts I will go into more detail.</p>
+<h2 id="central-hub">Central Hub</h2>
+<p>As my Smarthome Hub I&rsquo;m running <a href="http://www.home-assistant.io" title="Home Assistant">Home Assistant</a> on a Raspberry Pi 3B+. I&rsquo;m using the native Version with HassOS and the system boots directly from an SSD drive. There is a Conbee stick attached via USB for Zigbee connectivity. Additionally I run another Rasberry Pi 1 with <a href="https://raspberrymatic.de/de/home/" title="RaspberryMatic">RaspberryMatic</a> to connect my Homematic components.</p>
+<p>My router is a FritzBox 7590 supported by a FritzRepeater 1750E for connecting WiFi components.</p>
+<p>Both the Fritzbox and the main Raspberry are buffered by an uninterruptible power supply, because the fuse regularly blows in my flat when I switch on my power strip.</p>
+<h3 id="hardwarelist">Hardwarelist</h3>
+<ul>
+<li><strong>Raspberry Pi 3B+</strong> with 2.4A power supply.</li>
+<li>Intenso Portable <strong>SSD with 128GB</strong>. Additional power supply with 2.4A and USB Y-cable.</li>
+<li><strong>Conbee Stick</strong> by <a href="https://phoscon.de/de/conbee" title="Conbee Stick">Dresden Elektronik</a></li>
+<li>Uninterruptible power supply <strong>APC BX700U-GR</strong></li>
+<li>Raspberry Pi 1 with <strong>HM-MOD-RPI-PCB</strong> by <a href="https://de.elv.com/elv-homematic-komplettbausatz-funkmodul-fuer-raspberry-pi-hm-mod-rpi-pcb-fuer-smart-home-hausautomation-142141?fs=2908134611&amp;c=499" title="ELV Shop">ELV</a></li>
+</ul>
+<h3 id="software">Software</h3>
+<p>When I moved to the SSD drive I decided against setting up for example Rasbian, but used the native installation. That way there is no extra operating system to maintain, but everything can be managed from the Home Assistant interface.
+Parallel to Home Assistant there are of course a bunch of Addons on the Raspberry:</p>
+<ul>
+<li><strong>ADB Bridge</strong> for Android TV control</li>
+<li><strong>APC USB Daemon</strong> for reading the UPS</li>
+<li><strong>Duck DNS</strong> for secure remote access via internet</li>
+<li><strong>ESPhome</strong> for DIY components</li>
+<li><strong>File Editor</strong> to edit the configuration from within the browser</li>
+<li><strong>Hass.io Google Drive Backup</strong> for automated back up</li>
+<li><strong>MariaDB</strong> as replacement for the SQLite history database</li>
+<li><strong>Mosquitto broker</strong> for MQTT</li>
+<li><strong>Node-RED</strong> for automations</li>
+<li><strong>Samba-Share</strong> for access from other computers</li>
+<li><strong>TasmoAdmin</strong> for managing the Tasmota devices</li>
+<li><strong>Terminal &amp; SSH</strong> for low level access to the system</li>
+<li><strong>chrony</strong> as local NTP server</li>
+<li><strong>deCONZ</strong> for managing the Zigbee components</li>
+</ul>
+<p>Of course <a href="https://hacs.xyz/" title="HACS">HACS</a> (Home Assistant Community Store) is also installed for custom components, lovelace plugins, and themes.</p>
+<h2 id="components">Components</h2>
+<p>The advantage of Home Assistant is that components from a wide variety of manufacturers and with a wide variety of technologies can be integrated. Accordingly, various sensors and actuators are distributed in the apartment.</p>
+<h3 id="sensors">Sensors</h3>
+<p>Temperature, humidity and air pressure are recorded in almost every room. On the one hand, the Aqara WSDCGQ11LM multi-sensors via Zigbee are used, on the other hand, I have connected ESP8266 with BME280 sensors via ESPhome.</p>
+<p>Windows and doors are monitored with Aqara and Homematic door / window contacts. An IKEA Tradfri via Zigbee serves as the motion detector.</p>
+<p>In the basement, a Sonoff POW monitors the power consumption of the washing machine.</p>
+<h3 id="light">Light</h3>
+<p>The ceiling lighting is not yet smart in my apartment, but it usually stays off anyway because the light comes from decorative lights or indirect lighting.</p>
+<p>The decorative lights almost all have a classic light source and are plugged into smart intermediate sockets. Most of them are from Teckin or Sonoff and flashed to Tasmota. Another comes from Osram and is connected via Zigbee.</p>
+<p>There are also some directly connected lamps. A bulb from Eufy connected via their cloud service, an LED strip from Osram via Zigbee and two self-made LED lights connected via ESPhome.</p>
+<h3 id="heating">Heating</h3>
+<p>Our Viessmann heating system is connected via the cloud; Homematic thermostats are mounted on the radiators.</p>
+<h3 id="shutters">Shutters</h3>
+<p>For the control of the electric roller shutters, I installed Shelly 2.5 flush-mounted actuators and connected them locally via MQTT.</p>
+<h3 id="interaction">Interaction</h3>
+<p>Most components can be controlled via Alexa voice input, all components can be controlled via the web interface or companion app on the mobile phone. There are also physical buttons for some actions. In addition to the Aqara WXKG11LM Zigbee button, a self-made button via ESPhome is also used here.</p>
+<h2 id="automation">Automation</h2>
+<p>The automations are of course what makes the smart home smart. Here is just a brief overview:</p>
+<p>In the living room, the light is switched on and off depending on the television. The radiators are linked to the windows and also regulate up or down according to the time of day.</p>
+<p>When I go to bed, the computer and the NAS are shut down, the roller shutters are closed and the radiator is turned down.</p>
+<p>There are notifications when the washing machine is ready, when the doorbell rings and when the garbage has to be put out.</p>
+<hr>
+<p>That should suffice as a brief overview of my setup. As written above, soon followed by other articles with details on specific topics.</p>
+]]></description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                        
+                    
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://syralist.github.io/en/tags/smarthome/">Smarthome</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://syralist.github.io/en/tags/home-assistant/">Home Assistant</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://syralist.github.io/en/tags/zigbee/">Zigbee</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://syralist.github.io/en/tags/homematic/">Homematic</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://syralist.github.io/en/tags/raspberry-pi/">Raspberry Pi</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+    </channel>
+</rss>
