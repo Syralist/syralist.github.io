@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de-DE">
     <title type="text">Syralists Blog</title>
     <subtitle type="html">Syralists persöhnlicher Blog.</subtitle>
-    <updated>2020-03-25T20:02:58+01:00</updated>
+    <updated>2020-04-03T19:59:22+02:00</updated>
     <id>https://syralist.github.io/</id>
     <link rel="alternate" type="text/html" href="https://syralist.github.io/" />
     <link rel="self" type="application/atom+xml" href="https://syralist.github.io/atom.xml" />
@@ -16,6 +16,255 @@
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights>
     <generator uri="https://gohugo.io/" version="0.66.0">Hugo</generator>
+        <entry>
+            <title type="text">Umweltsensor mit ESPHome in Home Assistant</title>
+            <link rel="alternate" type="text/html" href="https://syralist.github.io/posts/smarthome/esphome-sensor/" />
+            <id>https://syralist.github.io/posts/smarthome/esphome-sensor/</id>
+            <updated>2020-04-03T19:57:08+02:00</updated>
+            <published>2020-04-03T12:53:16+02:00</published>
+            <author>
+                    <name>Thomas Helmke</name>
+                    <uri>https://syralist.github.io/</uri>
+                    <email>thomas.helmke@gmx.de</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html"><![CDATA[Umweltsensor mit ESPHome in Home Assistant In diesem Beitrag zeige ich die Schritte, um meinen Umweltsensor mit Button nachzubauen. Der Sensor misst Temperatur, Luftfeuchtigkeit und Luftdruck und hat einen Button um beliebige Aktionen auszulösen.
+Vorbereitung Was ist ESPHome? Laut der Selbstbeschreibung auf esphome.]]></summary>
+            
+                <content type="html"><![CDATA[<h1 id="umweltsensor-mit-esphome-in-home-assistant">Umweltsensor mit ESPHome in Home Assistant</h1>
+<p>In diesem Beitrag zeige ich die Schritte, um meinen Umweltsensor mit Button nachzubauen. Der Sensor misst Temperatur, Luftfeuchtigkeit und Luftdruck und hat einen Button um beliebige Aktionen auszulösen.</p>
+<p><img src="/images/2020-04-03-esphome-hardware-01.jpg" alt="Fertige Box"></p>
+<h2 id="vorbereitung">Vorbereitung</h2>
+<h3 id="was-ist-esphome">Was ist ESPHome?</h3>
+<p>Laut der Selbstbeschreibung auf <a href="https://esphome.io/" title="ESPHome">esphome.io</a> ist ESPHome ein System, um ESP8266 bzw. ESP32 Mikrocontroller mit Hilfe von einfachen Konfigurationsdateien zu programmieren.</p>
+<p>ESPHome ist in Python geschrieben und lässt sich auch ohne Home Assistant einfach über <code>pip install esphome</code> oder mit <code>docker pull esphome/esphome</code> installieren. Ich benutze ESPHome als Home Assistant Addon, da bekommt man noch eine Weboberfläche zur Administration dazu.</p>
+<h3 id="benötigte-hardware">Benötigte Hardware</h3>
+<ul>
+<li>ESP8266 Mikrocontroller - z.B. Wemos D1 mini</li>
+<li>BME280 Sensor - mit I²C Breakoutboard</li>
+<li>Drucktaster</li>
+</ul>
+<p><img src="/images/2020-04-03-esphome-hardware-02.jpg" alt="Fertige Box offen"></p>
+<p>Das Gehäuse ist aus 3mm MDF gelasert. Ein Generator für solche Gehäuse ist zum Beispiel <a href="https://www.festi.info/boxes.py/" title="boxes.py">boxes.py</a>.</p>
+<h3 id="sensor-und-button-anschließen">Sensor und Button anschließen</h3>
+<p>Der BME280 wird per I²C angeschlossen, dafür brauchen wir die folgenden Pins:</p>
+<ul>
+<li>5V → VIN</li>
+<li>G   → GND</li>
+<li>D4 → SDA</li>
+<li>D5 → SCL</li>
+</ul>
+<p>Den Pin für den Button kann man frei wählen, allerdings gibt es einige Pins, die spezielle Funktionen beim Booten auslösen. Ich habe hier Pin D3 verwendet, der zweite Pin des Buttons wird mit GND verbunden.</p>
+<p><img src="/images/2020-04-03-esphome-hardware-04.jpg" alt="Platine von unten"></p>
+<p>Ich habe das ganze mit Sockeln auf einer Lochrasterplatine aufgebaut, um die Bauteile leicht wieder auseinanderbauen zu können.</p>
+<p><img src="/images/2020-04-03-esphome-hardware-03.jpg" alt="Platine von oben"></p>
+<h2 id="esphome-projekt-in-home-assistant">ESPHome Projekt in Home Assistant</h2>
+<h3 id="projekt-anlegen">Projekt anlegen</h3>
+<p>Auf der Weboberfläche klickt man auf den freundlichen roten Button mit dem Plus, um den Wizard für neue Projekte aufzurufen.</p>
+<p><img src="/images/2020-04-03-esphome-01.png" alt="ESPHome Weboberfläche"></p>
+<p>Als erstes vergibt man einen Namen.</p>
+<p><img src="/images/2020-04-03-esphome-02.png" alt="ESPHome Wizard Schritt 1"></p>
+<p>Zweiter Schritt ist die Auswahl des Mikrocontrollers. Ich benutze für die meisten Projekte den Wemos D1 mini.</p>
+<p><img src="/images/2020-04-03-esphome-03.png" alt="ESPHome Wizard Schritt 2"></p>
+<p>Als letztes folgt die Angabe der WLan-Daten und des Passworts für das Over-the-air Update. Ich benutze hier die von Home Assistant bekannte <code>!secret</code> Notation. Details dazu weiter unten.</p>
+<p><img src="/images/2020-04-03-esphome-04.png" alt="ESPHome Wizard Schritt 3"></p>
+<p>Nun ist der Wizard abgeschlossen und zeigt uns die nächsten Schritte, um den Mikrocontroller zu programmieren.</p>
+<p><img src="/images/2020-04-03-esphome-05.png" alt="ESPHome Wizard Schritt 4"></p>
+<p>Nachdem man den Wizard mit <strong>Submit</strong> geschlossen hat, wird man noch auf die Schnittstellenauswahl in der oberen Ecke hingewiesen.</p>
+<p><img src="/images/2020-04-03-esphome-06.png" alt="ESPHome Wizard Schritt 5"></p>
+<h3 id="dateiorganisation-und-secrets">Dateiorganisation und !secrets</h3>
+<p>In Home Assistant liegen die Projektdateien im Verzeichnis <code>/config/esphome</code>. Das Beispiel oben hat eine <code>umweltsensor.yaml</code> erzeugt.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">esphome</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="k">name</span><span class="p">:</span><span class="w"> </span>umweltsensor<span class="w">
+</span><span class="w">  </span><span class="k">platform</span><span class="p">:</span><span class="w"> </span>ESP8266<span class="w">
+</span><span class="w">  </span><span class="k">board</span><span class="p">:</span><span class="w"> </span>d1_mini<span class="w">
+</span><span class="w"></span><span class="k">wifi</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="k">ssid</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;!secret wifi-ssid&#34;</span><span class="w">
+</span><span class="w">  </span><span class="k">password</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;!secret wifi-password&#34;</span><span class="w">
+</span><span class="w">  </span><span class="c"># Enable fallback hotspot (captive portal) in case wifi connection fails</span><span class="w">
+</span><span class="w">  </span><span class="k">ap</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="k">ssid</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Umweltsensor Fallback Hotspot&#34;</span><span class="w">
+</span><span class="w">    </span><span class="k">password</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;lg2kCzecpat7&#34;</span><span class="w">
+</span><span class="w"></span><span class="k">captive_portal</span><span class="p">:</span><span class="w">
+</span><span class="w"></span><span class="c"># Enable logging</span><span class="w">
+</span><span class="w"></span><span class="k">logger</span><span class="p">:</span><span class="w">
+</span><span class="w"></span><span class="c"># Enable Home Assistant API</span><span class="w">
+</span><span class="w"></span><span class="k">api</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="k">password</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;!secret esphome-password&#34;</span><span class="w">
+</span><span class="w"></span><span class="k">ota</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="k">password</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;!secret esphome-password&#34;</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>Im gleichen Verzeichnis habe ich eine <code>secrets.yaml</code> angelegt. Die Einträge darin können in anderen <code>.yaml</code> Dateien mit <code>!secret</code> importiert werden. Das hat den Vorteil, dass man die Projektdatei mit anderen teilen kann, so wie ich hier, ohne dass man seine Zugangsdaten weitergibt.</p>
+<p><img src="/images/2020-04-03-esphome-07.png" alt="ESPHome secrets.yaml"></p>
+<h3 id="das-erste-mal-flashen">Das erste Mal Flashen</h3>
+<p>Zum ersten Flashen muss der Mikrocontroller per USB mit dem Rechner verdunden werden, auf dem ESPHome läuft. In meinem Fall ist das der Raspberry Pi auf dem Home Assistant installiert ist.</p>
+<p>Meistens wird der Port des Mikrocontrollers nicht sofort angezeigt, wenn man das USB Kabel anschließt. Das hängt mit dem Docker System zusammen auf dem Home Assistant basiert. Der Workaround ist das Addon neuzustarten, nachdem der Mikrocontroller angeschlossen ist.</p>
+<p>Wenn nichts anderes angeschlossen ist, wird wahrscheinlich <code>/dev/ttyUSB0</code> angezeigt, in meinem Fall ist der Mikrocontroller an <code>/dev/ttyUSB1</code>.</p>
+<p><img src="/images/2020-04-03-esphome-08.png" alt="ESPHome Port Auswahl"></p>
+<p>Damit die Zugangsdaten korrekt importiert werden, müssen wir noch die erzeugte <code>.yaml</code> Datei bearbeiten und die Anführungszeichen bei allen Einträgen mit <code>!secret</code> entfernen. Dazu klickt man auf <strong>EDIT</strong> unter dem entsprechenden Eintrag.</p>
+<p><img src="/images/2020-04-03-esphome-09.png" alt="ESPHome Edit Button"></p>
+<p>Als letztes klickt man auf <strong>UPLOAD</strong> um das Flashen zu starten.</p>
+<p><img src="/images/2020-04-03-esphome-10.png" alt="ESPHome Upload"></p>
+<p>Wenn alles korrekt funktioniert hat, sollte nun aus der <code>.yaml</code> Datei der Arduino-Code generiert werden. Dabei werden im Hintergrund alle benötigten Bibliotheken heruntergeladen, der Code kompiliert und der Upload gestartet.</p>
+<p><img src="/images/2020-04-03-esphome-11.png" alt="ESPHome Upload"></p>
+<p>In der folgenden Logging-Ausgabe kann man kontrollieren, ob man die WLAN Daten korrekt eingeben hat.</p>
+<p><img src="/images/2020-04-03-esphome-12.png" alt="ESPHome Upload"></p>
+<p>Ab jetzt kann man den Mikrocontroller vom Raspberry Pi trennen und übers WLAN programmieren. Dafür stellt man die Schnittstelle oben auf Over-the-Air um.</p>
+<h3 id="sensor-und-button-konfigurieren">Sensor und Button konfigurieren</h3>
+<p>Damit der Sensor angesprochen werden kann wird als erstes die I²C Komponente geladen. Die Option <code>scan: True</code> sorgt dafür, dass bei jedem Boot der Bus nach Geräten gescannt wird.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">i2c</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="k">sda</span><span class="p">:</span><span class="w"> </span><span class="m">4</span><span class="w">
+</span><span class="w">  </span><span class="k">scl</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="w">
+</span><span class="w">  </span><span class="k">scan</span><span class="p">:</span><span class="w"> </span>True<span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>Da der BME280 drei Größen misst, müssen entsprechend die drei Optionen <code>temperature</code>, <code>pressure</code> und <code>humidity</code> konfiguriert werden.</p>
+<p>Unter <code>filters:</code> ist beim Temperatursensor ein statischer Offset von -7 Grad eingestellt, den ich im Vergleich mit einem zweiten Sensor ermittelt habe. Ebenso ist bei der Luftfeuchtigkeit ein statischer Offset von +10 Prozent eingestellt.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">sensor</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span>- <span class="k">platform</span><span class="p">:</span><span class="w"> </span>bme280<span class="w">
+</span><span class="w">    </span><span class="k">temperature</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="k">name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Thomas Zimmer Temperatur&#34;</span><span class="w">
+</span><span class="w">      </span><span class="k">oversampling</span><span class="p">:</span><span class="w"> </span>16x<span class="w">
+</span><span class="w">      </span><span class="k">filters</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span>- <span class="k">offset</span><span class="p">:</span><span class="w"> </span>-<span class="m">7.0</span><span class="w">
+</span><span class="w">    </span><span class="k">pressure</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="k">name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Thomas Zimmer Luftdruck&#34;</span><span class="w">
+</span><span class="w">    </span><span class="k">humidity</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="k">name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Thomas Zimmer Feuchtigkeit&#34;</span><span class="w">
+</span><span class="w">      </span><span class="k">filters</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span>- <span class="k">offset</span><span class="p">:</span><span class="w"> </span>+<span class="m">10.0</span><span class="w">
+</span><span class="w">    </span><span class="k">address</span><span class="p">:</span><span class="w"> </span><span class="m">0x76</span><span class="w">
+</span><span class="w">    </span><span class="k">update_interval</span><span class="p">:</span><span class="w"> </span>60s<span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>Der Button wird als Binärsensor konfiguriert. Da der Button mit GND verbunden ist, muss hier der interne Pullup-Widerstand aktiviert werden und mit <code>inverted: True</code> der Zustand invertiert werden. Damit liefert der Sensor <strong>on</strong>, wenn der Button gedrückt wird.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">binary_sensor</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span>- <span class="k">platform</span><span class="p">:</span><span class="w"> </span>gpio<span class="w">
+</span><span class="w">    </span><span class="k">pin</span><span class="p">:</span><span class="w"> 
+</span><span class="w">      </span><span class="k">number</span><span class="p">:</span><span class="w"> </span>D3<span class="w">
+</span><span class="w">      </span><span class="k">mode</span><span class="p">:</span><span class="w"> </span>INPUT_PULLUP<span class="w">
+</span><span class="w">      </span><span class="k">inverted</span><span class="p">:</span><span class="w"> </span>True<span class="w">
+</span><span class="w">    </span><span class="k">name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Thomas Zimmer Button&#34;</span><span class="w">
+</span><span class="w">    </span><span class="k">filters</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="k">delayed_on</span><span class="p">:</span><span class="w"> </span>10ms<span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id="mit-home-assistant-verbinden">Mit Home Assistant verbinden</h3>
+<p>Nachdem das vollständige Programm auf den Mikrocontroller geladen ist, müssen die Sensoren noch in Home Assistant einbunden werden. Die Einrichtung erfolgt über die Integrationsseite in den Home Assistant Einstellungen.</p>
+<p><img src="/images/2020-04-03-esphome-13.png" alt="ESPHome Integration"></p>
+<p>Als Hostadresse gibt man den Namen des Projekts ein, in diesem Fall <code>umweltsensor.local</code>.</p>
+<p><img src="/images/2020-04-03-esphome-14.png" alt="ESPHome Integration"></p>
+<p>Nach der API Passwort Abfrage werden automatisch die Entities für die konfigurierten Sensoren zu Home Assitant hinzugefügt.</p>
+<p><img src="/images/2020-04-03-esphome-15.png" alt="ESPHome Integration"></p>
+]]></content>
+            
+            
+            
+                
+                
+                
+                    
+                    
+                    
+                
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://syralist.github.io/tags/smarthome/" term="Smarthome" label="Smarthome" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://syralist.github.io/tags/home-assistant/" term="Home Assistant" label="Home Assistant" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://syralist.github.io/tags/esphome/" term="ESPHome" label="ESPHome" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://syralist.github.io/tags/esp8266/" term="ESP8266" label="ESP8266" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">Mein Smarthome Setup</title>
             <link rel="alternate" type="text/html" href="https://syralist.github.io/posts/smarthome/mein_setup/" />

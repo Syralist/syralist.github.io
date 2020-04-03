@@ -3,8 +3,53 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://syralist.github.io/en/posts/smarthome/esphome-sensor/</loc>
+    <lastmod>2020-04-03T19:57:20+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://syralist.github.io/posts/smarthome/esphome-sensor/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://syralist.github.io/en/posts/smarthome/esphome-sensor/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://syralist.github.io/en/tags/esp8266/</loc>
+    <lastmod>2020-04-03T19:57:20+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://syralist.github.io/tags/esp8266/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://syralist.github.io/en/tags/esp8266/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://syralist.github.io/en/tags/esphome/</loc>
+    <lastmod>2020-04-03T19:57:20+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://syralist.github.io/tags/esphome/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://syralist.github.io/en/tags/esphome/"
+                />
+  </url>
+  
+  <url>
     <loc>https://syralist.github.io/en/tags/home-assistant/</loc>
-    <lastmod>2020-03-25T20:00:02+01:00</lastmod>
+    <lastmod>2020-04-03T19:57:20+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -14,6 +59,66 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://syralist.github.io/en/tags/home-assistant/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://syralist.github.io/en/posts/</loc>
+    <lastmod>2020-04-03T19:57:20+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://syralist.github.io/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://syralist.github.io/en/posts/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://syralist.github.io/en/tags/smarthome/</loc>
+    <lastmod>2020-04-03T19:57:20+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://syralist.github.io/tags/smarthome/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://syralist.github.io/en/tags/smarthome/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://syralist.github.io/en/</loc>
+    <lastmod>2020-04-03T19:57:20+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://syralist.github.io/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://syralist.github.io/en/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://syralist.github.io/en/tags/</loc>
+    <lastmod>2020-04-03T19:57:20+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://syralist.github.io/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://syralist.github.io/en/tags/"
                 />
   </url>
   
@@ -48,21 +153,6 @@
   </url>
   
   <url>
-    <loc>https://syralist.github.io/en/posts/</loc>
-    <lastmod>2020-03-25T20:00:02+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://syralist.github.io/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://syralist.github.io/en/posts/"
-                />
-  </url>
-  
-  <url>
     <loc>https://syralist.github.io/en/tags/raspberry-pi/</loc>
     <lastmod>2020-03-25T20:00:02+01:00</lastmod>
     <xhtml:link
@@ -74,51 +164,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://syralist.github.io/en/tags/raspberry-pi/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://syralist.github.io/en/tags/smarthome/</loc>
-    <lastmod>2020-03-25T20:00:02+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://syralist.github.io/tags/smarthome/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://syralist.github.io/en/tags/smarthome/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://syralist.github.io/en/</loc>
-    <lastmod>2020-03-25T20:00:02+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://syralist.github.io/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://syralist.github.io/en/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://syralist.github.io/en/tags/</loc>
-    <lastmod>2020-03-25T20:00:02+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://syralist.github.io/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://syralist.github.io/en/tags/"
                 />
   </url>
   
