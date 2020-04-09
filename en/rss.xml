@@ -10,7 +10,7 @@
         <title>Syralists Blog</title>
         <link>https://syralist.github.io/en/</link>
         <description>Syralists persöhnlicher Blog.</description>
-        <generator>Hugo 0.66.0 https://gohugo.io/</generator>
+        <generator>Hugo 0.68.3 https://gohugo.io/</generator>
         
             <language>en-US</language>
         
@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
         
-        <lastBuildDate>Sat, 04 Apr 2020 18:14:36 +0200</lastBuildDate>
+        <lastBuildDate>Thu, 09 Apr 2020 20:11:33 +0200</lastBuildDate>
         
             <atom:link rel="self" type="application/rss+xml" href="https://syralist.github.io/en/rss.xml" />
         
@@ -238,6 +238,12 @@
                         
                         
                             
+                                <category domain="https://syralist.github.io/en/posts/">posts</category>
+                            
+                        
+                    
+                        
+                        
                         
                     
                 
@@ -353,6 +359,12 @@ Parallel to Home Assistant there are of course a bunch of Addons on the Raspberr
                         
                         
                             
+                                <category domain="https://syralist.github.io/en/posts/">posts</category>
+                            
+                        
+                    
+                        
+                        
                         
                     
                 
