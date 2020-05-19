@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">
     <title type="text">Syralists Blog</title>
     <subtitle type="html">Syralists persöhnlicher Blog.</subtitle>
-    <updated>2020-04-10T12:11:28+02:00</updated>
+    <updated>2020-05-19T23:10:29+02:00</updated>
     <id>https://syralist.github.io/en/</id>
     <link rel="alternate" type="text/html" href="https://syralist.github.io/en/" />
     <link rel="self" type="application/atom+xml" href="https://syralist.github.io/en/atom.xml" />
@@ -15,12 +15,98 @@
                 <email>thomas.helmke@gmx.de</email>
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights>
-    <generator uri="https://gohugo.io/" version="0.68.3">Hugo</generator>
+    <generator uri="https://gohugo.io/" version="0.66.0">Hugo</generator>
+        <entry>
+            <title type="text">Building a Website with Hugo - Basics</title>
+            <link rel="alternate" type="text/html" href="https://syralist.github.io/en/posts/allgemein/website-mit-hugo/" />
+            <id>https://syralist.github.io/en/posts/allgemein/website-mit-hugo/</id>
+            <updated>2020-05-19T23:05:03+02:00</updated>
+            <published>2020-05-19T20:20:55+00:00</published>
+            <author>
+                    <name>Thomas Helmke</name>
+                    <uri>https://syralist.github.io/en/</uri>
+                    <email>thomas.helmke@gmx.de</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html"><![CDATA[Building a Website with Hugo &ndash; Basics This blog is created with Hugo. In this post I tell you what it&rsquo;s all about and why I chose this method.
+What is Hugo? Hugo claims to be the world&rsquo;s fastest framework for creating static websites.]]></summary>
+            
+                <content type="html"><![CDATA[<h1 id="building-a-website-with-hugo----basics">Building a Website with Hugo &ndash; Basics</h1>
+<p>This blog is created with <a href="https://gohugo.io/" title="Hugo">Hugo</a>. In this post I tell you what it&rsquo;s all about and why I chose this method.</p>
+<h2 id="what-is-hugo">What is Hugo?</h2>
+<p>Hugo claims to be the world&rsquo;s fastest framework for creating static websites.
+Hugo is programmed in <strong>Go</strong> and available for all common operating systems.</p>
+<p>The articles are written in <strong>Markdown</strong> and then “compiled” to create the HTML pages. The appearance is determined via <strong>Themes</strong>.</p>
+<p>This makes the workflow comparable to that of $\LaTeX$.</p>
+<h2 id="why-hugo">Why Hugo?</h2>
+<p>With most content management systems like Wordpress, Drupal, Typo3, etc. it always bothered me that you have to set up a more or less powerful backend.
+You always need PHP or Python and a database, even if you just want to write a simple blog.</p>
+<p>On the <a href="https://selfhosted.show/" title="Self-Hosted Podcast">Self Hosted</a> Podcast I then heard about Hugo.</p>
+<h2 id="how-to-get-started">How to get started?</h2>
+<h3 id="preparations">Preparations</h3>
+<p>There are various installation methods for Hugo. I downloaded the program as a ZIP file on my Windows computer, on Linux I installed it with Snap. Details can be found on the <a href="https://gohugo.io/getting-started/installing" title="Hugo Installation">Hugo website</a>.</p>
+<p>It&rsquo;s not mandatory, but using Git makes it a little easier. Therefore, in this article I assume that you have installed Git and have a Github account.</p>
+<h3 id="create-site">Create Site</h3>
+<p>The basic structure of the page is created with the following command on the console:</p>
+<pre><code class="language-console" data-lang="console">hugo new site meinblog
+</code></pre><p>Hugo creates a subdirectory with the name <code>meinblog</code> and this content:</p>
+<pre><code class="language-console" data-lang="console">archetypes/
+config.toml
+content/
+data/
+layouts/
+static/
+themes/
+</code></pre><p>Next you should choose a theme from the <a href="https://themes.gohugo.io/" title="Hugo Themes List">Hugo Theme List</a>. I tried some and finally decided on the MemE theme. The easiest way to install is with Git as described in <a href="https://github.com/reuixiy/hugo-theme-meme" title="MemE Readme">README</a>.
+You have to adapt the <code>config.toml</code> to your own needs. Another article on this topic follows.</p>
+<h3 id="create-article">Create Article</h3>
+<p>Articles are created in the <code>content</code> directory as .md files. You can optionally create subfolders as categories. You can create the file manually or use this Hugo command:</p>
+<pre><code class="language-console" data-lang="console">hugo new posts/my-first-post.md
+</code></pre><p>The advantage over manual creation is that a frontmatter is also created. This is the configuration area of the article where appearance and behavior can be customized. Another article on this topic follows.</p>
+<p>At this stage you can start the integrated server and display the (empty) page:</p>
+<pre><code class="language-console" data-lang="console">hugo server -D
+</code></pre><p>The option <code>-D</code> at this point is important so that articles marked as draft are also created and displayed.</p>
+<p>Now you can write your articles. If the server is running in the background, the page is automatically regenerated and updated in the browser as soon as you change and save a file.</p>
+<h3 id="publish-the-site">Publish the Site</h3>
+<p>When you are finished with your articles, you call <code>hugo</code> without any other options. This creates the finished website with all necessary files in the <code>public</code> subdirectory. This directory can now be hosted on any web server. The workflow for hosting as a github.io page is shown on the <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/" title="Hosting-on-Github">Hugo website</a>.</p>
+]]></content>
+            
+            
+            
+                
+                
+                
+                    
+                    
+                    
+                
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://syralist.github.io/en/tags/hugo/" term="Hugo" label="Hugo" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://syralist.github.io/en/tags/website/" term="Website" label="Website" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">Environment Sensor with ESPHome in Home Assistant</title>
             <link rel="alternate" type="text/html" href="https://syralist.github.io/en/posts/smarthome/esphome-sensor/" />
             <id>https://syralist.github.io/en/posts/smarthome/esphome-sensor/</id>
-            <updated>2020-04-09T16:42:46+02:00</updated>
+            <updated>2020-04-03T19:57:20+02:00</updated>
             <published>2020-04-03T12:53:16+02:00</published>
             <author>
                     <name>Thomas Helmke</name>
@@ -229,14 +315,6 @@ Preparation What ist ESPHome? According to the self-description on esphome.]]></
                     
                     
                     
-                        
-                            <category scheme="https://syralist.github.io/en/posts/" term="posts" label="posts" />
-                        
-                    
-                
-                    
-                    
-                    
                 
             
             
@@ -277,7 +355,7 @@ Preparation What ist ESPHome? According to the self-description on esphome.]]></
             <title type="text">My Smarthome Setup</title>
             <link rel="alternate" type="text/html" href="https://syralist.github.io/en/posts/smarthome/mein_setup/" />
             <id>https://syralist.github.io/en/posts/smarthome/mein_setup/</id>
-            <updated>2020-04-09T16:42:46+02:00</updated>
+            <updated>2020-03-25T20:00:02+01:00</updated>
             <published>2020-03-25T18:17:45+00:00</published>
             <author>
                     <name>Thomas Helmke</name>
@@ -350,14 +428,6 @@ Parallel to Home Assistant there are of course a bunch of Addons on the Raspberr
             
                 
                 
-                
-                    
-                    
-                    
-                        
-                            <category scheme="https://syralist.github.io/en/posts/" term="posts" label="posts" />
-                        
-                    
                 
                     
                     

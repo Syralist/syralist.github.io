@@ -10,7 +10,7 @@
         <title>Syralists Blog</title>
         <link>https://syralist.github.io/</link>
         <description>Syralists persöhnlicher Blog.</description>
-        <generator>Hugo 0.68.3 https://gohugo.io/</generator>
+        <generator>Hugo 0.66.0 https://gohugo.io/</generator>
         
             <language>de-DE</language>
         
@@ -23,10 +23,92 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
         
-        <lastBuildDate>Fri, 10 Apr 2020 12:11:28 +0200</lastBuildDate>
+        <lastBuildDate>Tue, 19 May 2020 23:10:29 +0200</lastBuildDate>
         
             <atom:link rel="self" type="application/rss+xml" href="https://syralist.github.io/rss.xml" />
         
+        
+            <item>
+                <title>Website mit Hugo erstellen - Einstieg</title>
+                <link>https://syralist.github.io/posts/allgemein/website-mit-hugo/</link>
+                <guid isPermaLink="true">https://syralist.github.io/posts/allgemein/website-mit-hugo/</guid>
+                <pubDate>Tue, 19 May 2020 20:20:55 +0000</pubDate>
+                
+                    <author>thomas.helmke@gmx.de (Thomas Helmke)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
+                
+                    <description><![CDATA[<h1 id="website-mit-hugo-erstellen----einstieg">Website mit Hugo erstellen &ndash; Einstieg</h1>
+<p>Dieser Blog wird mit <a href="https://gohugo.io/" title="Hugo">Hugo</a> erstellt. In diesem Beitrag erzähle ich was es damit auf sich hat und wie ich dazu gekommen bin.</p>
+<h2 id="was-ist-hugo">Was ist Hugo?</h2>
+<p>Hugo ist nach eigener Aussage das weltweit schnellste Framework für die Erstellung statischer Webseiten.
+Hugo ist in <strong>Go</strong> programmiert und verfügbar für alle gängigen Betriebssysteme.</p>
+<p>Die Beiträge werden in <strong>Markdown</strong> geschrieben und dann „kompiliert“ um die HTML Seiten zu erstellen. Das Aussehen wird dabei über <strong>Themes</strong> festgelegt.</p>
+<p>Damit ist der Workflow mit dem von $\LaTeX$ vergleichbar.</p>
+<h2 id="warum-hugo">Warum Hugo?</h2>
+<p>An den meisten Content-Management-Systemen wie Wordpress, Drupal, Typo3, etc. hat mich immer gestört, dass man dafür ein mehr oder weniger mächtiges Backend aufsetzen muss.
+Man braucht immer PHP oder Python und eine Datenbank, auch wenn man eigentlich nur einen einfachen Blog schreiben möchte.</p>
+<p>Im <a href="https://selfhosted.show/" title="Self-Hosted Podcast">Self Hosted</a> Podcast habe ich dann von Hugo gehört.</p>
+<h2 id="wie-geht-es-los">Wie geht es los?</h2>
+<h3 id="vorbereitung">Vorbereitung</h3>
+<p>Für Hugo gibt es diverse Installationsmethoden. Auf meinem Windowsrechner habe ich das Programm als ZIP heruntergeladen, unter Linux habe ich es mit Snap installiert. Details sind auf der <a href="https://gohugo.io/getting-started/installing" title="Hugo Installation">Hugo Webseite</a> zu finden.</p>
+<p>Es ist nicht zwingend erforderlich, aber es erleichtert einige Vorgänge, wenn man Git benutzt. Daher gehe ich in diesem Artikel davon aus, dass ihr Git installiert habt und über einen Github Account verfügt.</p>
+<h3 id="seite-anlegen">Seite anlegen</h3>
+<p>Das Grundgerüst der Seite legt man mit dem folgenden Kommando auf der Konsole an:</p>
+<pre><code class="language-console" data-lang="console">hugo new site meinblog
+</code></pre><p>Hugo erzeugt damit ein Unterverzeichnis mit dem Namen <code>meinblog</code> und diesem Inhalt:</p>
+<pre><code class="language-console" data-lang="console">archetypes/
+config.toml
+content/
+data/
+layouts/
+static/
+themes/
+</code></pre><p>Als nächstes sollte man sich ein Theme aus der <a href="https://themes.gohugo.io/" title="Hugo Themes List">Hugo Theme Liste</a> aussuchen. Ich habe einige ausprobiert und mich schließlich für das MemE Theme entschieden. Die Installation funktioniert am einfachsten mit Git wie im <a href="https://github.com/reuixiy/hugo-theme-meme" title="MemE Readme">README</a> beschrieben.
+Die <code>config.toml</code> muss man an seine eigenen Bedürfnisse anpassen. Dazu folgt noch ein weiterer Artikel.</p>
+<h3 id="artikel-anlegen">Artikel anlegen</h3>
+<p>Artikel legt man im Verzeichnis <code>content</code> als .md-Dateien an. Dabei kann man optional Unterordner als Kategorien anlegen. Man kann die Datei manuell anlegen oder diesen Hugo-Befehl dafür benutzen:</p>
+<pre><code class="language-console" data-lang="console">hugo new posts/my-first-post.md
+</code></pre><p>Der Vorteil gegenüber dem manuellen Anlegen ist, dass gleich ein Frontmatter mit angelegt wird. Das ist der Konfigurationsbereich des Artikels, wo Aussehen und Verhalten angepasst werden kann. Auch dazu folgt noch ein weiterer Artikel.</p>
+<p>In diesem Zustand kann man jetzt schon den integrierten Server starten und die (leere) Seite anzeigen:</p>
+<pre><code class="language-console" data-lang="console">hugo server -D
+</code></pre><p>Die Option <code>-D</code> an dieser Stelle ist wichtig, damit auch Artikel die als Draft (also Entwurf) gekennzeichnet sind erzeugt und angezeigt werden.</p>
+<p>Jetzt kann man seine Artikel schreiben. Wenn der Server im Hintergrund läuft, wird die Seite automatisch neu erzeugt und im Browser aktualisiert, sobald man eine Datei ändert und speichert.</p>
+<h3 id="seite-veröffentlichen">Seite veröffentlichen</h3>
+<p>Wenn man fertig mit seinen Artikeln ist ruft man <code>hugo</code> ohne weitere Optionen auf. Damit wird im Unterverzeichnis <code>public</code> die fertige Webseite mit allen nötigen Dateien erzeugt. Dieses Verzeichnis kann jetzt auf jedem Webserver gehostet werden. Der Workflow für das Hosten als github.io Seite wird auf der <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/" title="Hosting-on-Github">Hugo-Webseite</a> gezeigt.</p>
+]]></description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                    
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://syralist.github.io/tags/hugo/">Hugo</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://syralist.github.io/tags/website/">Website</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>Umweltsensor mit ESPHome in Home Assistant</title>
@@ -237,18 +319,6 @@
                         
                         
                         
-                            
-                                <category domain="https://syralist.github.io/posts/">posts</category>
-                            
-                        
-                    
-                        
-                        
-                        
-                            
-                                <category domain="https://syralist.github.io/posts/smarthome/">smarthome</category>
-                            
-                        
                     
                 
                 
@@ -362,18 +432,6 @@ Neben dem Home Assistant laufen allerdings noch einige Addons auf dem Raspberry:
                         
                         
                         
-                            
-                                <category domain="https://syralist.github.io/posts/">posts</category>
-                            
-                        
-                    
-                        
-                        
-                        
-                            
-                                <category domain="https://syralist.github.io/posts/smarthome/">smarthome</category>
-                            
-                        
                     
                 
                 
@@ -440,18 +498,6 @@ Neben dem Home Assistant laufen allerdings noch einige Addons auf dem Raspberry:
                     
                         
                         
-                        
-                            
-                                <category domain="https://syralist.github.io/posts/">posts</category>
-                            
-                        
-                    
-                        
-                        
-                        
-                            
-                                <category domain="https://syralist.github.io/posts/allgemein/">allgemein</category>
-                            
                         
                     
                 
