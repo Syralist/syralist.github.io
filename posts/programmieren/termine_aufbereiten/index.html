@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://syralist.github.io/css/meme.min.a34dcdefdd8271bce2275d1fb4d93830bf0936531cbe247bab7a8fbe4a5c3912.css" integrity="sha256-o03N792CcbziJ10ftNk4ML8JNlMcviR7q3qPvkpcORI=" />
 
     
-    <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/lunr-languages@1.4.0/min/lunr.stemmer.support.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/lunr-languages@1.4.0/min/lunr.de.min.js" defer></script><script src="https://syralist.github.io/js/meme.min.fa1c54e1725f9c1096d30d239764a35134b0554075a0470a058526dca091e7ea.js" integrity="sha256-&#43;hxU4XJfnBCW0w0jl2SjUTSwVUB1oEcKBYUm3KCR5&#43;o="></script>
+    <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/lunr-languages@1.4.0/min/lunr.stemmer.support.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/lunr-languages@1.4.0/min/lunr.de.min.js" defer></script><script src="https://syralist.github.io/js/meme.min.4cb315ea5c97fa5f12bae530279ce1ca1c929d94a321d8ae6fef500dfcda232d.js" integrity="sha256-TLMV6lyX&#43;l8SuuUwJ5zhyhySnZSjIdiub&#43;9QDfzaIy0="></script>
 
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -307,7 +307,7 @@ Hintergrund Die Bremer Stadtreinigung bietet die Müllabfuhrtermine zum Download
 <h2 id="imports"><a href="#imports" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Imports</h2>
 <p>Zuerst werden die benötigte Module importiert. <code>ics</code> und <code>arrow</code> können über <code>pip</code> installiert werden, die anderen Module sind in der Standardlibrary enthalten.</p>
 <div class="highlight"><div class="chroma-dark">
-<table class="lntable"><tr><td class="lntd">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma-dark"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
@@ -320,7 +320,7 @@ Hintergrund Die Bremer Stadtreinigung bietet die Müllabfuhrtermine zum Download
 <span class="kn">import</span> <span class="nn">arrow</span>
 <span class="kn">from</span> <span class="nn">dateutil</span> <span class="kn">import</span> <span class="n">tz</span>
 <span class="kn">import</span> <span class="nn">datetime</span>
-</code></pre></td></tr></table>
+</code></pre></td></tr></table></div>
 </div>
 </div><ul>
 <li><code>csv</code> : Lesen und Schreiben von CSV Dateien</li>
@@ -332,7 +332,7 @@ Hintergrund Die Bremer Stadtreinigung bietet die Müllabfuhrtermine zum Download
 <h2 id="einstellungen"><a href="#einstellungen" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Einstellungen</h2>
 <p>Damit mein Skript auch für andere interessant ist, habe ich versucht, verschiedene Möglichkeiten die Termine zu erstellen zu programmieren und parametrierbar zu machen.</p>
 <div class="highlight"><div class="chroma-dark">
-<table class="lntable"><tr><td class="lntd">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma-dark"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
@@ -371,14 +371,14 @@ Hintergrund Die Bremer Stadtreinigung bietet die Müllabfuhrtermine zum Download
 <span class="c1"># Wie lange soll der Termin sein, wenn er nicht ganztägig ist? 0..23</span>
 <span class="n">duration_hour</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="c1">######</span>
-</code></pre></td></tr></table>
+</code></pre></td></tr></table></div>
 </div>
 </div><p>Eingestellt werden kann, ob der Termin ganztägig oder zu einer bestimmten Stunde mit einer einstellbaren Dauer erzeugt werden soll. Dabei kann man den Termin am Vortag der Abfuhr erzeugen oder am richtigen Tag.
 Man kann die Art der Abfuhr mit in den Titel schreiben lassen oder nur „Müllabfuhr“. Für die Einbindung in Home Assistant kann man einen Offset eintragen lassen.</p>
 <h2 id="hilfsvariablen"><a href="#hilfsvariablen" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Hilfsvariablen</h2>
 <p>Bevor es an das Einlesen der CSV Datei geht, erzeuge ich einige Hilfsvariablen.</p>
 <div class="highlight"><div class="chroma-dark">
-<table class="lntable"><tr><td class="lntd">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma-dark"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
@@ -393,14 +393,14 @@ Man kann die Art der Abfuhr mit in den Titel schreiben lassen oder nur „Mülla
 <span class="c1"># globale Variablen vorbelegen</span>
 <span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="n">c</span> <span class="o">=</span> <span class="n">Calendar</span><span class="p">()</span>
-</code></pre></td></tr></table>
+</code></pre></td></tr></table></div>
 </div>
 </div><p>Der <code>offset_string</code> wird für die schon angesprochene Home Assistant Einbindung benötigt. Ich benutze hier einen f-String, um den Inhalt der Variablen in den String einzufügen. Der Ausdruck <code>offset_hours:02d</code> sorgt dafür, dass einstellige Zahlen mit führender Null eingefügt werden.</p>
 <p>Für den folgenden Code brauche ich dann noch ein leeres Dictionary <code>d</code> und ein leeres Calendar-Objekt <code>c</code>.</p>
 <h2 id="csv-datei-einlesen"><a href="#csv-datei-einlesen" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>CSV Datei einlesen</h2>
 <p>Die Einträge in der CSV-Datei sehen folgendermaßen aus:</p>
 <div class="highlight"><div class="chroma-dark">
-<table class="lntable"><tr><td class="lntd">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma-dark"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
@@ -411,11 +411,11 @@ Man kann die Art der Abfuhr mit in den Titel schreiben lassen oder nur „Mülla
 &#34;Samstag&#34;;&#34;04.01.2020&#34;;&#34;Papier / Gelber Sack&#34;
 &#34;Mittwoch&#34;;&#34;08.01.2020&#34;;&#34;Bioabfall&#34;
 &#34;Mittwoch&#34;;&#34;08.01.2020&#34;;&#34;Restmüll&#34;
-</code></pre></td></tr></table>
+</code></pre></td></tr></table></div>
 </div>
 </div><p>Die CSV-Datei wird zeilenweise eingelesen und die Einträge vorverarbeitet.</p>
 <div class="highlight"><div class="chroma-dark">
-<table class="lntable"><tr><td class="lntd">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma-dark"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
@@ -444,7 +444,7 @@ Man kann die Art der Abfuhr mit in den Titel schreiben lassen oder nur „Mülla
             <span class="n">d</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span><span class="n">f</span><span class="s2">&#34;{d[row[1]]} / {row[2]}&#34;</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">d</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-</code></pre></td></tr></table>
+</code></pre></td></tr></table></div>
 </div>
 </div><p>Dem <code>csv.reader</code> muss man dabei das Trennzeichen und den Quotechar mitgeben, damit die Datei korrekt eingelesen wird.</p>
 <p>In der for-Schleife wird zuerst die Überschrift übersprungen. Als nächstes wird mit <code>if row[1] in d</code> geprüft, ob das Datum schon in meinem Dictionary eingetragen ist. Wenn das der Fall ist, werden die beiden Abfuhrarten über einen f-String zusammengefasst und der Eintrag im Dictionary aktualisiert.
@@ -453,7 +453,7 @@ Ansonsten wird einfach ein neuer Eintrag zum Dictionary hinzugefügt.</p>
 <h2 id="events-anlegen"><a href="#events-anlegen" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Events anlegen</h2>
 <p>Im nächsten Schritt wird jetzt über das Dictionary iteriert und das oben angelegte Calendar-Objekt mit Events befüllt. <code>d.items()</code> gibt dabei jeweils <em>Key</em> und <em>Value</em> als Tuple zurück.</p>
 <div class="highlight"><div class="chroma-dark">
-<table class="lntable"><tr><td class="lntd">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma-dark"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
@@ -496,7 +496,7 @@ Ansonsten wird einfach ein neuer Eintrag zum Dictionary hinzugefügt.</p>
     <span class="n">e</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="n">abfuhr</span>
     <span class="c1"># Event eintragen</span>
     <span class="n">c</span><span class="o">.</span><span class="n">events</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
-</code></pre></td></tr></table>
+</code></pre></td></tr></table></div>
 </div>
 </div><p>Für den Titel des Events benutze ich wieder einen f-String, um mehrere Strings zusammenzusetzen.
 Der Ausdruck <code>(' ' + abfuhr) if descriptive_title else ''</code> ist ein sogennater <em>ternärer Operator</em>.
@@ -512,7 +512,7 @@ Wenn oben konfiguriert ist, dass der Termin am Tag vor der Abfuhr erzeugt werden
 <h2 id="ics-datei-schreiben"><a href="#ics-datei-schreiben" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>ICS Datei schreiben</h2>
 <p>Der letzte Schritt ist dann das Calendar Objekt in eine Datei zu schreiben.</p>
 <div class="highlight"><div class="chroma-dark">
-<table class="lntable"><tr><td class="lntd">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma-dark"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
@@ -521,7 +521,7 @@ Wenn oben konfiguriert ist, dass der Termin am Tag vor der Abfuhr erzeugt werden
 <pre class="chroma-dark"><code class="language-python" data-lang="python"><span class="c1"># Kalenderdatei schreiben</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;abfuhr.ics&#34;</span><span class="p">,</span> <span class="s2">&#34;w&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">f</span><span class="o">.</span><span class="n">writelines</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-</code></pre></td></tr></table>
+</code></pre></td></tr></table></div>
 </div>
 </div><p>Die entstandene Datei kann man nun zum Beispiel in Google importieren.</p>
 

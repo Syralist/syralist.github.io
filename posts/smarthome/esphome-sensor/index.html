@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://syralist.github.io/css/meme.min.a34dcdefdd8271bce2275d1fb4d93830bf0936531cbe247bab7a8fbe4a5c3912.css" integrity="sha256-o03N792CcbziJ10ftNk4ML8JNlMcviR7q3qPvkpcORI=" />
 
     
-    <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/lunr-languages@1.4.0/min/lunr.stemmer.support.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/lunr-languages@1.4.0/min/lunr.de.min.js" defer></script><script src="https://syralist.github.io/js/meme.min.fa1c54e1725f9c1096d30d239764a35134b0554075a0470a058526dca091e7ea.js" integrity="sha256-&#43;hxU4XJfnBCW0w0jl2SjUTSwVUB1oEcKBYUm3KCR5&#43;o="></script>
+    <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/lunr-languages@1.4.0/min/lunr.stemmer.support.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/lunr-languages@1.4.0/min/lunr.de.min.js" defer></script><script src="https://syralist.github.io/js/meme.min.4cb315ea5c97fa5f12bae530279ce1ca1c929d94a321d8ae6fef500dfcda232d.js" integrity="sha256-TLMV6lyX&#43;l8SuuUwJ5zhyhySnZSjIdiub&#43;9QDfzaIy0="></script>
 
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -356,7 +356,7 @@ Vorbereitung Was ist ESPHome? Laut der Selbstbeschreibung auf esphome.io ist ESP
 <h2 id="dateiorganisation-und-secrets"><a href="#dateiorganisation-und-secrets" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:dateiorganisation-und-secrets" class="headings">Dateiorganisation und !secrets</a></h2>
 <p>In Home Assistant liegen die Projektdateien im Verzeichnis <code>/config/esphome</code>. Das Beispiel oben hat eine <code>umweltsensor.yaml</code> erzeugt.</p>
 <div class="highlight"><div class="chroma-dark">
-<table class="lntable"><tr><td class="lntd">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma-dark"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
@@ -397,7 +397,7 @@ Vorbereitung Was ist ESPHome? Laut der Selbstbeschreibung auf esphome.io ist ESP
 </span><span class="w">  </span><span class="k">password</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;!secret esphome-password&#34;</span><span class="w">
 </span><span class="w"></span><span class="k">ota</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="k">password</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;!secret esphome-password&#34;</span><span class="w">
-</span></code></pre></td></tr></table>
+</span></code></pre></td></tr></table></div>
 </div>
 </div><p>Im gleichen Verzeichnis habe ich eine <code>secrets.yaml</code> angelegt. Die Einträge darin können in anderen <code>.yaml</code> Dateien mit <code>!secret</code> importiert werden. Das hat den Vorteil, dass man die Projektdatei mit anderen teilen kann, so wie ich hier, ohne dass man seine Zugangsdaten weitergibt.</p>
 <p><img src="https://syralist.github.io/images/2020-04-03-esphome-07.png" alt="ESPHome secrets.yaml"></p>
@@ -418,7 +418,7 @@ Vorbereitung Was ist ESPHome? Laut der Selbstbeschreibung auf esphome.io ist ESP
 <h2 id="sensor-und-button-konfigurieren"><a href="#sensor-und-button-konfigurieren" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:sensor-und-button-konfigurieren" class="headings">Sensor und Button konfigurieren</a></h2>
 <p>Damit der Sensor angesprochen werden kann wird als erstes die I²C Komponente geladen. Die Option <code>scan: True</code> sorgt dafür, dass bei jedem Boot der Bus nach Geräten gescannt wird.</p>
 <div class="highlight"><div class="chroma-dark">
-<table class="lntable"><tr><td class="lntd">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma-dark"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
@@ -429,12 +429,12 @@ Vorbereitung Was ist ESPHome? Laut der Selbstbeschreibung auf esphome.io ist ESP
 </span><span class="w">  </span><span class="k">sda</span><span class="p">:</span><span class="w"> </span><span class="m">4</span><span class="w">
 </span><span class="w">  </span><span class="k">scl</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="w">
 </span><span class="w">  </span><span class="k">scan</span><span class="p">:</span><span class="w"> </span>True<span class="w">
-</span></code></pre></td></tr></table>
+</span></code></pre></td></tr></table></div>
 </div>
 </div><p>Da der BME280 drei Größen misst, müssen entsprechend die drei Optionen <code>temperature</code>, <code>pressure</code> und <code>humidity</code> konfiguriert werden.</p>
 <p>Unter <code>filters:</code> ist beim Temperatursensor ein statischer Offset von -7 Grad eingestellt, den ich im Vergleich mit einem zweiten Sensor ermittelt habe. Ebenso ist bei der Luftfeuchtigkeit ein statischer Offset von +10 Prozent eingestellt.</p>
 <div class="highlight"><div class="chroma-dark">
-<table class="lntable"><tr><td class="lntd">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma-dark"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
@@ -467,11 +467,11 @@ Vorbereitung Was ist ESPHome? Laut der Selbstbeschreibung auf esphome.io ist ESP
 </span><span class="w">        </span>- <span class="k">offset</span><span class="p">:</span><span class="w"> </span>+<span class="m">10.0</span><span class="w">
 </span><span class="w">    </span><span class="k">address</span><span class="p">:</span><span class="w"> </span><span class="m">0x76</span><span class="w">
 </span><span class="w">    </span><span class="k">update_interval</span><span class="p">:</span><span class="w"> </span>60s<span class="w">
-</span></code></pre></td></tr></table>
+</span></code></pre></td></tr></table></div>
 </div>
 </div><p>Der Button wird als Binärsensor konfiguriert. Da der Button mit GND verbunden ist, muss hier der interne Pullup-Widerstand aktiviert werden und mit <code>inverted: True</code> der Zustand invertiert werden. Damit liefert der Sensor <strong>on</strong>, wenn der Button gedrückt wird.</p>
 <div class="highlight"><div class="chroma-dark">
-<table class="lntable"><tr><td class="lntd">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma-dark"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
@@ -492,7 +492,7 @@ Vorbereitung Was ist ESPHome? Laut der Selbstbeschreibung auf esphome.io ist ESP
 </span><span class="w">    </span><span class="k">name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Thomas Zimmer Button&#34;</span><span class="w">
 </span><span class="w">    </span><span class="k">filters</span><span class="p">:</span><span class="w">
 </span><span class="w">      </span>- <span class="k">delayed_on</span><span class="p">:</span><span class="w"> </span>10ms<span class="w">
-</span></code></pre></td></tr></table>
+</span></code></pre></td></tr></table></div>
 </div>
 </div><h2 id="mit-home-assistant-verbinden"><a href="#mit-home-assistant-verbinden" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:mit-home-assistant-verbinden" class="headings">Mit Home Assistant verbinden</a></h2>
 <p>Nachdem das vollständige Programm auf den Mikrocontroller geladen ist, müssen die Sensoren noch in Home Assistant einbunden werden. Die Einrichtung erfolgt über die Integrationsseite in den Home Assistant Einstellungen.</p>

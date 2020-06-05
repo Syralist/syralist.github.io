@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://syralist.github.io/en/css/meme.min.a34dcdefdd8271bce2275d1fb4d93830bf0936531cbe247bab7a8fbe4a5c3912.css" integrity="sha256-o03N792CcbziJ10ftNk4ML8JNlMcviR7q3qPvkpcORI=" />
 
     
-    <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js" defer></script><script src="https://syralist.github.io/en/js/meme.min.8e0df412234823b654f8bfb6c9b944986b757ddc388f0485b5abcbf7524abf8c.js" integrity="sha256-jg30EiNII7ZU&#43;L&#43;2yblEmGt1fdw4jwSFtavL91JKv4w="></script>
+    <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js" defer></script><script src="https://syralist.github.io/en/js/meme.min.bad003690992e93f83fb85df40f5ce28c85a9ff13b336191816e64a3a97bb4d5.js" integrity="sha256-utADaQmS6T&#43;D&#43;4XfQPXOKMhan/E7M2GRgW5ko6l7tNU="></script>
 
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -307,7 +307,7 @@ Background Bremer Stadtreinigung offers the waste collection dates for download 
 <h2 id="imports"><a href="#imports" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Imports</h2>
 <p>First the required modules are imported. <code>ics</code> and <code>arrow</code> can be installed via <code>pip</code>, the other modules are included in the standard library.</p>
 <div class="highlight"><div class="chroma-dark">
-<table class="lntable"><tr><td class="lntd">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma-dark"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
@@ -320,7 +320,7 @@ Background Bremer Stadtreinigung offers the waste collection dates for download 
 <span class="kn">import</span> <span class="nn">arrow</span>
 <span class="kn">from</span> <span class="nn">dateutil</span> <span class="kn">import</span> <span class="n">tz</span>
 <span class="kn">import</span> <span class="nn">datetime</span>
-</code></pre></td></tr></table>
+</code></pre></td></tr></table></div>
 </div>
 </div><ul>
 <li><code>csv</code> : Read and write CSV files</li>
@@ -332,7 +332,7 @@ Background Bremer Stadtreinigung offers the waste collection dates for download 
 <h2 id="configuration"><a href="#configuration" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Configuration</h2>
 <p>To make my script also interesting for others, I tried to program different possibilities to create the dates and make them configurable.</p>
 <div class="highlight"><div class="chroma-dark">
-<table class="lntable"><tr><td class="lntd">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma-dark"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
@@ -371,14 +371,14 @@ Background Bremer Stadtreinigung offers the waste collection dates for download 
 <span class="c1"># Wie lange soll der Termin sein, wenn er nicht ganztägig ist? 0..23</span>
 <span class="n">duration_hour</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="c1">######</span>
-</code></pre></td></tr></table>
+</code></pre></td></tr></table></div>
 </div>
 </div><p>It can be set whether the appointment is to be created for a whole day or for a specific hour with a configurable duration. You can create the appointment on the day before the collection or on the correct day.
 You can have the type of collection written in the title or just „Müllabfuhr“. For the integration in Home Assistant you can enter an offset.</p>
 <h2 id="helper-variables"><a href="#helper-variables" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Helper Variables</h2>
 <p>Before we start reading the CSV file, I create some helper variables.</p>
 <div class="highlight"><div class="chroma-dark">
-<table class="lntable"><tr><td class="lntd">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma-dark"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
@@ -393,14 +393,14 @@ You can have the type of collection written in the title or just „Müllabfuhr�
 <span class="c1"># globale Variablen vorbelegen</span>
 <span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="n">c</span> <span class="o">=</span> <span class="n">Calendar</span><span class="p">()</span>
-</code></pre></td></tr></table>
+</code></pre></td></tr></table></div>
 </div>
 </div><p>The <code>offset_string</code> is required for the Home Assistant integration already mentioned. I use an f-string here to insert the content of the variable into the string. The expression <code>offset_hours:02d</code> ensures that one-digit numbers are inserted with leading zero.</p>
 <p>For the following code I additionally need an empty Dictionary <code>d</code> and an empty Calendar object <code>c</code>.</p>
 <h2 id="import-csv-file"><a href="#import-csv-file" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Import CSV file</h2>
 <p>The entries in the CSV file look like this:</p>
 <div class="highlight"><div class="chroma-dark">
-<table class="lntable"><tr><td class="lntd">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma-dark"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
@@ -411,11 +411,11 @@ You can have the type of collection written in the title or just „Müllabfuhr�
 &#34;Samstag&#34;;&#34;04.01.2020&#34;;&#34;Papier / Gelber Sack&#34;
 &#34;Mittwoch&#34;;&#34;08.01.2020&#34;;&#34;Bioabfall&#34;
 &#34;Mittwoch&#34;;&#34;08.01.2020&#34;;&#34;Restmüll&#34;
-</code></pre></td></tr></table>
+</code></pre></td></tr></table></div>
 </div>
 </div><p>The CSV file is read in line by line and the entries are pre-processed.</p>
 <div class="highlight"><div class="chroma-dark">
-<table class="lntable"><tr><td class="lntd">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma-dark"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
@@ -444,7 +444,7 @@ You can have the type of collection written in the title or just „Müllabfuhr�
             <span class="n">d</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span><span class="n">f</span><span class="s2">&#34;{d[row[1]]} / {row[2]}&#34;</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">d</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-</code></pre></td></tr></table>
+</code></pre></td></tr></table></div>
 </div>
 </div><p>The <code>csv.reader</code> requires the separator and the quote-character to read the file correctly.</p>
 <p>In the for loop, the heading is skipped first. Next, <code>if-row[1] in d</code> is used to check whether the date is already entered in my dictionary. If this is the case, the two collection types are combined via an f-string and the entry in the dictionary is updated.
@@ -453,7 +453,7 @@ Otherwise, a new entry is added to the dictionary.</p>
 <h2 id="create-events"><a href="#create-events" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Create Events</h2>
 <p>The next step is to iterate over the dictionary and fill the Calendar object created above with events. <code>d.items()</code> returns <em>Key</em> and <em>Value</em> as a tuple.</p>
 <div class="highlight"><div class="chroma-dark">
-<table class="lntable"><tr><td class="lntd">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma-dark"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
@@ -496,7 +496,7 @@ Otherwise, a new entry is added to the dictionary.</p>
     <span class="n">e</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="n">abfuhr</span>
     <span class="c1"># Event eintragen</span>
     <span class="n">c</span><span class="o">.</span><span class="n">events</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
-</code></pre></td></tr></table>
+</code></pre></td></tr></table></div>
 </div>
 </div><p>For the title of the event I use an f-string again to put several strings together.
 The expression <code>(' ' + abfuhr) if descriptive_title else ''</code> is a so-called <em>ternary operator</em>.
@@ -512,7 +512,7 @@ If it is configured above that the appointment is to be created on the day befor
 <h2 id="writing-the-ics-file"><a href="#writing-the-ics-file" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Writing the ICS file</h2>
 <p>The last step is to write the Calendar object to a file.</p>
 <div class="highlight"><div class="chroma-dark">
-<table class="lntable"><tr><td class="lntd">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma-dark"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
@@ -521,7 +521,7 @@ If it is configured above that the appointment is to be created on the day befor
 <pre class="chroma-dark"><code class="language-python" data-lang="python"><span class="c1"># Kalenderdatei schreiben</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;abfuhr.ics&#34;</span><span class="p">,</span> <span class="s2">&#34;w&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">f</span><span class="o">.</span><span class="n">writelines</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-</code></pre></td></tr></table>
+</code></pre></td></tr></table></div>
 </div>
 </div><p>The resulting file can now be imported into Google, for example.</p>
 
