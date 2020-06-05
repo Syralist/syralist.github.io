@@ -4,10 +4,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de-DE">
     <title type="text">Syralists Blog</title>
     <subtitle type="html">Syralists persöhnlicher Blog.</subtitle>
-    <updated>2020-05-19T23:10:29+02:00</updated>
+    <updated>2020-06-05T14:32:33&#43;02:00</updated>
     <id>https://syralist.github.io/</id>
     <link rel="alternate" type="text/html" href="https://syralist.github.io/" />
-    <link rel="self" type="application/atom+xml" href="https://syralist.github.io/atom.xml" />
+    <link rel="self" type="application/atom&#43;xml" href="https://syralist.github.io/atom.xml" />
     <author>
             <name>Thomas Helmke</name>
             <uri>https://syralist.github.io/</uri>
@@ -15,60 +15,349 @@
                 <email>thomas.helmke@gmx.de</email>
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights>
-    <generator uri="https://gohugo.io/" version="0.66.0">Hugo</generator>
+    <generator uri="https://gohugo.io/" version="0.71.1">Hugo</generator>
         <entry>
-            <title type="text">Website mit Hugo erstellen - Einstieg</title>
-            <link rel="alternate" type="text/html" href="https://syralist.github.io/posts/allgemein/website-mit-hugo/" />
-            <id>https://syralist.github.io/posts/allgemein/website-mit-hugo/</id>
-            <updated>2020-05-19T22:48:07+02:00</updated>
-            <published>2020-05-19T20:20:55+00:00</published>
+            <title type="text">Termine mit Python aufbereiten</title>
+            <link rel="alternate" type="text/html" href="https://syralist.github.io/posts/programmieren/termine_aufbereiten/" />
+            <id>https://syralist.github.io/posts/programmieren/termine_aufbereiten/</id>
+            <updated>2020-06-05T14:27:15&#43;02:00</updated>
+            <published>2020-06-05T12:03:21&#43;00:00</published>
             <author>
                     <name>Thomas Helmke</name>
                     <uri>https://syralist.github.io/</uri>
                     <email>thomas.helmke@gmx.de</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html"><![CDATA[Website mit Hugo erstellen &ndash; Einstieg Dieser Blog wird mit Hugo erstellt. In diesem Beitrag erzähle ich was es damit auf sich hat und wie ich dazu gekommen bin.
-Was ist Hugo? Hugo ist nach eigener Aussage das weltweit schnellste Framework für die Erstellung statischer Webseiten.]]></summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">In diesem Beitrag zeige ich, wie ich eine Liste mit Terminen einlese, verarbeite und dann im ICS Format abspeichere.
+Hintergrund Die Bremer Stadtreinigung bietet die Müllabfuhrtermine zum Download als ICS Datei und als CSV Datei an. Leider sind dabei für Restmüll und Biomüll jeweils zwei einzelne Termine eingetragen obwohl beides am gleichen Tag abgeholt wird.</summary>
             
-                <content type="html"><![CDATA[<h1 id="website-mit-hugo-erstellen----einstieg">Website mit Hugo erstellen &ndash; Einstieg</h1>
-<p>Dieser Blog wird mit <a href="https://gohugo.io/" title="Hugo">Hugo</a> erstellt. In diesem Beitrag erzähle ich was es damit auf sich hat und wie ich dazu gekommen bin.</p>
-<h2 id="was-ist-hugo">Was ist Hugo?</h2>
-<p>Hugo ist nach eigener Aussage das weltweit schnellste Framework für die Erstellung statischer Webseiten.
-Hugo ist in <strong>Go</strong> programmiert und verfügbar für alle gängigen Betriebssysteme.</p>
-<p>Die Beiträge werden in <strong>Markdown</strong> geschrieben und dann „kompiliert“ um die HTML Seiten zu erstellen. Das Aussehen wird dabei über <strong>Themes</strong> festgelegt.</p>
-<p>Damit ist der Workflow mit dem von $\LaTeX$ vergleichbar.</p>
-<h2 id="warum-hugo">Warum Hugo?</h2>
-<p>An den meisten Content-Management-Systemen wie Wordpress, Drupal, Typo3, etc. hat mich immer gestört, dass man dafür ein mehr oder weniger mächtiges Backend aufsetzen muss.
-Man braucht immer PHP oder Python und eine Datenbank, auch wenn man eigentlich nur einen einfachen Blog schreiben möchte.</p>
-<p>Im <a href="https://selfhosted.show/" title="Self-Hosted Podcast">Self Hosted</a> Podcast habe ich dann von Hugo gehört.</p>
-<h2 id="wie-geht-es-los">Wie geht es los?</h2>
-<h3 id="vorbereitung">Vorbereitung</h3>
-<p>Für Hugo gibt es diverse Installationsmethoden. Auf meinem Windowsrechner habe ich das Programm als ZIP heruntergeladen, unter Linux habe ich es mit Snap installiert. Details sind auf der <a href="https://gohugo.io/getting-started/installing" title="Hugo Installation">Hugo Webseite</a> zu finden.</p>
-<p>Es ist nicht zwingend erforderlich, aber es erleichtert einige Vorgänge, wenn man Git benutzt. Daher gehe ich in diesem Artikel davon aus, dass ihr Git installiert habt und über einen Github Account verfügt.</p>
-<h3 id="seite-anlegen">Seite anlegen</h3>
-<p>Das Grundgerüst der Seite legt man mit dem folgenden Kommando auf der Konsole an:</p>
-<pre><code class="language-console" data-lang="console">hugo new site meinblog
-</code></pre><p>Hugo erzeugt damit ein Unterverzeichnis mit dem Namen <code>meinblog</code> und diesem Inhalt:</p>
-<pre><code class="language-console" data-lang="console">archetypes/
+                <content type="html">&lt;p&gt;In diesem Beitrag zeige ich, wie ich eine Liste mit Terminen einlese, verarbeite und dann im ICS Format abspeichere.&lt;/p&gt;
+&lt;h1 id=&#34;hintergrund&#34;&gt;Hintergrund&lt;/h1&gt;
+&lt;p&gt;Die Bremer Stadtreinigung bietet die &lt;a href=&#34;https://www.die-bremer-stadtreinigung.de/privatkunden/entsorgung/bremer_abfallkalender-23080&#34; title=&#34;Bremer Abfallkalender&#34;&gt;Müllabfuhrtermine&lt;/a&gt; zum Download als ICS Datei und als CSV Datei an. Leider sind dabei für Restmüll und Biomüll jeweils zwei einzelne Termine eingetragen obwohl beides am gleichen Tag abgeholt wird.&lt;/p&gt;
+&lt;p&gt;Da ich die Termine ausserdem in mein Smarthome einbinde, um darüber Benachrichtungen zu erhalten, möchte ich sie ausserdem im einem bestimmten Format im Kalender stehen haben. Details zur Einbindung folgen in einem späteren Artikel.&lt;/p&gt;
+&lt;h1 id=&#34;das-python-skript&#34;&gt;Das Python-Skript&lt;/h1&gt;
+&lt;p&gt;Zu finden ist das fertige Skript hier auf &lt;a href=&#34;https://github.com/Syralist/Abfallkalender&#34; title=&#34;Syralist/Abfallkalender&#34;&gt;Github&lt;/a&gt;. Man braucht mindestens &lt;strong&gt;Python 3.6&lt;/strong&gt;, da ich f-Strings verwende.&lt;/p&gt;
+&lt;h2 id=&#34;imports&#34;&gt;Imports&lt;/h2&gt;
+&lt;p&gt;Zuerst werden die benötigte Module importiert. &lt;code&gt;ics&lt;/code&gt; und &lt;code&gt;arrow&lt;/code&gt; können über &lt;code&gt;pip&lt;/code&gt; installiert werden, die anderen Module sind in der Standardlibrary enthalten.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;csv&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;ics&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Calendar&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Event&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;arrow&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;dateutil&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tz&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;datetime&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;csv&lt;/code&gt; : Lesen und Schreiben von CSV Dateien&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ics&lt;/code&gt; : Lesen und Schreiben von ICS Dateien&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;arrow&lt;/code&gt; : erweiterte Funktionen für Zeitobjekte&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dateutil.tz&lt;/code&gt; : Zeitzonen-Definitionen&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;datetime&lt;/code&gt; : Standardfunktionen für Zeitobjekte&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;einstellungen&#34;&gt;Einstellungen&lt;/h2&gt;
+&lt;p&gt;Damit mein Skript auch für andere interessant ist, habe ich versucht, verschiedene Möglichkeiten die Termine zu erstellen zu programmieren und parametrierbar zu machen.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;c1&#34;&gt;###### Einstellungen ######&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# CSV-Datei von der Eno&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;csv_file&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Abfuhrtermine für  Auf dem Kamp.csv&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Soll die Art der Abfuhr in den Titel eingetragen werden? True/False&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;descriptive_title&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;True&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Soll für die HomeAssistant Integration ein Offset eingetragen werden? 0..23&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;offset_hours&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Soll ein ganztägiger Termin erzeugt werden? True/False&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;all_day&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;True&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Workaround für fehlerhafte All Day Events in ics.py aktivieren? True/False&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;ics_workaround&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;True&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Soll der Termin am Tag vor der Abfuhr erzeugt werden? True/False&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;on_day_before&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;False&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Zu welcher Stunde der Termin erzeugt werden, wenn er nicht ganztägig ist? 0..23&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;event_hour&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;18&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Wie lange soll der Termin sein, wenn er nicht ganztägig ist? 0..23&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;duration_hour&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;######&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Eingestellt werden kann, ob der Termin ganztägig oder zu einer bestimmten Stunde mit einer einstellbaren Dauer erzeugt werden soll. Dabei kann man den Termin am Vortag der Abfuhr erzeugen oder am richtigen Tag.
+Man kann die Art der Abfuhr mit in den Titel schreiben lassen oder nur „Müllabfuhr“. Für die Einbindung in Home Assistant kann man einen Offset eintragen lassen.&lt;/p&gt;
+&lt;h2 id=&#34;hilfsvariablen&#34;&gt;Hilfsvariablen&lt;/h2&gt;
+&lt;p&gt;Bevor es an das Einlesen der CSV Datei geht, erzeuge ich einige Hilfsvariablen.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Hilfsvariablen&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;offset_string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34; !!-{offset_hours:02d}:00&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# globale Variablen vorbelegen&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{}&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Calendar&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Der &lt;code&gt;offset_string&lt;/code&gt; wird für die schon angesprochene Home Assistant Einbindung benötigt. Ich benutze hier einen f-String, um den Inhalt der Variablen in den String einzufügen. Der Ausdruck &lt;code&gt;offset_hours:02d&lt;/code&gt; sorgt dafür, dass einstellige Zahlen mit führender Null eingefügt werden.&lt;/p&gt;
+&lt;p&gt;Für den folgenden Code brauche ich dann noch ein leeres Dictionary &lt;code&gt;d&lt;/code&gt; und ein leeres Calendar-Objekt &lt;code&gt;c&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;csv-datei-einlesen&#34;&gt;CSV Datei einlesen&lt;/h2&gt;
+&lt;p&gt;Die Einträge in der CSV-Datei sehen folgendermaßen aus:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&amp;#34;Wochentag&amp;#34;;&amp;#34;Datum&amp;#34;;&amp;#34;Abfuhrart&amp;#34;
+&amp;#34;Samstag&amp;#34;;&amp;#34;04.01.2020&amp;#34;;&amp;#34;Papier / Gelber Sack&amp;#34;
+&amp;#34;Mittwoch&amp;#34;;&amp;#34;08.01.2020&amp;#34;;&amp;#34;Bioabfall&amp;#34;
+&amp;#34;Mittwoch&amp;#34;;&amp;#34;08.01.2020&amp;#34;;&amp;#34;Restmüll&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Die CSV-Datei wird zeilenweise eingelesen und die Einträge vorverarbeitet.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Datei öffnen&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;csv_file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# CSV parsen&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;csv_reader&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;csv&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;reader&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;delimiter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;quotechar&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#34;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;row&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;csv_reader&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;row&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Wochentag&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+            &lt;span class=&#34;c1&#34;&gt;# Überschrift überspringen&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;continue&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;# Mehrere Abfuhren an einem Tag zusammenfassen&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;row&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;row&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;{d[row[1]]} / {row[2]}&amp;#34;&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;row&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;row&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Dem &lt;code&gt;csv.reader&lt;/code&gt; muss man dabei das Trennzeichen und den Quotechar mitgeben, damit die Datei korrekt eingelesen wird.&lt;/p&gt;
+&lt;p&gt;In der for-Schleife wird zuerst die Überschrift übersprungen. Als nächstes wird mit &lt;code&gt;if row[1] in d&lt;/code&gt; geprüft, ob das Datum schon in meinem Dictionary eingetragen ist. Wenn das der Fall ist, werden die beiden Abfuhrarten über einen f-String zusammengefasst und der Eintrag im Dictionary aktualisiert.
+Ansonsten wird einfach ein neuer Eintrag zum Dictionary hinzugefügt.&lt;/p&gt;
+&lt;p&gt;Damit habe ich nun ein Dictionary mit dem Datums-String als &lt;em&gt;key&lt;/em&gt; und der Abfuhrart als &lt;em&gt;value&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;events-anlegen&#34;&gt;Events anlegen&lt;/h2&gt;
+&lt;p&gt;Im nächsten Schritt wird jetzt über das Dictionary iteriert und das oben angelegte Calendar-Objekt mit Events befüllt. &lt;code&gt;d.items()&lt;/code&gt; gibt dabei jeweils &lt;em&gt;Key&lt;/em&gt; und &lt;em&gt;Value&lt;/em&gt; als Tuple zurück.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Zusammengefasste Termine ins ICS Format umandeln&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;datum&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;abfuhr&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;items&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;():&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# Event anlegen&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Event&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# Titel zusammenbauen&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Müllabfuhr{(&amp;#39; &amp;#39; + abfuhr) if descriptive_title else &amp;#39;&amp;#39;}{offset_string if offset_hours &amp;gt; 0 else &amp;#39;&amp;#39;}&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# Startzeitpunkt zusammenbauen&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;_date&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;datetime&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;datetime&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;strptime&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;datum&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;%d&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;.%m.%Y&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;replace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hour&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;event_hour&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tzinfo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tz&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gettz&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Europe/Berlin&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;begin&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;arrow&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_date&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ics_workaround&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;begin&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;begin&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;shift&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;days&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;begin&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;begin&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;shift&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;days&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;on_day_before&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# Dauer eintragen bzw. ganztägigen Termin erzeugen&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;duration&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;hours&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;duration_hour&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;all_day&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;make_all_day&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# Art der Abfuhr eintragen&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;description&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;abfuhr&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# Event eintragen&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;events&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Für den Titel des Events benutze ich wieder einen f-String, um mehrere Strings zusammenzusetzen.
+Der Ausdruck &lt;code&gt;(&#39; &#39; + abfuhr) if descriptive_title else &#39;&#39;&lt;/code&gt; ist ein sogennater &lt;em&gt;ternärer Operator&lt;/em&gt;.
+Wenn &lt;code&gt;descriptive_title&lt;/code&gt; auf &lt;code&gt;True&lt;/code&gt; gesetzt ist, wird der Teil vor dem &lt;code&gt;if&lt;/code&gt; benutzt, ansonsten der Teil hinter dem &lt;code&gt;else&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Der Startzeitpunkt wird zunächst als &lt;em&gt;datetime&lt;/em&gt; Objekt mit &lt;code&gt;strptime&lt;/code&gt; aus dem Key gelesen.
+Gleichzeitig wird mit &lt;code&gt;.replace&lt;/code&gt; die Stunde auf den oben definierten Wert gesetzt und die Zeitzone eingestellt.
+Das &lt;em&gt;datetime&lt;/em&gt; Objekt wird anschließend in &lt;em&gt;arrow&lt;/em&gt; Objekt umgewandelt, weil das vom ICS Modul erwartet wird.&lt;/p&gt;
+&lt;p&gt;Das ICS Modul hat in der verwendeten Version den Bug, dass bei ganztägigen Terminen die Zeitzone nicht berücksichtigt wird und so der Termin einen Tag zu früh erscheint. 
+Als Workaround schiebe ich daher den Termin mit &lt;code&gt;.shift&lt;/code&gt; einen Tag nach vorne, so dass er von ICS am richtigen Tag erzeugt wird. 
+Wenn oben konfiguriert ist, dass der Termin am Tag vor der Abfuhr erzeugt werden soll, wird mit dem gleichen Befehl der Zeitpunkt wieder nach hinten geschoben.&lt;/p&gt;
+&lt;p&gt;Nun wird die oben eingestellte Dauer in den Termin eingetragen und anschließend gegebenenfalls der Termin in einen ganztägigen Termin umgewandelt.&lt;/p&gt;
+&lt;p&gt;Zu guter Letzt wird die Abfuhrart in die Terminbeschreibung eingetragen und das Event zum Calender Objekt hinzugefügt.&lt;/p&gt;
+&lt;h2 id=&#34;ics-datei-schreiben&#34;&gt;ICS Datei schreiben&lt;/h2&gt;
+&lt;p&gt;Der letzte Schritt ist dann das Calendar Objekt in eine Datei zu schreiben.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Kalenderdatei schreiben&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;abfuhr.ics&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;w&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;writelines&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Die entstandene Datei kann man nun zum Beispiel in Google importieren.&lt;/p&gt;
+</content>
+            
+            
+            
+                
+                
+                
+                    
+                    
+                    
+                        
+                            <category scheme="https://syralist.github.io/posts/programmieren/" term="posts\programmieren\" label="posts\programmieren\" />
+                        
+                    
+                
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://syralist.github.io/tags/python/" term="Python" label="Python" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://syralist.github.io/tags/home-assistant/" term="Home Assistant" label="Home Assistant" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://syralist.github.io/tags/datatransformation/" term="Datatransformation" label="Datatransformation" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://syralist.github.io/tags/ics/" term="ICS" label="ICS" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">Website mit Hugo erstellen – Einstieg</title>
+            <link rel="alternate" type="text/html" href="https://syralist.github.io/posts/allgemein/website-mit-hugo/" />
+            <id>https://syralist.github.io/posts/allgemein/website-mit-hugo/</id>
+            <updated>2020-05-30T19:36:31&#43;02:00</updated>
+            <published>2020-05-19T20:20:55&#43;00:00</published>
+            <author>
+                    <name>Thomas Helmke</name>
+                    <uri>https://syralist.github.io/</uri>
+                    <email>thomas.helmke@gmx.de</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Dieser Blog wird mit Hugo erstellt. In diesem Beitrag erzähle ich was es damit auf sich hat und wie ich dazu gekommen bin.
+Was ist Hugo? Hugo ist nach eigener Aussage das weltweit schnellste Framework für die Erstellung statischer Webseiten. Hugo ist in Go programmiert und verfügbar für alle gängigen Betriebssysteme.</summary>
+            
+                <content type="html">&lt;p&gt;Dieser Blog wird mit &lt;a href=&#34;https://gohugo.io/&#34; title=&#34;Hugo&#34;&gt;Hugo&lt;/a&gt; erstellt. In diesem Beitrag erzähle ich was es damit auf sich hat und wie ich dazu gekommen bin.&lt;/p&gt;
+&lt;h1 id=&#34;was-ist-hugo&#34;&gt;Was ist Hugo?&lt;/h1&gt;
+&lt;p&gt;Hugo ist nach eigener Aussage das weltweit schnellste Framework für die Erstellung statischer Webseiten.
+Hugo ist in &lt;strong&gt;Go&lt;/strong&gt; programmiert und verfügbar für alle gängigen Betriebssysteme.&lt;/p&gt;
+&lt;p&gt;Die Beiträge werden in &lt;strong&gt;Markdown&lt;/strong&gt; geschrieben und dann „kompiliert“ um die HTML Seiten zu erstellen. Das Aussehen wird dabei über &lt;strong&gt;Themes&lt;/strong&gt; festgelegt.&lt;/p&gt;
+&lt;p&gt;Damit ist der Workflow mit dem von $\LaTeX$ vergleichbar.&lt;/p&gt;
+&lt;h1 id=&#34;warum-hugo&#34;&gt;Warum Hugo?&lt;/h1&gt;
+&lt;p&gt;An den meisten Content-Management-Systemen wie Wordpress, Drupal, Typo3, etc. hat mich immer gestört, dass man dafür ein mehr oder weniger mächtiges Backend aufsetzen muss.
+Man braucht immer PHP oder Python und eine Datenbank, auch wenn man eigentlich nur einen einfachen Blog schreiben möchte.&lt;/p&gt;
+&lt;p&gt;Im &lt;a href=&#34;https://selfhosted.show/&#34; title=&#34;Self-Hosted Podcast&#34;&gt;Self Hosted&lt;/a&gt; Podcast habe ich dann von Hugo gehört.&lt;/p&gt;
+&lt;h1 id=&#34;wie-geht-es-los&#34;&gt;Wie geht es los?&lt;/h1&gt;
+&lt;h2 id=&#34;vorbereitung&#34;&gt;Vorbereitung&lt;/h2&gt;
+&lt;p&gt;Für Hugo gibt es diverse Installationsmethoden. Auf meinem Windowsrechner habe ich das Programm als ZIP heruntergeladen, unter Linux habe ich es mit Snap installiert. Details sind auf der &lt;a href=&#34;https://gohugo.io/getting-started/installing&#34; title=&#34;Hugo Installation&#34;&gt;Hugo Webseite&lt;/a&gt; zu finden.&lt;/p&gt;
+&lt;p&gt;Es ist nicht zwingend erforderlich, aber es erleichtert einige Vorgänge, wenn man Git benutzt. Daher gehe ich in diesem Artikel davon aus, dass ihr Git installiert habt und über einen Github Account verfügt.&lt;/p&gt;
+&lt;h2 id=&#34;seite-anlegen&#34;&gt;Seite anlegen&lt;/h2&gt;
+&lt;p&gt;Das Grundgerüst der Seite legt man mit dem folgenden Kommando auf der Konsole an:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;hugo new site meinblog
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Hugo erzeugt damit ein Unterverzeichnis mit dem Namen &lt;code&gt;meinblog&lt;/code&gt; und diesem Inhalt:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;archetypes/
 config.toml
 content/
 data/
 layouts/
 static/
 themes/
-</code></pre><p>Als nächstes sollte man sich ein Theme aus der <a href="https://themes.gohugo.io/" title="Hugo Themes List">Hugo Theme Liste</a> aussuchen. Ich habe einige ausprobiert und mich schließlich für das MemE Theme entschieden. Die Installation funktioniert am einfachsten mit Git wie im <a href="https://github.com/reuixiy/hugo-theme-meme" title="MemE Readme">README</a> beschrieben.
-Die <code>config.toml</code> muss man an seine eigenen Bedürfnisse anpassen. Dazu folgt noch ein weiterer Artikel.</p>
-<h3 id="artikel-anlegen">Artikel anlegen</h3>
-<p>Artikel legt man im Verzeichnis <code>content</code> als .md-Dateien an. Dabei kann man optional Unterordner als Kategorien anlegen. Man kann die Datei manuell anlegen oder diesen Hugo-Befehl dafür benutzen:</p>
-<pre><code class="language-console" data-lang="console">hugo new posts/my-first-post.md
-</code></pre><p>Der Vorteil gegenüber dem manuellen Anlegen ist, dass gleich ein Frontmatter mit angelegt wird. Das ist der Konfigurationsbereich des Artikels, wo Aussehen und Verhalten angepasst werden kann. Auch dazu folgt noch ein weiterer Artikel.</p>
-<p>In diesem Zustand kann man jetzt schon den integrierten Server starten und die (leere) Seite anzeigen:</p>
-<pre><code class="language-console" data-lang="console">hugo server -D
-</code></pre><p>Die Option <code>-D</code> an dieser Stelle ist wichtig, damit auch Artikel die als Draft (also Entwurf) gekennzeichnet sind erzeugt und angezeigt werden.</p>
-<p>Jetzt kann man seine Artikel schreiben. Wenn der Server im Hintergrund läuft, wird die Seite automatisch neu erzeugt und im Browser aktualisiert, sobald man eine Datei ändert und speichert.</p>
-<h3 id="seite-veröffentlichen">Seite veröffentlichen</h3>
-<p>Wenn man fertig mit seinen Artikeln ist ruft man <code>hugo</code> ohne weitere Optionen auf. Damit wird im Unterverzeichnis <code>public</code> die fertige Webseite mit allen nötigen Dateien erzeugt. Dieses Verzeichnis kann jetzt auf jedem Webserver gehostet werden. Der Workflow für das Hosten als github.io Seite wird auf der <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/" title="Hosting-on-Github">Hugo-Webseite</a> gezeigt.</p>
-]]></content>
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Als nächstes sollte man sich ein Theme aus der &lt;a href=&#34;https://themes.gohugo.io/&#34; title=&#34;Hugo Themes List&#34;&gt;Hugo Theme Liste&lt;/a&gt; aussuchen. Ich habe einige ausprobiert und mich schließlich für das MemE Theme entschieden. Die Installation funktioniert am einfachsten mit Git wie im &lt;a href=&#34;https://github.com/reuixiy/hugo-theme-meme&#34; title=&#34;MemE Readme&#34;&gt;README&lt;/a&gt; beschrieben.
+Die &lt;code&gt;config.toml&lt;/code&gt; muss man an seine eigenen Bedürfnisse anpassen. Dazu folgt noch ein weiterer Artikel.&lt;/p&gt;
+&lt;h2 id=&#34;artikel-anlegen&#34;&gt;Artikel anlegen&lt;/h2&gt;
+&lt;p&gt;Artikel legt man im Verzeichnis &lt;code&gt;content&lt;/code&gt; als .md-Dateien an. Dabei kann man optional Unterordner als Kategorien anlegen. Man kann die Datei manuell anlegen oder diesen Hugo-Befehl dafür benutzen:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;hugo new posts/my-first-post.md
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Der Vorteil gegenüber dem manuellen Anlegen ist, dass gleich ein Frontmatter mit angelegt wird. Das ist der Konfigurationsbereich des Artikels, wo Aussehen und Verhalten angepasst werden kann. Auch dazu folgt noch ein weiterer Artikel.&lt;/p&gt;
+&lt;p&gt;In diesem Zustand kann man jetzt schon den integrierten Server starten und die (leere) Seite anzeigen:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;hugo server -D
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Die Option &lt;code&gt;-D&lt;/code&gt; an dieser Stelle ist wichtig, damit auch Artikel die als Draft (also Entwurf) gekennzeichnet sind erzeugt und angezeigt werden.&lt;/p&gt;
+&lt;p&gt;Jetzt kann man seine Artikel schreiben. Wenn der Server im Hintergrund läuft, wird die Seite automatisch neu erzeugt und im Browser aktualisiert, sobald man eine Datei ändert und speichert.&lt;/p&gt;
+&lt;h2 id=&#34;seite-veröffentlichen&#34;&gt;Seite veröffentlichen&lt;/h2&gt;
+&lt;p&gt;Wenn man fertig mit seinen Artikeln ist ruft man &lt;code&gt;hugo&lt;/code&gt; ohne weitere Optionen auf. Damit wird im Unterverzeichnis &lt;code&gt;public&lt;/code&gt; die fertige Webseite mit allen nötigen Dateien erzeugt. Dieses Verzeichnis kann jetzt auf jedem Webserver gehostet werden. Der Workflow für das Hosten als github.io Seite wird auf der &lt;a href=&#34;https://gohugo.io/hosting-and-deployment/hosting-on-github/&#34; title=&#34;Hosting-on-Github&#34;&gt;Hugo-Webseite&lt;/a&gt; gezeigt.&lt;/p&gt;
+</content>
             
             
             
@@ -77,6 +366,10 @@ Die <code>config.toml</code> muss man an seine eigenen Bedürfnisse anpassen. Da
                 
                     
                     
+                    
+                        
+                            <category scheme="https://syralist.github.io/posts/allgemein/" term="posts\allgemein\" label="posts\allgemein\" />
+                        
                     
                 
             
@@ -106,206 +399,205 @@ Die <code>config.toml</code> muss man an seine eigenen Bedürfnisse anpassen. Da
             <title type="text">Umweltsensor mit ESPHome in Home Assistant</title>
             <link rel="alternate" type="text/html" href="https://syralist.github.io/posts/smarthome/esphome-sensor/" />
             <id>https://syralist.github.io/posts/smarthome/esphome-sensor/</id>
-            <updated>2020-04-03T19:57:08+02:00</updated>
-            <published>2020-04-03T12:53:16+02:00</published>
+            <updated>2020-05-26T18:54:27&#43;02:00</updated>
+            <published>2020-04-03T12:53:16&#43;02:00</published>
             <author>
                     <name>Thomas Helmke</name>
                     <uri>https://syralist.github.io/</uri>
                     <email>thomas.helmke@gmx.de</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html"><![CDATA[Umweltsensor mit ESPHome in Home Assistant In diesem Beitrag zeige ich die Schritte, um meinen Umweltsensor mit Button nachzubauen. Der Sensor misst Temperatur, Luftfeuchtigkeit und Luftdruck und hat einen Button um beliebige Aktionen auszulösen.
-Vorbereitung Was ist ESPHome? Laut der Selbstbeschreibung auf esphome.]]></summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">In diesem Beitrag zeige ich die Schritte, um meinen Umweltsensor mit Button nachzubauen. Der Sensor misst Temperatur, Luftfeuchtigkeit und Luftdruck und hat einen Button um beliebige Aktionen auszulösen.
+Vorbereitung Was ist ESPHome? Laut der Selbstbeschreibung auf esphome.io ist ESPHome ein System, um ESP8266 bzw.</summary>
             
-                <content type="html"><![CDATA[<h1 id="umweltsensor-mit-esphome-in-home-assistant">Umweltsensor mit ESPHome in Home Assistant</h1>
-<p>In diesem Beitrag zeige ich die Schritte, um meinen Umweltsensor mit Button nachzubauen. Der Sensor misst Temperatur, Luftfeuchtigkeit und Luftdruck und hat einen Button um beliebige Aktionen auszulösen.</p>
-<p><img src="/images/2020-04-03-esphome-hardware-01.jpg" alt="Fertige Box"></p>
-<h2 id="vorbereitung">Vorbereitung</h2>
-<h3 id="was-ist-esphome">Was ist ESPHome?</h3>
-<p>Laut der Selbstbeschreibung auf <a href="https://esphome.io/" title="ESPHome">esphome.io</a> ist ESPHome ein System, um ESP8266 bzw. ESP32 Mikrocontroller mit Hilfe von einfachen Konfigurationsdateien zu programmieren.</p>
-<p>ESPHome ist in Python geschrieben und lässt sich auch ohne Home Assistant einfach über <code>pip install esphome</code> oder mit <code>docker pull esphome/esphome</code> installieren. Ich benutze ESPHome als Home Assistant Addon, da bekommt man noch eine Weboberfläche zur Administration dazu.</p>
-<h3 id="benötigte-hardware">Benötigte Hardware</h3>
-<ul>
-<li>ESP8266 Mikrocontroller - z.B. Wemos D1 mini</li>
-<li>BME280 Sensor - mit I²C Breakoutboard</li>
-<li>Drucktaster</li>
-</ul>
-<p><img src="/images/2020-04-03-esphome-hardware-02.jpg" alt="Fertige Box offen"></p>
-<p>Das Gehäuse ist aus 3mm MDF gelasert. Ein Generator für solche Gehäuse ist zum Beispiel <a href="https://www.festi.info/boxes.py/" title="boxes.py">boxes.py</a>.</p>
-<h3 id="sensor-und-button-anschließen">Sensor und Button anschließen</h3>
-<p>Der BME280 wird per I²C angeschlossen, dafür brauchen wir die folgenden Pins:</p>
-<ul>
-<li>5V → VIN</li>
-<li>G   → GND</li>
-<li>D4 → SDA</li>
-<li>D5 → SCL</li>
-</ul>
-<p>Den Pin für den Button kann man frei wählen, allerdings gibt es einige Pins, die spezielle Funktionen beim Booten auslösen. Ich habe hier Pin D3 verwendet, der zweite Pin des Buttons wird mit GND verbunden.</p>
-<p><img src="/images/2020-04-03-esphome-hardware-04.jpg" alt="Platine von unten"></p>
-<p>Ich habe das ganze mit Sockeln auf einer Lochrasterplatine aufgebaut, um die Bauteile leicht wieder auseinanderbauen zu können.</p>
-<p><img src="/images/2020-04-03-esphome-hardware-03.jpg" alt="Platine von oben"></p>
-<h2 id="esphome-projekt-in-home-assistant">ESPHome Projekt in Home Assistant</h2>
-<h3 id="projekt-anlegen">Projekt anlegen</h3>
-<p>Auf der Weboberfläche klickt man auf den freundlichen roten Button mit dem Plus, um den Wizard für neue Projekte aufzurufen.</p>
-<p><img src="/images/2020-04-03-esphome-01.png" alt="ESPHome Weboberfläche"></p>
-<p>Als erstes vergibt man einen Namen.</p>
-<p><img src="/images/2020-04-03-esphome-02.png" alt="ESPHome Wizard Schritt 1"></p>
-<p>Zweiter Schritt ist die Auswahl des Mikrocontrollers. Ich benutze für die meisten Projekte den Wemos D1 mini.</p>
-<p><img src="/images/2020-04-03-esphome-03.png" alt="ESPHome Wizard Schritt 2"></p>
-<p>Als letztes folgt die Angabe der WLan-Daten und des Passworts für das Over-the-air Update. Ich benutze hier die von Home Assistant bekannte <code>!secret</code> Notation. Details dazu weiter unten.</p>
-<p><img src="/images/2020-04-03-esphome-04.png" alt="ESPHome Wizard Schritt 3"></p>
-<p>Nun ist der Wizard abgeschlossen und zeigt uns die nächsten Schritte, um den Mikrocontroller zu programmieren.</p>
-<p><img src="/images/2020-04-03-esphome-05.png" alt="ESPHome Wizard Schritt 4"></p>
-<p>Nachdem man den Wizard mit <strong>Submit</strong> geschlossen hat, wird man noch auf die Schnittstellenauswahl in der oberen Ecke hingewiesen.</p>
-<p><img src="/images/2020-04-03-esphome-06.png" alt="ESPHome Wizard Schritt 5"></p>
-<h3 id="dateiorganisation-und-secrets">Dateiorganisation und !secrets</h3>
-<p>In Home Assistant liegen die Projektdateien im Verzeichnis <code>/config/esphome</code>. Das Beispiel oben hat eine <code>umweltsensor.yaml</code> erzeugt.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">esphome</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="k">name</span><span class="p">:</span><span class="w"> </span>umweltsensor<span class="w">
-</span><span class="w">  </span><span class="k">platform</span><span class="p">:</span><span class="w"> </span>ESP8266<span class="w">
-</span><span class="w">  </span><span class="k">board</span><span class="p">:</span><span class="w"> </span>d1_mini<span class="w">
-</span><span class="w"></span><span class="k">wifi</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="k">ssid</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;!secret wifi-ssid&#34;</span><span class="w">
-</span><span class="w">  </span><span class="k">password</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;!secret wifi-password&#34;</span><span class="w">
-</span><span class="w">  </span><span class="c"># Enable fallback hotspot (captive portal) in case wifi connection fails</span><span class="w">
-</span><span class="w">  </span><span class="k">ap</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="k">ssid</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Umweltsensor Fallback Hotspot&#34;</span><span class="w">
-</span><span class="w">    </span><span class="k">password</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;lg2kCzecpat7&#34;</span><span class="w">
-</span><span class="w"></span><span class="k">captive_portal</span><span class="p">:</span><span class="w">
-</span><span class="w"></span><span class="c"># Enable logging</span><span class="w">
-</span><span class="w"></span><span class="k">logger</span><span class="p">:</span><span class="w">
-</span><span class="w"></span><span class="c"># Enable Home Assistant API</span><span class="w">
-</span><span class="w"></span><span class="k">api</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="k">password</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;!secret esphome-password&#34;</span><span class="w">
-</span><span class="w"></span><span class="k">ota</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="k">password</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;!secret esphome-password&#34;</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><p>Im gleichen Verzeichnis habe ich eine <code>secrets.yaml</code> angelegt. Die Einträge darin können in anderen <code>.yaml</code> Dateien mit <code>!secret</code> importiert werden. Das hat den Vorteil, dass man die Projektdatei mit anderen teilen kann, so wie ich hier, ohne dass man seine Zugangsdaten weitergibt.</p>
-<p><img src="/images/2020-04-03-esphome-07.png" alt="ESPHome secrets.yaml"></p>
-<h3 id="das-erste-mal-flashen">Das erste Mal Flashen</h3>
-<p>Zum ersten Flashen muss der Mikrocontroller per USB mit dem Rechner verdunden werden, auf dem ESPHome läuft. In meinem Fall ist das der Raspberry Pi auf dem Home Assistant installiert ist.</p>
-<p>Meistens wird der Port des Mikrocontrollers nicht sofort angezeigt, wenn man das USB Kabel anschließt. Das hängt mit dem Docker System zusammen auf dem Home Assistant basiert. Der Workaround ist das Addon neuzustarten, nachdem der Mikrocontroller angeschlossen ist.</p>
-<p>Wenn nichts anderes angeschlossen ist, wird wahrscheinlich <code>/dev/ttyUSB0</code> angezeigt, in meinem Fall ist der Mikrocontroller an <code>/dev/ttyUSB1</code>.</p>
-<p><img src="/images/2020-04-03-esphome-08.png" alt="ESPHome Port Auswahl"></p>
-<p>Damit die Zugangsdaten korrekt importiert werden, müssen wir noch die erzeugte <code>.yaml</code> Datei bearbeiten und die Anführungszeichen bei allen Einträgen mit <code>!secret</code> entfernen. Dazu klickt man auf <strong>EDIT</strong> unter dem entsprechenden Eintrag.</p>
-<p><img src="/images/2020-04-03-esphome-09.png" alt="ESPHome Edit Button"></p>
-<p>Als letztes klickt man auf <strong>UPLOAD</strong> um das Flashen zu starten.</p>
-<p><img src="/images/2020-04-03-esphome-10.png" alt="ESPHome Upload"></p>
-<p>Wenn alles korrekt funktioniert hat, sollte nun aus der <code>.yaml</code> Datei der Arduino-Code generiert werden. Dabei werden im Hintergrund alle benötigten Bibliotheken heruntergeladen, der Code kompiliert und der Upload gestartet.</p>
-<p><img src="/images/2020-04-03-esphome-11.png" alt="ESPHome Upload"></p>
-<p>In der folgenden Logging-Ausgabe kann man kontrollieren, ob man die WLAN Daten korrekt eingeben hat.</p>
-<p><img src="/images/2020-04-03-esphome-12.png" alt="ESPHome Upload"></p>
-<p>Ab jetzt kann man den Mikrocontroller vom Raspberry Pi trennen und übers WLAN programmieren. Dafür stellt man die Schnittstelle oben auf Over-the-Air um.</p>
-<h3 id="sensor-und-button-konfigurieren">Sensor und Button konfigurieren</h3>
-<p>Damit der Sensor angesprochen werden kann wird als erstes die I²C Komponente geladen. Die Option <code>scan: True</code> sorgt dafür, dass bei jedem Boot der Bus nach Geräten gescannt wird.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">i2c</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="k">sda</span><span class="p">:</span><span class="w"> </span><span class="m">4</span><span class="w">
-</span><span class="w">  </span><span class="k">scl</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="w">
-</span><span class="w">  </span><span class="k">scan</span><span class="p">:</span><span class="w"> </span>True<span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><p>Da der BME280 drei Größen misst, müssen entsprechend die drei Optionen <code>temperature</code>, <code>pressure</code> und <code>humidity</code> konfiguriert werden.</p>
-<p>Unter <code>filters:</code> ist beim Temperatursensor ein statischer Offset von -7 Grad eingestellt, den ich im Vergleich mit einem zweiten Sensor ermittelt habe. Ebenso ist bei der Luftfeuchtigkeit ein statischer Offset von +10 Prozent eingestellt.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">sensor</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span>- <span class="k">platform</span><span class="p">:</span><span class="w"> </span>bme280<span class="w">
-</span><span class="w">    </span><span class="k">temperature</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span><span class="k">name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Thomas Zimmer Temperatur&#34;</span><span class="w">
-</span><span class="w">      </span><span class="k">oversampling</span><span class="p">:</span><span class="w"> </span>16x<span class="w">
-</span><span class="w">      </span><span class="k">filters</span><span class="p">:</span><span class="w">
-</span><span class="w">        </span>- <span class="k">offset</span><span class="p">:</span><span class="w"> </span>-<span class="m">7.0</span><span class="w">
-</span><span class="w">    </span><span class="k">pressure</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span><span class="k">name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Thomas Zimmer Luftdruck&#34;</span><span class="w">
-</span><span class="w">    </span><span class="k">humidity</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span><span class="k">name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Thomas Zimmer Feuchtigkeit&#34;</span><span class="w">
-</span><span class="w">      </span><span class="k">filters</span><span class="p">:</span><span class="w">
-</span><span class="w">        </span>- <span class="k">offset</span><span class="p">:</span><span class="w"> </span>+<span class="m">10.0</span><span class="w">
-</span><span class="w">    </span><span class="k">address</span><span class="p">:</span><span class="w"> </span><span class="m">0x76</span><span class="w">
-</span><span class="w">    </span><span class="k">update_interval</span><span class="p">:</span><span class="w"> </span>60s<span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><p>Der Button wird als Binärsensor konfiguriert. Da der Button mit GND verbunden ist, muss hier der interne Pullup-Widerstand aktiviert werden und mit <code>inverted: True</code> der Zustand invertiert werden. Damit liefert der Sensor <strong>on</strong>, wenn der Button gedrückt wird.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">binary_sensor</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span>- <span class="k">platform</span><span class="p">:</span><span class="w"> </span>gpio<span class="w">
-</span><span class="w">    </span><span class="k">pin</span><span class="p">:</span><span class="w"> 
-</span><span class="w">      </span><span class="k">number</span><span class="p">:</span><span class="w"> </span>D3<span class="w">
-</span><span class="w">      </span><span class="k">mode</span><span class="p">:</span><span class="w"> </span>INPUT_PULLUP<span class="w">
-</span><span class="w">      </span><span class="k">inverted</span><span class="p">:</span><span class="w"> </span>True<span class="w">
-</span><span class="w">    </span><span class="k">name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Thomas Zimmer Button&#34;</span><span class="w">
-</span><span class="w">    </span><span class="k">filters</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- <span class="k">delayed_on</span><span class="p">:</span><span class="w"> </span>10ms<span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><h3 id="mit-home-assistant-verbinden">Mit Home Assistant verbinden</h3>
-<p>Nachdem das vollständige Programm auf den Mikrocontroller geladen ist, müssen die Sensoren noch in Home Assistant einbunden werden. Die Einrichtung erfolgt über die Integrationsseite in den Home Assistant Einstellungen.</p>
-<p><img src="/images/2020-04-03-esphome-13.png" alt="ESPHome Integration"></p>
-<p>Als Hostadresse gibt man den Namen des Projekts ein, in diesem Fall <code>umweltsensor.local</code>.</p>
-<p><img src="/images/2020-04-03-esphome-14.png" alt="ESPHome Integration"></p>
-<p>Nach der API Passwort Abfrage werden automatisch die Entities für die konfigurierten Sensoren zu Home Assitant hinzugefügt.</p>
-<p><img src="/images/2020-04-03-esphome-15.png" alt="ESPHome Integration"></p>
-]]></content>
+                <content type="html">&lt;p&gt;In diesem Beitrag zeige ich die Schritte, um meinen Umweltsensor mit Button nachzubauen. Der Sensor misst Temperatur, Luftfeuchtigkeit und Luftdruck und hat einen Button um beliebige Aktionen auszulösen.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-hardware-01.jpg&#34; alt=&#34;Fertige Box&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;vorbereitung&#34;&gt;Vorbereitung&lt;/h1&gt;
+&lt;h2 id=&#34;was-ist-esphome&#34;&gt;Was ist ESPHome?&lt;/h2&gt;
+&lt;p&gt;Laut der Selbstbeschreibung auf &lt;a href=&#34;https://esphome.io/&#34; title=&#34;ESPHome&#34;&gt;esphome.io&lt;/a&gt; ist ESPHome ein System, um ESP8266 bzw. ESP32 Mikrocontroller mit Hilfe von einfachen Konfigurationsdateien zu programmieren.&lt;/p&gt;
+&lt;p&gt;ESPHome ist in Python geschrieben und lässt sich auch ohne Home Assistant einfach über &lt;code&gt;pip install esphome&lt;/code&gt; oder mit &lt;code&gt;docker pull esphome/esphome&lt;/code&gt; installieren. Ich benutze ESPHome als Home Assistant Addon, da bekommt man noch eine Weboberfläche zur Administration dazu.&lt;/p&gt;
+&lt;h2 id=&#34;benötigte-hardware&#34;&gt;Benötigte Hardware&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ESP8266 Mikrocontroller - z.B. Wemos D1 mini&lt;/li&gt;
+&lt;li&gt;BME280 Sensor - mit I²C Breakoutboard&lt;/li&gt;
+&lt;li&gt;Drucktaster&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-hardware-02.jpg&#34; alt=&#34;Fertige Box offen&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Das Gehäuse ist aus 3mm MDF gelasert. Ein Generator für solche Gehäuse ist zum Beispiel &lt;a href=&#34;https://www.festi.info/boxes.py/&#34; title=&#34;boxes.py&#34;&gt;boxes.py&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;sensor-und-button-anschließen&#34;&gt;Sensor und Button anschließen&lt;/h2&gt;
+&lt;p&gt;Der BME280 wird per I²C angeschlossen, dafür brauchen wir die folgenden Pins:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;5V → VIN&lt;/li&gt;
+&lt;li&gt;G   → GND&lt;/li&gt;
+&lt;li&gt;D4 → SDA&lt;/li&gt;
+&lt;li&gt;D5 → SCL&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Den Pin für den Button kann man frei wählen, allerdings gibt es einige Pins, die spezielle Funktionen beim Booten auslösen. Ich habe hier Pin D3 verwendet, der zweite Pin des Buttons wird mit GND verbunden.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-hardware-04.jpg&#34; alt=&#34;Platine von unten&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Ich habe das ganze mit Sockeln auf einer Lochrasterplatine aufgebaut, um die Bauteile leicht wieder auseinanderbauen zu können.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-hardware-03.jpg&#34; alt=&#34;Platine von oben&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;esphome-projekt-in-home-assistant&#34;&gt;ESPHome Projekt in Home Assistant&lt;/h1&gt;
+&lt;h2 id=&#34;projekt-anlegen&#34;&gt;Projekt anlegen&lt;/h2&gt;
+&lt;p&gt;Auf der Weboberfläche klickt man auf den freundlichen roten Button mit dem Plus, um den Wizard für neue Projekte aufzurufen.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-01.png&#34; alt=&#34;ESPHome Weboberfläche&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Als erstes vergibt man einen Namen.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-02.png&#34; alt=&#34;ESPHome Wizard Schritt 1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Zweiter Schritt ist die Auswahl des Mikrocontrollers. Ich benutze für die meisten Projekte den Wemos D1 mini.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-03.png&#34; alt=&#34;ESPHome Wizard Schritt 2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Als letztes folgt die Angabe der WLan-Daten und des Passworts für das Over-the-air Update. Ich benutze hier die von Home Assistant bekannte &lt;code&gt;!secret&lt;/code&gt; Notation. Details dazu weiter unten.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-04.png&#34; alt=&#34;ESPHome Wizard Schritt 3&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Nun ist der Wizard abgeschlossen und zeigt uns die nächsten Schritte, um den Mikrocontroller zu programmieren.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-05.png&#34; alt=&#34;ESPHome Wizard Schritt 4&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Nachdem man den Wizard mit &lt;strong&gt;Submit&lt;/strong&gt; geschlossen hat, wird man noch auf die Schnittstellenauswahl in der oberen Ecke hingewiesen.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-06.png&#34; alt=&#34;ESPHome Wizard Schritt 5&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;dateiorganisation-und-secrets&#34;&gt;Dateiorganisation und !secrets&lt;/h2&gt;
+&lt;p&gt;In Home Assistant liegen die Projektdateien im Verzeichnis &lt;code&gt;/config/esphome&lt;/code&gt;. Das Beispiel oben hat eine &lt;code&gt;umweltsensor.yaml&lt;/code&gt; erzeugt.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;k&#34;&gt;esphome&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;umweltsensor&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;platform&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;ESP8266&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;board&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;d1_mini&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;wifi&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;ssid&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;!secret wifi-ssid&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;!secret wifi-password&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Enable fallback hotspot (captive portal) in case wifi connection fails&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;ap&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;ssid&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Umweltsensor Fallback Hotspot&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;lg2kCzecpat7&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;captive_portal&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Enable logging&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;logger&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Enable Home Assistant API&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;api&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;!secret esphome-password&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;ota&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;!secret esphome-password&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Im gleichen Verzeichnis habe ich eine &lt;code&gt;secrets.yaml&lt;/code&gt; angelegt. Die Einträge darin können in anderen &lt;code&gt;.yaml&lt;/code&gt; Dateien mit &lt;code&gt;!secret&lt;/code&gt; importiert werden. Das hat den Vorteil, dass man die Projektdatei mit anderen teilen kann, so wie ich hier, ohne dass man seine Zugangsdaten weitergibt.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-07.png&#34; alt=&#34;ESPHome secrets.yaml&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;das-erste-mal-flashen&#34;&gt;Das erste Mal Flashen&lt;/h2&gt;
+&lt;p&gt;Zum ersten Flashen muss der Mikrocontroller per USB mit dem Rechner verdunden werden, auf dem ESPHome läuft. In meinem Fall ist das der Raspberry Pi auf dem Home Assistant installiert ist.&lt;/p&gt;
+&lt;p&gt;Meistens wird der Port des Mikrocontrollers nicht sofort angezeigt, wenn man das USB Kabel anschließt. Das hängt mit dem Docker System zusammen auf dem Home Assistant basiert. Der Workaround ist das Addon neuzustarten, nachdem der Mikrocontroller angeschlossen ist.&lt;/p&gt;
+&lt;p&gt;Wenn nichts anderes angeschlossen ist, wird wahrscheinlich &lt;code&gt;/dev/ttyUSB0&lt;/code&gt; angezeigt, in meinem Fall ist der Mikrocontroller an &lt;code&gt;/dev/ttyUSB1&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-08.png&#34; alt=&#34;ESPHome Port Auswahl&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Damit die Zugangsdaten korrekt importiert werden, müssen wir noch die erzeugte &lt;code&gt;.yaml&lt;/code&gt; Datei bearbeiten und die Anführungszeichen bei allen Einträgen mit &lt;code&gt;!secret&lt;/code&gt; entfernen. Dazu klickt man auf &lt;strong&gt;EDIT&lt;/strong&gt; unter dem entsprechenden Eintrag.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-09.png&#34; alt=&#34;ESPHome Edit Button&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Als letztes klickt man auf &lt;strong&gt;UPLOAD&lt;/strong&gt; um das Flashen zu starten.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-10.png&#34; alt=&#34;ESPHome Upload&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Wenn alles korrekt funktioniert hat, sollte nun aus der &lt;code&gt;.yaml&lt;/code&gt; Datei der Arduino-Code generiert werden. Dabei werden im Hintergrund alle benötigten Bibliotheken heruntergeladen, der Code kompiliert und der Upload gestartet.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-11.png&#34; alt=&#34;ESPHome Upload&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In der folgenden Logging-Ausgabe kann man kontrollieren, ob man die WLAN Daten korrekt eingeben hat.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-12.png&#34; alt=&#34;ESPHome Upload&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Ab jetzt kann man den Mikrocontroller vom Raspberry Pi trennen und übers WLAN programmieren. Dafür stellt man die Schnittstelle oben auf Over-the-Air um.&lt;/p&gt;
+&lt;h2 id=&#34;sensor-und-button-konfigurieren&#34;&gt;Sensor und Button konfigurieren&lt;/h2&gt;
+&lt;p&gt;Damit der Sensor angesprochen werden kann wird als erstes die I²C Komponente geladen. Die Option &lt;code&gt;scan: True&lt;/code&gt; sorgt dafür, dass bei jedem Boot der Bus nach Geräten gescannt wird.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;k&#34;&gt;i2c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;sda&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;scl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;scan&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;True&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Da der BME280 drei Größen misst, müssen entsprechend die drei Optionen &lt;code&gt;temperature&lt;/code&gt;, &lt;code&gt;pressure&lt;/code&gt; und &lt;code&gt;humidity&lt;/code&gt; konfiguriert werden.&lt;/p&gt;
+&lt;p&gt;Unter &lt;code&gt;filters:&lt;/code&gt; ist beim Temperatursensor ein statischer Offset von -7 Grad eingestellt, den ich im Vergleich mit einem zweiten Sensor ermittelt habe. Ebenso ist bei der Luftfeuchtigkeit ein statischer Offset von +10 Prozent eingestellt.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;k&#34;&gt;sensor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;k&#34;&gt;platform&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;bme280&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;temperature&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Thomas Zimmer Temperatur&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;oversampling&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;16x&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;filters&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;- &lt;span class=&#34;k&#34;&gt;offset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;-&lt;span class=&#34;m&#34;&gt;7.0&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;pressure&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Thomas Zimmer Luftdruck&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;humidity&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Thomas Zimmer Feuchtigkeit&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;filters&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;- &lt;span class=&#34;k&#34;&gt;offset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;+&lt;span class=&#34;m&#34;&gt;10.0&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;address&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0x76&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;update_interval&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;60s&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Der Button wird als Binärsensor konfiguriert. Da der Button mit GND verbunden ist, muss hier der interne Pullup-Widerstand aktiviert werden und mit &lt;code&gt;inverted: True&lt;/code&gt; der Zustand invertiert werden. Damit liefert der Sensor &lt;strong&gt;on&lt;/strong&gt;, wenn der Button gedrückt wird.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;k&#34;&gt;binary_sensor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;k&#34;&gt;platform&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;gpio&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;pin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; 
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;number&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;D3&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;mode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;INPUT_PULLUP&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;inverted&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;True&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Thomas Zimmer Button&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;filters&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;k&#34;&gt;delayed_on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;10ms&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;mit-home-assistant-verbinden&#34;&gt;Mit Home Assistant verbinden&lt;/h2&gt;
+&lt;p&gt;Nachdem das vollständige Programm auf den Mikrocontroller geladen ist, müssen die Sensoren noch in Home Assistant einbunden werden. Die Einrichtung erfolgt über die Integrationsseite in den Home Assistant Einstellungen.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-13.png&#34; alt=&#34;ESPHome Integration&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Als Hostadresse gibt man den Namen des Projekts ein, in diesem Fall &lt;code&gt;umweltsensor.local&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-14.png&#34; alt=&#34;ESPHome Integration&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Nach der API Passwort Abfrage werden automatisch die Entities für die konfigurierten Sensoren zu Home Assitant hinzugefügt.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-15.png&#34; alt=&#34;ESPHome Integration&#34;&gt;&lt;/p&gt;
+</content>
             
             
             
@@ -314,6 +606,10 @@ Vorbereitung Was ist ESPHome? Laut der Selbstbeschreibung auf esphome.]]></summa
                 
                     
                     
+                    
+                        
+                            <category scheme="https://syralist.github.io/posts/smarthome/" term="posts\smarthome\" label="posts\smarthome\" />
+                        
                     
                 
             
@@ -355,74 +651,73 @@ Vorbereitung Was ist ESPHome? Laut der Selbstbeschreibung auf esphome.]]></summa
             <title type="text">Mein Smarthome Setup</title>
             <link rel="alternate" type="text/html" href="https://syralist.github.io/posts/smarthome/mein_setup/" />
             <id>https://syralist.github.io/posts/smarthome/mein_setup/</id>
-            <updated>2020-03-22T19:07:14+01:00</updated>
-            <published>2020-03-21T18:45:02+00:00</published>
+            <updated>2020-05-26T18:55:28&#43;02:00</updated>
+            <published>2020-03-21T18:45:02&#43;00:00</published>
             <author>
                     <name>Thomas Helmke</name>
                     <uri>https://syralist.github.io/</uri>
                     <email>thomas.helmke@gmx.de</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html"><![CDATA[Mein Smarthome Setup Hier möchte ich einen kurzen Überblick über mein Smarthome Setup geben. Auf Details werde ich dann später in weiteren Beiträgen eingehen.
-Zentrale Als Smarthome-Zentrale habe ich Home Assistant auf einem Raspberry Pi 3B+ laufen. Ich benutze die native Version mit HassOS und boote direkt von einer SSD Festplatte.]]></summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Hier möchte ich einen kurzen Überblick über mein Smarthome Setup geben. Auf Details werde ich dann später in weiteren Beiträgen eingehen.
+Zentrale Als Smarthome-Zentrale habe ich Home Assistant auf einem Raspberry Pi 3B+ laufen. Ich benutze die native Version mit HassOS und boote direkt von einer SSD Festplatte.</summary>
             
-                <content type="html"><![CDATA[<h1 id="mein-smarthome-setup">Mein Smarthome Setup</h1>
-<p>Hier möchte ich einen kurzen Überblick über mein Smarthome Setup geben. Auf Details werde ich dann später in weiteren Beiträgen eingehen.</p>
-<h2 id="zentrale">Zentrale</h2>
-<p>Als Smarthome-Zentrale habe ich <a href="http://www.home-assistant.io" title="Home Assistant">Home Assistant</a> auf einem Raspberry Pi 3B+ laufen. Ich benutze die native Version mit HassOS und boote direkt von einer SSD Festplatte. Per USB angeschlossen ist hier ein Conbee Stick für die Zigbee-Anbindung. Daneben läuft ein Raspberry Pi 1 mit <a href="https://raspberrymatic.de/de/home/" title="RaspberryMatic">RaspberryMatic</a>, um meine Homematic Komponenten anzubinden.</p>
-<p>Mein Router ist eine FritzBox 7590 unterstützt durch einen FritzRepeater 1750E zur Anbindung von WLAN Komponenten.</p>
-<p>Sowohl die Fritzbox als auch der Haupt-Raspberry sind durch eine unterbrechungsfreie Stromversorgung gepuffert, da hier gerne mal die Sicherung fliegt, wenn ich meine Steckdosenleiste einschalte.</p>
-<h3 id="hardwareliste">Hardwareliste</h3>
-<ul>
-<li><strong>Raspberry Pi 3B+</strong> mit 2,4A Netzteil.</li>
-<li>Intenso Portable <strong>SSD mit 128GB</strong>. Zusätzliche Stromversorgung mit 2,4A Netzteil und USB Y-Kabel.</li>
-<li><strong>Conbee Stick</strong> von <a href="https://phoscon.de/de/conbee" title="Conbee Stick">Dresden Elektronik</a></li>
-<li>Unterbrechungsfreie Stromversorgung <strong>APC BX700U-GR</strong></li>
-<li>Raspberry Pi 1 mit <strong>HM-MOD-RPI-PCB</strong> von <a href="https://de.elv.com/elv-homematic-komplettbausatz-funkmodul-fuer-raspberry-pi-hm-mod-rpi-pcb-fuer-smart-home-hausautomation-142141?fs=2908134611&amp;c=499" title="ELV Shop">ELV</a></li>
-</ul>
-<h3 id="software">Software</h3>
-<p>Ich habe mich beim Umzug auf die SSD Festplatte gegen ein Setup mit z.B. Rasbian entschieden, sondern wieder die native Installation benutzt, weil ich so kein weiteres Betriebssystem administrieren muss, sondern alles aus der Home Assistant Oberfläche verwalten kann.
-Neben dem Home Assistant laufen allerdings noch einige Addons auf dem Raspberry:</p>
-<ul>
-<li><strong>ADB Bridge</strong> für die Android TV Anbindung</li>
-<li><strong>APC USB Daemon</strong> für die Anbindung der USV</li>
-<li><strong>Duck DNS</strong> für Fernzugriff per SSL aus dem Internet</li>
-<li><strong>ESPhome</strong> für selbstgebaute Komponenten</li>
-<li><strong>File Editor</strong> zum Bearbeiten der Konfiguration im Browser</li>
-<li><strong>Hass.io Google Drive Backup</strong> für die automatische Sicherung des Systems</li>
-<li><strong>MariaDB</strong> als Alternative für die SQLite History Datenbank</li>
-<li><strong>Mosquitto broker</strong> für MQTT</li>
-<li><strong>Node-RED</strong> für die Automatisierung</li>
-<li><strong>Samba-Share</strong> für Datenzugriff von anderen Rechnern</li>
-<li><strong>TasmoAdmin</strong> für die Verwaltung der Tasmota Komponenten</li>
-<li><strong>Terminal &amp; SSH</strong> für Low Level Zugriff auf das System</li>
-<li><strong>chrony</strong> als lokaler NTP Server</li>
-<li><strong>deCONZ</strong> für die Verwaltung der Zigbee Komponenten</li>
-</ul>
-<p>Zusätzlich ist natürlich auch noch <a href="https://hacs.xyz/" title="HACS">HACS</a> (Home Assistant Community Store) installiert für Custom Components, Lovelace Plugins und Themes.</p>
-<h2 id="komponenten">Komponenten</h2>
-<p>Der Vorteil von Home Assistant ist, dass sich Komponenten von den verschiedensten Herstellern und mit den unterschiedlichsten Technologien integrieren lassen. Dementsprechend sind in der Wohnung diverse Sensoren und Aktoren verteilt.</p>
-<h3 id="sensoren">Sensoren</h3>
-<p>In fast jedem Raum werden Temperatur, Luftfeuchtigkeit und Luftdruck erfasst. Dazu kommen zum einen die Aqara WSDCGQ11LM Multisensoren über Zigbee zum Einsatz, zum anderen habe ich ESP8266 mit BME280 Sensoren per ESPhome angebunden.</p>
-<p>Fenster und Türen werden mit Aqara und Homematic Tür-/Fensterkontakten überwacht. Als Bewegungsmelder dient ein IKEA Tradfri über Zigbee.</p>
-<p>Im Keller überwacht ein Sonoff POW die Leistungsaufnahme der Waschmaschine.</p>
-<h3 id="licht">Licht</h3>
-<p>Die Deckenbeleuchtung ist bisher noch nicht smart in meiner Wohnung, allerdings bleibt die sowieso meist aus, weil das Licht von Dekoleuchten oder indireker Beleuchtung kommt.</p>
-<p>Die Dekoleuchten haben fast alle ein klassisches Leuchtmittel und sind in smarte Zwischensteckdosen eingesteckt. Die meisten sind von Teckin oder Sonoff und umgeflasht auf Tasmota. Eine weitere kommt von Osram und ist über Zigbee angebunden.</p>
-<p>Daneben gibt es einige direkt angebundene Leuchtmittel. Eine Birne von Eufy, angebunden über deren Cloud Dienst, ein LED-Strip von Osram über Zigbee und zwei selbstgebaute LED-Leuchten, angebunden über ESPhome.</p>
-<h3 id="heizung">Heizung</h3>
-<p>Unsere Viessmann Heizungsanlage ist über die Cloud angebunden, an den Heizkörpern sind Homematic Thermostate montiert.</p>
-<h3 id="rollladen">Rollladen</h3>
-<p>Für die Steuerung der elektrischen Rollladen habe ich Shelly 2.5 Unterputzaktoren eingebaut und lokal per MQTT angebunden.</p>
-<h3 id="interaktion">Interaktion</h3>
-<p>Die meisten Komponenten lassen sich per Alexa Spracheingabe steuern, alle Komponenten sind über die Weboberfläche bzw. Companion App auf dem Handy steuerbar. Für einige Aktionen gibt es zusätzlich physikalische Taster. Neben dem Aqara WXKG11LM Zigbee Taster kommt auch hier wieder ein selbst gebauter Button via ESPhome zum Einsatz.</p>
-<h2 id="automation">Automation</h2>
-<p>Die Automationen sind natürlich das, was das Smarthome erst smart macht. Hier wieder nur eine kurze Übersicht:</p>
-<p>Im Wohnzimmer wird das Licht abhängig vom Fernseher an- und ausgeschaltet. Die Heizkörper sind mit den Fenstern verknüpft und regeln zusätzlich nach Tageszeit rauf oder runter.</p>
-<p>Wenn ich ins Bett gehe, wird der Rechner und das NAS heruntergefahren, die Rollladen geschlossen und der Heizkörper heruntergeregelt.</p>
-<p>Es gibt Benachrichtigungen, wenn die Waschmaschine fertig ist, wenn es an der Tür klingelt und wenn der Müll rausgestellt muss.</p>
-<hr>
-<p>Das soll als kurzer Überblick über mein Setup genügen. Wie bereits oben geschrieben, folgen bald weitere Artikel mit Details zu einzelnen Themen.</p>
-]]></content>
+                <content type="html">&lt;p&gt;Hier möchte ich einen kurzen Überblick über mein Smarthome Setup geben. Auf Details werde ich dann später in weiteren Beiträgen eingehen.&lt;/p&gt;
+&lt;h1 id=&#34;zentrale&#34;&gt;Zentrale&lt;/h1&gt;
+&lt;p&gt;Als Smarthome-Zentrale habe ich &lt;a href=&#34;http://www.home-assistant.io&#34; title=&#34;Home Assistant&#34;&gt;Home Assistant&lt;/a&gt; auf einem Raspberry Pi 3B+ laufen. Ich benutze die native Version mit HassOS und boote direkt von einer SSD Festplatte. Per USB angeschlossen ist hier ein Conbee Stick für die Zigbee-Anbindung. Daneben läuft ein Raspberry Pi 1 mit &lt;a href=&#34;https://raspberrymatic.de/de/home/&#34; title=&#34;RaspberryMatic&#34;&gt;RaspberryMatic&lt;/a&gt;, um meine Homematic Komponenten anzubinden.&lt;/p&gt;
+&lt;p&gt;Mein Router ist eine FritzBox 7590 unterstützt durch einen FritzRepeater 1750E zur Anbindung von WLAN Komponenten.&lt;/p&gt;
+&lt;p&gt;Sowohl die Fritzbox als auch der Haupt-Raspberry sind durch eine unterbrechungsfreie Stromversorgung gepuffert, da hier gerne mal die Sicherung fliegt, wenn ich meine Steckdosenleiste einschalte.&lt;/p&gt;
+&lt;h2 id=&#34;hardwareliste&#34;&gt;Hardwareliste&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Raspberry Pi 3B+&lt;/strong&gt; mit 2,4A Netzteil.&lt;/li&gt;
+&lt;li&gt;Intenso Portable &lt;strong&gt;SSD mit 128GB&lt;/strong&gt;. Zusätzliche Stromversorgung mit 2,4A Netzteil und USB Y-Kabel.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Conbee Stick&lt;/strong&gt; von &lt;a href=&#34;https://phoscon.de/de/conbee&#34; title=&#34;Conbee Stick&#34;&gt;Dresden Elektronik&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Unterbrechungsfreie Stromversorgung &lt;strong&gt;APC BX700U-GR&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Raspberry Pi 1 mit &lt;strong&gt;HM-MOD-RPI-PCB&lt;/strong&gt; von &lt;a href=&#34;https://de.elv.com/elv-homematic-komplettbausatz-funkmodul-fuer-raspberry-pi-hm-mod-rpi-pcb-fuer-smart-home-hausautomation-142141?fs=2908134611&amp;amp;c=499&#34; title=&#34;ELV Shop&#34;&gt;ELV&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;software&#34;&gt;Software&lt;/h2&gt;
+&lt;p&gt;Ich habe mich beim Umzug auf die SSD Festplatte gegen ein Setup mit z.B. Rasbian entschieden, sondern wieder die native Installation benutzt, weil ich so kein weiteres Betriebssystem administrieren muss, sondern alles aus der Home Assistant Oberfläche verwalten kann.
+Neben dem Home Assistant laufen allerdings noch einige Addons auf dem Raspberry:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ADB Bridge&lt;/strong&gt; für die Android TV Anbindung&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;APC USB Daemon&lt;/strong&gt; für die Anbindung der USV&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Duck DNS&lt;/strong&gt; für Fernzugriff per SSL aus dem Internet&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ESPhome&lt;/strong&gt; für selbstgebaute Komponenten&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;File Editor&lt;/strong&gt; zum Bearbeiten der Konfiguration im Browser&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Hass.io Google Drive Backup&lt;/strong&gt; für die automatische Sicherung des Systems&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MariaDB&lt;/strong&gt; als Alternative für die SQLite History Datenbank&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mosquitto broker&lt;/strong&gt; für MQTT&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Node-RED&lt;/strong&gt; für die Automatisierung&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Samba-Share&lt;/strong&gt; für Datenzugriff von anderen Rechnern&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TasmoAdmin&lt;/strong&gt; für die Verwaltung der Tasmota Komponenten&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Terminal &amp;amp; SSH&lt;/strong&gt; für Low Level Zugriff auf das System&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;chrony&lt;/strong&gt; als lokaler NTP Server&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;deCONZ&lt;/strong&gt; für die Verwaltung der Zigbee Komponenten&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Zusätzlich ist natürlich auch noch &lt;a href=&#34;https://hacs.xyz/&#34; title=&#34;HACS&#34;&gt;HACS&lt;/a&gt; (Home Assistant Community Store) installiert für Custom Components, Lovelace Plugins und Themes.&lt;/p&gt;
+&lt;h1 id=&#34;komponenten&#34;&gt;Komponenten&lt;/h1&gt;
+&lt;p&gt;Der Vorteil von Home Assistant ist, dass sich Komponenten von den verschiedensten Herstellern und mit den unterschiedlichsten Technologien integrieren lassen. Dementsprechend sind in der Wohnung diverse Sensoren und Aktoren verteilt.&lt;/p&gt;
+&lt;h2 id=&#34;sensoren&#34;&gt;Sensoren&lt;/h2&gt;
+&lt;p&gt;In fast jedem Raum werden Temperatur, Luftfeuchtigkeit und Luftdruck erfasst. Dazu kommen zum einen die Aqara WSDCGQ11LM Multisensoren über Zigbee zum Einsatz, zum anderen habe ich ESP8266 mit BME280 Sensoren per ESPhome angebunden.&lt;/p&gt;
+&lt;p&gt;Fenster und Türen werden mit Aqara und Homematic Tür-/Fensterkontakten überwacht. Als Bewegungsmelder dient ein IKEA Tradfri über Zigbee.&lt;/p&gt;
+&lt;p&gt;Im Keller überwacht ein Sonoff POW die Leistungsaufnahme der Waschmaschine.&lt;/p&gt;
+&lt;h2 id=&#34;licht&#34;&gt;Licht&lt;/h2&gt;
+&lt;p&gt;Die Deckenbeleuchtung ist bisher noch nicht smart in meiner Wohnung, allerdings bleibt die sowieso meist aus, weil das Licht von Dekoleuchten oder indireker Beleuchtung kommt.&lt;/p&gt;
+&lt;p&gt;Die Dekoleuchten haben fast alle ein klassisches Leuchtmittel und sind in smarte Zwischensteckdosen eingesteckt. Die meisten sind von Teckin oder Sonoff und umgeflasht auf Tasmota. Eine weitere kommt von Osram und ist über Zigbee angebunden.&lt;/p&gt;
+&lt;p&gt;Daneben gibt es einige direkt angebundene Leuchtmittel. Eine Birne von Eufy, angebunden über deren Cloud Dienst, ein LED-Strip von Osram über Zigbee und zwei selbstgebaute LED-Leuchten, angebunden über ESPhome.&lt;/p&gt;
+&lt;h2 id=&#34;heizung&#34;&gt;Heizung&lt;/h2&gt;
+&lt;p&gt;Unsere Viessmann Heizungsanlage ist über die Cloud angebunden, an den Heizkörpern sind Homematic Thermostate montiert.&lt;/p&gt;
+&lt;h2 id=&#34;rollladen&#34;&gt;Rollladen&lt;/h2&gt;
+&lt;p&gt;Für die Steuerung der elektrischen Rollladen habe ich Shelly 2.5 Unterputzaktoren eingebaut und lokal per MQTT angebunden.&lt;/p&gt;
+&lt;h2 id=&#34;interaktion&#34;&gt;Interaktion&lt;/h2&gt;
+&lt;p&gt;Die meisten Komponenten lassen sich per Alexa Spracheingabe steuern, alle Komponenten sind über die Weboberfläche bzw. Companion App auf dem Handy steuerbar. Für einige Aktionen gibt es zusätzlich physikalische Taster. Neben dem Aqara WXKG11LM Zigbee Taster kommt auch hier wieder ein selbst gebauter Button via ESPhome zum Einsatz.&lt;/p&gt;
+&lt;h1 id=&#34;automation&#34;&gt;Automation&lt;/h1&gt;
+&lt;p&gt;Die Automationen sind natürlich das, was das Smarthome erst smart macht. Hier wieder nur eine kurze Übersicht:&lt;/p&gt;
+&lt;p&gt;Im Wohnzimmer wird das Licht abhängig vom Fernseher an- und ausgeschaltet. Die Heizkörper sind mit den Fenstern verknüpft und regeln zusätzlich nach Tageszeit rauf oder runter.&lt;/p&gt;
+&lt;p&gt;Wenn ich ins Bett gehe, wird der Rechner und das NAS heruntergefahren, die Rollladen geschlossen und der Heizkörper heruntergeregelt.&lt;/p&gt;
+&lt;p&gt;Es gibt Benachrichtigungen, wenn die Waschmaschine fertig ist, wenn es an der Tür klingelt und wenn der Müll rausgestellt muss.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Das soll als kurzer Überblick über mein Setup genügen. Wie bereits oben geschrieben, folgen bald weitere Artikel mit Details zu einzelnen Themen.&lt;/p&gt;
+</content>
             
             
             
@@ -431,6 +726,10 @@ Neben dem Home Assistant laufen allerdings noch einige Addons auf dem Raspberry:
                 
                     
                     
+                    
+                        
+                            <category scheme="https://syralist.github.io/posts/smarthome/" term="posts\smarthome\" label="posts\smarthome\" />
+                        
                     
                 
             
@@ -475,26 +774,26 @@ Neben dem Home Assistant laufen allerdings noch einige Addons auf dem Raspberry:
         </entry>
     
         <entry>
-            <title type="text">Und jetzt bloggt er auch noch...</title>
+            <title type="text">Und jetzt bloggt er auch noch…</title>
             <link rel="alternate" type="text/html" href="https://syralist.github.io/posts/allgemein/my-first-post/" />
             <id>https://syralist.github.io/posts/allgemein/my-first-post/</id>
-            <updated>2020-03-22T19:07:14+01:00</updated>
-            <published>2020-03-08T18:11:30+01:00</published>
+            <updated>2020-03-22T19:07:14&#43;01:00</updated>
+            <published>2020-03-08T18:11:30&#43;01:00</published>
             <author>
                     <name>Thomas Helmke</name>
                     <uri>https://syralist.github.io/</uri>
                     <email>thomas.helmke@gmx.de</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html"><![CDATA[Warum ein eigener Blog? Frei nach Alf halte ich mich an das Motto: „Wenn Du sowieso nichts zu sagen hast, dann schreibt halt einen Blog.“
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Warum ein eigener Blog? Frei nach Alf halte ich mich an das Motto: „Wenn Du sowieso nichts zu sagen hast, dann schreibt halt einen Blog.“
 Ob ich wirklich nichts zu sagen habe, wird sich zeigen.
-Worüber schreibe ich? Ich schreibe über Smart Home, Python und dergleichen mehr.]]></summary>
+Worüber schreibe ich? Ich schreibe über Smart Home, Python und dergleichen mehr.</summary>
             
-                <content type="html"><![CDATA[<h1 id="warum-ein-eigener-blog">Warum ein eigener Blog?</h1>
-<p>Frei nach Alf halte ich mich an das Motto: „Wenn Du sowieso nichts zu sagen hast, dann schreibt halt einen Blog.“</p>
-<p>Ob ich wirklich nichts zu sagen habe, wird sich zeigen.</p>
-<h1 id="worüber-schreibe-ich">Worüber schreibe ich?</h1>
-<p>Ich schreibe über Smart Home, Python und dergleichen mehr.</p>
-]]></content>
+                <content type="html">&lt;h1 id=&#34;warum-ein-eigener-blog&#34;&gt;Warum ein eigener Blog?&lt;/h1&gt;
+&lt;p&gt;Frei nach Alf halte ich mich an das Motto: „Wenn Du sowieso nichts zu sagen hast, dann schreibt halt einen Blog.“&lt;/p&gt;
+&lt;p&gt;Ob ich wirklich nichts zu sagen habe, wird sich zeigen.&lt;/p&gt;
+&lt;h1 id=&#34;worüber-schreibe-ich&#34;&gt;Worüber schreibe ich?&lt;/h1&gt;
+&lt;p&gt;Ich schreibe über Smart Home, Python und dergleichen mehr.&lt;/p&gt;
+</content>
             
             
             
@@ -503,6 +802,10 @@ Worüber schreibe ich? Ich schreibe über Smart Home, Python und dergleichen meh
                 
                     
                     
+                    
+                        
+                            <category scheme="https://syralist.github.io/posts/allgemein/" term="posts\allgemein\" label="posts\allgemein\" />
+                        
                     
                 
             
