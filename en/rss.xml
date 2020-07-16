@@ -10,7 +10,7 @@
         <title>Syralists Blog</title>
         <link>https://syralist.github.io/en/</link>
         <description>Syralists persöhnlicher Blog.</description>
-        <generator>Hugo 0.71.1 https://gohugo.io/</generator>
+        <generator>Hugo 0.74.1 https://gohugo.io/</generator>
         
             <language>en-US</language>
         
@@ -23,10 +23,149 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
         
-        <lastBuildDate>Sat, 06 Jun 2020 16:49:59 &#43;0200</lastBuildDate>
+        <lastBuildDate>Thu, 16 Jul 2020 13:26:12 &#43;0200</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://syralist.github.io/en/rss.xml" />
         
+        
+            <item>
+                <title>Alfawise U50 – Unboxing and First Impression</title>
+                <link>https://syralist.github.io/en/posts/3d-druck/alfawise-u50-unboxing/</link>
+                <guid isPermaLink="true">https://syralist.github.io/en/posts/3d-druck/alfawise-u50-unboxing/</guid>
+                <pubDate>Thu, 16 Jul 2020 11:09:19 &#43;0000</pubDate>
+                
+                    <author>thomas.helmke@gmx.de (Thomas Helmke)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
+                
+                    <description>&lt;h2 id=&#34;my-first-3d-printer&#34;&gt;My first 3D Printer&lt;/h2&gt;
+&lt;p&gt;I learned about 3D printing a few years ago at the &lt;a href=&#34;http://www.hackerspace-bremen.de&#34; title=&#34;Hackerspace Bremen&#34;&gt; Hackerspace &lt;/a&gt;. Now I finally decided to buy my own printer.
+After a video from &lt;a href=&#34;https://www.youtube.com/watch?v=nQ3ZTZvvC3M&#34; title=&#34;[Alfawise U20 One] 3D-Drucker mit XXL Druckplattform zum schmalen Preis [Review][4K]&#34;&gt;SchimmerMedia&lt;/a&gt; I decided to buy the &lt;strong&gt;Alfawise U50&lt;/strong&gt; for less than 200€ from &lt;a href=&#34;https://de.gearbest.com/3d-printers--3d-printer-kits/pp_009143693697.html?wid=1895967&#34; title=&#34;Alfawise U50 DIY FDM 3D Drucker&#34;&gt;Gearbest&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;the-unboxing&#34;&gt;The Unboxing&lt;/h2&gt;
+&lt;h3 id=&#34;the-packaging&#34;&gt;The Packaging&lt;/h3&gt;
+&lt;p&gt;The printer arrives from China well protected in foam packaging.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-01.jpg&#34; alt=&#34;Packaged in foam&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Underneath the foam is the already assembled bottom part of the printer and a box with screws and tools.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-02.jpg&#34; alt=&#34;Bottom part and tool box&#34;&gt;
+&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-03.jpg&#34; alt=&#34;Bottom part and tool box&#34;&gt;&lt;/p&gt;
+&lt;p&gt;You need five(!) different hexagon socket wrenches for assembly. Fortunately all sizes are included.
+In addition there is a scraper and a side cutter to remove the printed parts from the bed later and to trim them, as well as a Micro-SD card with USB adapter. On the card you find an old version of Cura including a configuration file, the assembly instructions in digital form and some example 3D models.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-04.jpg&#34; alt=&#34;Tools and screws&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In the lower foam half you will find the remaining attachments, which are also already partly assembled.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-05.jpg&#34; alt=&#34;Attachments&#34;&gt;&lt;/p&gt;
+&lt;p&gt;These parts must now be assembled according to the instructions.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-06.jpg&#34; alt=&#34;Alle the parts&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;the-assembly&#34;&gt;The Assembly&lt;/h3&gt;
+&lt;p&gt;The text of the manual is translated into reasonably understandable English, but the pictures are sometimes a bit small.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-07.jpg&#34; alt=&#34;The Manual&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The first part to be assembled is the combination of X-axis drive and extruder drive. The construct has to be screwed to the X-axis strut and the screw has to be fiddled into the hole from behind.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-08.jpg&#34; alt=&#34;X-axis and extruder drive&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The hotend is then simply fitted onto the rail and the second Z-axis guide is screwed on the other side.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-09.jpg&#34; alt=&#34;Hotend and Z-axis guide&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The toothed belt that moves the hot end is fixed with printed clips. We will see how long they last.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-10.jpg&#34; alt=&#34;X-axis belt&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The vertical aluminium profiles are fixed from below with one screw each. The right side is additionally fixed with a T-profile.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-11.jpg&#34; alt=&#34;T-profile&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The left side is more fiddly again, because here you have to mount the attachment with the Z-axis drive.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-12.jpg&#34; alt=&#34;Z-axis drive&#34;&gt;
+&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-13.jpg&#34; alt=&#34;Z-axis drive&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The Y-axis drive is now mounted at the rear. Of course you need two different types of screws and the matching hexagon socket wrenches.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-14.jpg&#34; alt=&#34;Y-axis drive&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The belt for the Y-axis is fixed under the printing bed with cable ties. But I had to loosen one side of it to connect the belt to the drive.
+When fixing it again one of the printed clamps broke.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-15.jpg&#34; alt=&#34;Y-axis belt&#34;&gt;
+&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-16.jpg&#34; alt=&#34;Y-axis belt&#34;&gt;&lt;/p&gt;
+&lt;p&gt;And this is what it looks like before the wiring.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-17.jpg&#34; alt=&#34;Completely assembled - rear view&#34;&gt;
+&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-18.jpg&#34; alt=&#34;Completely assembled - front view&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;the-wiring&#34;&gt;The Wiring&lt;/h3&gt;
+&lt;p&gt;All components are wired with plug-in connectors.
+Due to the different size, servo connection and limit switch connection cannot be confused. Due to the shape of the plug, reverse polarity is also basically impossible.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-19.jpg&#34; alt=&#34;Cable for X-axis and extruder&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The individual cables are well labelled and combined in cable sleeves.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-20.jpg&#34; alt=&#34;Cable for Z-axis&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The connection for the hot end is secured by a screw connection.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-21.jpg&#34; alt=&#34;Cabel for the hotend&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The connection for the Y limit switch is the only one that requires some fiddling to connect.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-22.jpg&#34; alt=&#34;Cable for Y-axis&#34;&gt;
+&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-23.jpg&#34; alt=&#34;Cable for Y-axis&#34;&gt;&lt;/p&gt;
+&lt;p&gt;This is how the assembly looks like with the wiring finished. The wires from the hotend are located very unfavorably and grind as you can see on the printing bed.
+Meanwhile I have fixed them with cable ties to the top.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-24.jpg&#34; alt=&#34;Fully wired&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;switching-on-for-the-first-time&#34;&gt;Switching on for the first time&lt;/h3&gt;
+&lt;p&gt;After everything was wired, I could switch on for the first time and since no MagicSmoke™ has escaped anywhere, I obviously put everything together correctly.
+Here you can already see the glued on printing bed.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-25.jpg&#34; alt=&#34;Switched on for the first time&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The menu offers functions for manual control of all axes, temperature preselection and direct printing from the SD card.
+The pre-installed firmware with version 195 had the problem that the speed of the axes could not be adjusted because the input field did not work.
+In a French &lt;a href=&#34;https://www.lesimprimantes3d.fr/forum/topic/30009-mise-a-jour-firmware-u50/&#34; title=&#34;Les Imprimantes 3D Forum&#34;&gt;3D printing forum&lt;/a&gt; I found a firmware update to version 217, which fixes the problem. Unfortunately the rar archive could not be unpacked under Linux, but only under Windows.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-26.jpg&#34; alt=&#34;Main menu&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The extruder can only be moved via the menu when the hot end is heated up. I have not tested whether this is also blocked with external control.
+Before the extruder drive, the filament is threaded through a chamber with a limit switch, which detects when the filament has run out.
+After the extruder drive, the filament runs through a tube to the hot end. Here I had to cut a cable tie, because otherwise the filament could not be threaded to the end.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-27.jpg&#34; alt=&#34;Filament arrives at the bottom&#34;&gt;&lt;/p&gt;
+&lt;p&gt;When moving to the home position to adjust the printing bed, I noticed that the X limit switch is positioned too far outwards, so that the hotend is no longer above the printing bed.
+Unfortunately the limit switch can not be adjusted, so I glued a temporary spacer to the switch lug.
+In the meantime I have printed a suitable adapter for it. There will be a separate article on this later.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-28.jpg&#34; alt=&#34;Temporary spacer&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;my-first-impression&#34;&gt;My first Impression&lt;/h2&gt;
+&lt;p&gt;After I ordered the printer, I came across two blog posts at &lt;a href=&#34;https://www.china-gadgets.de/test-alfawise-u50-3d-drucker/&#34; title=&#34;China-Gadgets.de&#34;&gt;China-Gadets&lt;/a&gt; and &lt;a href=&#34;https://drucktipps3d.de/ein-ue-ei/&#34; title=&#34;Drucktipps3D.de&#34;&gt;Drucktipps3D&lt;/a&gt; that tore the U50 up quite a bit.
+Of course I don&amp;rsquo;t have that much experience with other printers but I&amp;rsquo;m quite satisfied with the construction and quality so far.&lt;/p&gt;
+&lt;p&gt;Gearbest advertises that you can assemble the printer in 20 minutes, I absolutely cannot confirm that. I took my time and took the photos in between, so it took me about two hours from opening the box to turning on the printer.
+As already written above, it is a little fiddly in some places, but in general, the printer can be easily assembled.&lt;/p&gt;
+&lt;p&gt;I started the first print from my Linux laptop directly from Cura. I am using the latest version of Cura, took the default setting of the Alfawise U20 and only adjusted the size of the printing bed.&lt;/p&gt;
+&lt;p&gt;Meanwhile I have connected the printer to a Raspberry Pi with &lt;a href=&#34;https://octoprint.org/&#34; title=&#34;Octoprint.org&#34;&gt;Octoprint&lt;/a&gt; and print from there. I haven&amp;rsquo;t made any big prints of several hours and I&amp;rsquo;m still at the provided filament sample, but so far I haven&amp;rsquo;t regretted the purchase.&lt;/p&gt;
+</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://syralist.github.io/en/posts/">posts</category>
+                            
+                        
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://syralist.github.io/en/posts/3d-druck/">3d-druck</category>
+                            
+                        
+                    
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://syralist.github.io/en/tags/3d-printing/">3D printing</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://syralist.github.io/en/tags/prototyping/">Prototyping</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://syralist.github.io/en/tags/raspberry-pi/">Raspberry Pi</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>Window Automation</title>
@@ -38,10 +177,10 @@
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
                 
-                    <description>&lt;h1 id=&#34;window-controls-radiator&#34;&gt;Window Controls Radiator&lt;/h1&gt;
+                    <description>&lt;h2 id=&#34;window-controls-radiator&#34;&gt;Window Controls Radiator&lt;/h2&gt;
 &lt;p&gt;As I wrote in my article about my &lt;a href=&#34;https://syralist.github.io/en/posts/smarthome/mein_setup/&#34; title=&#34;My Smarthome Setup&#34;&gt;Smarthome setup&lt;/a&gt;, automation is what makes a smart home smart.
 Here I describe how I turn the radiator down when the window is opened and turn it back up again when the window is closed.&lt;/p&gt;
-&lt;h2 id=&#34;involved-components&#34;&gt;Involved Components&lt;/h2&gt;
+&lt;h3 id=&#34;involved-components&#34;&gt;Involved Components&lt;/h3&gt;
 &lt;p&gt;The window is monitored with a &lt;strong&gt;Xiaomi Aqara door/window contact&lt;/strong&gt;. This sends the status via &lt;strong&gt;Zigbee&lt;/strong&gt; to the Conbee Stick. The Conbee is integrated into Home Assistant via Deconz.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-06-06-fensterkontakt.jpg&#34; alt=&#34;Xiaomi Aqara door/window contact&#34;&gt;&lt;/p&gt;
 &lt;p&gt;A &lt;strong&gt;Homematic radiator thermostat&lt;/strong&gt; is mounted on the radiator. As Homematic central I have a Raspberry Pi with &lt;em&gt;Raspberrymatic&lt;/em&gt; running.
@@ -49,7 +188,7 @@ The thermostats are always set to &lt;em&gt;manual&lt;/em&gt;, because they are 
 &lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-06-06-thermostat.jpg&#34; alt=&#34;Homematic Thermostat&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The reduced temperature is set via an &lt;em&gt;input_number&lt;/em&gt; entity.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-06-06-input-number.png&#34; alt=&#34;input_number&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;nodered&#34;&gt;NodeRed&lt;/h2&gt;
+&lt;h3 id=&#34;nodered&#34;&gt;NodeRed&lt;/h3&gt;
 &lt;p&gt;The automation is implemented in NodeRed and consists of six nodes.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-06-06-nodered-01.png&#34; alt=&#34;Complete Flow&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The &lt;em&gt;state node&lt;/em&gt; “Fenster” reacts to a change of state of the window contact.&lt;/p&gt;
@@ -487,7 +626,15 @@ If additional entities are to be considered, they only need to be added at one p
                         
                         
                             
-                                <category domain="https://syralist.github.io/en/posts/smarthome/">posts\smarthome\</category>
+                                <category domain="https://syralist.github.io/en/posts/">posts</category>
+                            
+                        
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://syralist.github.io/en/posts/smarthome/">smarthome</category>
                             
                         
                     
@@ -549,12 +696,12 @@ If additional entities are to be considered, they only need to be added at one p
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
                 
                     <description>&lt;p&gt;In this article I show how to import a list of appointments, process them and then save them in ICS format.&lt;/p&gt;
-&lt;h1 id=&#34;background&#34;&gt;Background&lt;/h1&gt;
+&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
 &lt;p&gt;Bremer Stadtreinigung offers the &lt;a href=&#34;https://www.die-bremer-stadtreinigung.de/privatkunden/entsorgung/bremer_abfallkalender-23080&#34; title=&#34;Bremer Abfallkalender&#34;&gt;waste collection dates&lt;/a&gt; for download as ICS file and as CSV file. Unfortunately there are two separate dates for residual waste and organic waste although both are collected on the same day.&lt;/p&gt;
 &lt;p&gt;Since I also integrate the dates into my Smarthome to receive notifications about them, I also want them to be in a certain format in the calendar. Details about the integration will follow in a later article.&lt;/p&gt;
-&lt;h1 id=&#34;the-python-script&#34;&gt;The Python script&lt;/h1&gt;
+&lt;h2 id=&#34;the-python-script&#34;&gt;The Python script&lt;/h2&gt;
 &lt;p&gt;The finished script can be found here on &lt;a href=&#34;https://github.com/Syralist/Abfallkalender&#34; title=&#34;Syralist/Abfallkalender&#34;&gt;Github&lt;/a&gt;. You need at least &lt;strong&gt;Python 3.6&lt;/strong&gt; because I use f-strings.&lt;/p&gt;
-&lt;h2 id=&#34;imports&#34;&gt;Imports&lt;/h2&gt;
+&lt;h3 id=&#34;imports&#34;&gt;Imports&lt;/h3&gt;
 &lt;p&gt;First the required modules are imported. &lt;code&gt;ics&lt;/code&gt; and &lt;code&gt;arrow&lt;/code&gt; can be installed via &lt;code&gt;pip&lt;/code&gt;, the other modules are included in the standard library.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -579,7 +726,7 @@ If additional entities are to be considered, they only need to be added at one p
 &lt;li&gt;&lt;code&gt;dateutil.tz&lt;/code&gt; : Time zone definitions&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;datetime&lt;/code&gt; : Standard functions for time objects&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;configuration&#34;&gt;Configuration&lt;/h2&gt;
+&lt;h3 id=&#34;configuration&#34;&gt;Configuration&lt;/h3&gt;
 &lt;p&gt;To make my script also interesting for others, I tried to program different possibilities to create the dates and make them configurable.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -625,7 +772,7 @@ If additional entities are to be considered, they only need to be added at one p
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;It can be set whether the appointment is to be created for a whole day or for a specific hour with a configurable duration. You can create the appointment on the day before the collection or on the correct day.
 You can have the type of collection written in the title or just “Müllabfuhr”. For the integration in Home Assistant you can enter an offset.&lt;/p&gt;
-&lt;h2 id=&#34;helper-variables&#34;&gt;Helper Variables&lt;/h2&gt;
+&lt;h3 id=&#34;helper-variables&#34;&gt;Helper Variables&lt;/h3&gt;
 &lt;p&gt;Before we start reading the CSV file, I create some helper variables.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -647,7 +794,7 @@ You can have the type of collection written in the title or just “Müllabfuhr�
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;The &lt;code&gt;offset_string&lt;/code&gt; is required for the Home Assistant integration already mentioned. I use an f-string here to insert the content of the variable into the string. The expression &lt;code&gt;offset_hours:02d&lt;/code&gt; ensures that one-digit numbers are inserted with leading zero.&lt;/p&gt;
 &lt;p&gt;For the following code I additionally need an empty Dictionary &lt;code&gt;d&lt;/code&gt; and an empty Calendar object &lt;code&gt;c&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;import-csv-file&#34;&gt;Import CSV file&lt;/h2&gt;
+&lt;h3 id=&#34;import-csv-file&#34;&gt;Import CSV file&lt;/h3&gt;
 &lt;p&gt;The entries in the CSV file look like this:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -700,7 +847,7 @@ You can have the type of collection written in the title or just “Müllabfuhr�
 &lt;p&gt;In the for loop, the heading is skipped first. Next, &lt;code&gt;if-row[1] in d&lt;/code&gt; is used to check whether the date is already entered in my dictionary. If this is the case, the two collection types are combined via an f-string and the entry in the dictionary is updated.
 Otherwise, a new entry is added to the dictionary.&lt;/p&gt;
 &lt;p&gt;Now I have a dictionary with the date string as &lt;em&gt;key&lt;/em&gt; and the collection type as &lt;em&gt;value&lt;/em&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;create-events&#34;&gt;Create Events&lt;/h2&gt;
+&lt;h3 id=&#34;create-events&#34;&gt;Create Events&lt;/h3&gt;
 &lt;p&gt;The next step is to iterate over the dictionary and fill the Calendar object created above with events. &lt;code&gt;d.items()&lt;/code&gt; returns &lt;em&gt;Key&lt;/em&gt; and &lt;em&gt;Value&lt;/em&gt; as a tuple.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -759,7 +906,7 @@ As a workaround I therefore move the appointment one day forward with &lt;code&g
 If it is configured above that the appointment is to be created on the day before the collection, the same command is used to move the appointment back again.&lt;/p&gt;
 &lt;p&gt;Now the duration set above is entered into the appointment and then, if necessary, the appointment is converted into an all-day appointment.&lt;/p&gt;
 &lt;p&gt;Finally, the collection type is entered in the event description and the event is added to the calendar object.&lt;/p&gt;
-&lt;h2 id=&#34;writing-the-ics-file&#34;&gt;Writing the ICS file&lt;/h2&gt;
+&lt;h3 id=&#34;writing-the-ics-file&#34;&gt;Writing the ICS file&lt;/h3&gt;
 &lt;p&gt;The last step is to write the Calendar object to a file.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -785,7 +932,15 @@ If it is configured above that the appointment is to be created on the day befor
                         
                         
                             
-                                <category domain="https://syralist.github.io/en/posts/programmieren/">posts\programmieren\</category>
+                                <category domain="https://syralist.github.io/en/posts/">posts</category>
+                            
+                        
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://syralist.github.io/en/posts/programmieren/">programmieren</category>
                             
                         
                     
@@ -835,20 +990,20 @@ If it is configured above that the appointment is to be created on the day befor
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
                 
                     <description>&lt;p&gt;This blog is created with &lt;a href=&#34;https://gohugo.io/&#34; title=&#34;Hugo&#34;&gt;Hugo&lt;/a&gt;. In this post I tell you what it&amp;rsquo;s all about and why I chose this method.&lt;/p&gt;
-&lt;h1 id=&#34;what-is-hugo&#34;&gt;What is Hugo?&lt;/h1&gt;
+&lt;h2 id=&#34;what-is-hugo&#34;&gt;What is Hugo?&lt;/h2&gt;
 &lt;p&gt;Hugo claims to be the world&amp;rsquo;s fastest framework for creating static websites.
 Hugo is programmed in &lt;strong&gt;Go&lt;/strong&gt; and available for all common operating systems.&lt;/p&gt;
 &lt;p&gt;The articles are written in &lt;strong&gt;Markdown&lt;/strong&gt; and then “compiled” to create the HTML pages. The appearance is determined via &lt;strong&gt;Themes&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;This makes the workflow comparable to that of $\LaTeX$.&lt;/p&gt;
-&lt;h1 id=&#34;why-hugo&#34;&gt;Why Hugo?&lt;/h1&gt;
+&lt;h2 id=&#34;why-hugo&#34;&gt;Why Hugo?&lt;/h2&gt;
 &lt;p&gt;With most content management systems like Wordpress, Drupal, Typo3, etc. it always bothered me that you have to set up a more or less powerful backend.
 You always need PHP or Python and a database, even if you just want to write a simple blog.&lt;/p&gt;
 &lt;p&gt;On the &lt;a href=&#34;https://selfhosted.show/&#34; title=&#34;Self-Hosted Podcast&#34;&gt;Self Hosted&lt;/a&gt; Podcast I then heard about Hugo.&lt;/p&gt;
-&lt;h1 id=&#34;how-to-get-started&#34;&gt;How to get started?&lt;/h1&gt;
-&lt;h2 id=&#34;preparations&#34;&gt;Preparations&lt;/h2&gt;
+&lt;h2 id=&#34;how-to-get-started&#34;&gt;How to get started?&lt;/h2&gt;
+&lt;h3 id=&#34;preparations&#34;&gt;Preparations&lt;/h3&gt;
 &lt;p&gt;There are various installation methods for Hugo. I downloaded the program as a ZIP file on my Windows computer, on Linux I installed it with Snap. Details can be found on the &lt;a href=&#34;https://gohugo.io/getting-started/installing&#34; title=&#34;Hugo Installation&#34;&gt;Hugo website&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;It&amp;rsquo;s not mandatory, but using Git makes it a little easier. Therefore, in this article I assume that you have installed Git and have a Github account.&lt;/p&gt;
-&lt;h2 id=&#34;create-site&#34;&gt;Create Site&lt;/h2&gt;
+&lt;h3 id=&#34;create-site&#34;&gt;Create Site&lt;/h3&gt;
 &lt;p&gt;The basic structure of the page is created with the following command on the console:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;hugo new site meinblog
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Hugo creates a subdirectory with the name &lt;code&gt;meinblog&lt;/code&gt; and this content:&lt;/p&gt;
@@ -861,7 +1016,7 @@ static/
 themes/
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Next you should choose a theme from the &lt;a href=&#34;https://themes.gohugo.io/&#34; title=&#34;Hugo Themes List&#34;&gt;Hugo Theme List&lt;/a&gt;. I tried some and finally decided on the MemE theme. The easiest way to install is with Git as described in &lt;a href=&#34;https://github.com/reuixiy/hugo-theme-meme&#34; title=&#34;MemE Readme&#34;&gt;README&lt;/a&gt;.
 You have to adapt the &lt;code&gt;config.toml&lt;/code&gt; to your own needs. Another article on this topic follows.&lt;/p&gt;
-&lt;h2 id=&#34;create-article&#34;&gt;Create Article&lt;/h2&gt;
+&lt;h3 id=&#34;create-article&#34;&gt;Create Article&lt;/h3&gt;
 &lt;p&gt;Articles are created in the &lt;code&gt;content&lt;/code&gt; directory as .md files. You can optionally create subfolders as categories. You can create the file manually or use this Hugo command:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;hugo new posts/my-first-post.md
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The advantage over manual creation is that a frontmatter is also created. This is the configuration area of the article where appearance and behavior can be customized. Another article on this topic follows.&lt;/p&gt;
@@ -869,7 +1024,7 @@ You have to adapt the &lt;code&gt;config.toml&lt;/code&gt; to your own needs. An
 &lt;pre&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;hugo server -D
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The option &lt;code&gt;-D&lt;/code&gt; at this point is important so that articles marked as draft are also created and displayed.&lt;/p&gt;
 &lt;p&gt;Now you can write your articles. If the server is running in the background, the page is automatically regenerated and updated in the browser as soon as you change and save a file.&lt;/p&gt;
-&lt;h2 id=&#34;publish-the-site&#34;&gt;Publish the Site&lt;/h2&gt;
+&lt;h3 id=&#34;publish-the-site&#34;&gt;Publish the Site&lt;/h3&gt;
 &lt;p&gt;When you are finished with your articles, you call &lt;code&gt;hugo&lt;/code&gt; without any other options. This creates the finished website with all necessary files in the &lt;code&gt;public&lt;/code&gt; subdirectory. This directory can now be hosted on any web server. The workflow for hosting as a github.io page is shown on the &lt;a href=&#34;https://gohugo.io/hosting-and-deployment/hosting-on-github/&#34; title=&#34;Hosting-on-Github&#34;&gt;Hugo website&lt;/a&gt;.&lt;/p&gt;
 </description>
                 
@@ -882,7 +1037,15 @@ You have to adapt the &lt;code&gt;config.toml&lt;/code&gt; to your own needs. An
                         
                         
                             
-                                <category domain="https://syralist.github.io/en/posts/allgemein/">posts\allgemein\</category>
+                                <category domain="https://syralist.github.io/en/posts/">posts</category>
+                            
+                        
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://syralist.github.io/en/posts/allgemein/">allgemein</category>
                             
                         
                     
@@ -921,11 +1084,11 @@ You have to adapt the &lt;code&gt;config.toml&lt;/code&gt; to your own needs. An
                 
                     <description>&lt;p&gt;In this post I show the steps to recreate my environmental sensor with a button. The sensor measures temperature, humidity and air pressure and has a button to trigger any action.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-hardware-01.jpg&#34; alt=&#34;Complete Box&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;preparation&#34;&gt;Preparation&lt;/h1&gt;
-&lt;h2 id=&#34;what-ist-esphome&#34;&gt;What ist ESPHome?&lt;/h2&gt;
+&lt;h2 id=&#34;preparation&#34;&gt;Preparation&lt;/h2&gt;
+&lt;h3 id=&#34;what-ist-esphome&#34;&gt;What ist ESPHome?&lt;/h3&gt;
 &lt;p&gt;According to the self-description on &lt;a href=&#34;https://esphome.io/&#34; title=&#34;ESPHome&#34;&gt;esphome.io&lt;/a&gt;, ESPHome is a system for programming ESP8266 or ESP32 microcontrollers using simple configuration files.&lt;/p&gt;
 &lt;p&gt;ESPHome is written in python and can be installed without Home Assistant using &lt;code&gt;pip install esphome&lt;/code&gt; or with &lt;code&gt;docker pull esphome/esphome&lt;/code&gt;. I use ESPHome as a home assistant addon, because you also get a web interface for administration.&lt;/p&gt;
-&lt;h2 id=&#34;needed-hardware&#34;&gt;Needed Hardware&lt;/h2&gt;
+&lt;h3 id=&#34;needed-hardware&#34;&gt;Needed Hardware&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;ESP8266 microcontroller - e.g. Wemos D1 mini&lt;/li&gt;
 &lt;li&gt;BME280 sensor - with I²C breakout board&lt;/li&gt;
@@ -933,7 +1096,7 @@ You have to adapt the &lt;code&gt;config.toml&lt;/code&gt; to your own needs. An
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-hardware-02.jpg&#34; alt=&#34;Complete Box Open&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The housing is lasered from 3mm MDF. A generator for such housings is for example &lt;a href=&#34;https://www.festi.info/boxes.py/&#34; title=&#34;boxes.py&#34;&gt;boxes.py&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;connect-sensor-and-button&#34;&gt;Connect Sensor and Button&lt;/h2&gt;
+&lt;h3 id=&#34;connect-sensor-and-button&#34;&gt;Connect Sensor and Button&lt;/h3&gt;
 &lt;p&gt;The BME280 is connected via I²C, for this we need the following pins:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;5V → VIN&lt;/li&gt;
@@ -945,8 +1108,8 @@ You have to adapt the &lt;code&gt;config.toml&lt;/code&gt; to your own needs. An
 &lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-hardware-04.jpg&#34; alt=&#34;Circuit Board from the bottom&#34;&gt;&lt;/p&gt;
 &lt;p&gt;I built the whole thing with plinths on a breadboard in order to be able to easily disassemble the components.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-hardware-03.jpg&#34; alt=&#34;Circuit Board from the top&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;esphome-project-in-home-assistant&#34;&gt;ESPHome Project in Home Assistant&lt;/h1&gt;
-&lt;h2 id=&#34;create-project&#34;&gt;Create Project&lt;/h2&gt;
+&lt;h2 id=&#34;esphome-project-in-home-assistant&#34;&gt;ESPHome Project in Home Assistant&lt;/h2&gt;
+&lt;h3 id=&#34;create-project&#34;&gt;Create Project&lt;/h3&gt;
 &lt;p&gt;Click on the friendly red button with the plus on the web interface to open the wizard for new projects.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-01.png&#34; alt=&#34;ESPHome Web UI&#34;&gt;&lt;/p&gt;
 &lt;p&gt;First you give a name.&lt;/p&gt;
@@ -959,7 +1122,7 @@ You have to adapt the &lt;code&gt;config.toml&lt;/code&gt; to your own needs. An
 &lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-05.png&#34; alt=&#34;ESPHome Wizard Step 4&#34;&gt;&lt;/p&gt;
 &lt;p&gt;After closing the wizard with &lt;strong&gt;Submit&lt;/strong&gt;, the interface selection in the upper corner is pointed out.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-06.png&#34; alt=&#34;ESPHome Wizard Step 5&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;fileorganisation-and-secrets&#34;&gt;Fileorganisation and !secrets&lt;/h2&gt;
+&lt;h3 id=&#34;fileorganisation-and-secrets&#34;&gt;Fileorganisation and !secrets&lt;/h3&gt;
 &lt;p&gt;In Home Assistant, the project files are in the directory &lt;code&gt;/config/esphome&lt;/code&gt;. The example given has created the &lt;code&gt;umweltsensor.yaml&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -1007,7 +1170,7 @@ You have to adapt the &lt;code&gt;config.toml&lt;/code&gt; to your own needs. An
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;I created a &lt;code&gt;secrets.yaml&lt;/code&gt; in the same directory. The entries in it can be imported into other &lt;code&gt;.yaml&lt;/code&gt; files with&lt;code&gt;!secret&lt;/code&gt;. This has the advantage that you can share the project file with others, like me here, without having to pass on your credentials.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-07.png&#34; alt=&#34;ESPHome secrets.yaml&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;flashing-for-the-first-time&#34;&gt;Flashing for the First Time&lt;/h2&gt;
+&lt;h3 id=&#34;flashing-for-the-first-time&#34;&gt;Flashing for the First Time&lt;/h3&gt;
 &lt;p&gt;For the first flashing, the microcontroller must be connected via USB to the computer on which ESPHome is running. In my case, the Raspberry Pi where Home Assistant is installed.&lt;/p&gt;
 &lt;p&gt;Most of the time, the port of the microcontroller is not displayed immediately when the USB cable is connected. This is related to the Docker system based on the Home Assistant. The workaround is to restart the addon after the microcontroller is connected.&lt;/p&gt;
 &lt;p&gt;If nothing else is connected, &lt;code&gt;/dev/ttyUSB0&lt;/code&gt; is probably displayed, in my case the microcontroller is at &lt;code&gt;/dev/ttyUSB1&lt;/code&gt;.&lt;/p&gt;
@@ -1021,7 +1184,7 @@ You have to adapt the &lt;code&gt;config.toml&lt;/code&gt; to your own needs. An
 &lt;p&gt;In the following logging output you can check whether you have entered the WiFi data correctly.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-12.png&#34; alt=&#34;ESPHome Upload&#34;&gt;&lt;/p&gt;
 &lt;p&gt;From now on you can disconnect the microcontroller from the Raspberry Pi and program it via WiFi. To do this, switch the interface above to over-the-air.&lt;/p&gt;
-&lt;h2 id=&#34;configure-sensor-and-button&#34;&gt;Configure Sensor and Button&lt;/h2&gt;
+&lt;h3 id=&#34;configure-sensor-and-button&#34;&gt;Configure Sensor and Button&lt;/h3&gt;
 &lt;p&gt;For the sensor to be addressed the I²C component is loaded first. The &lt;code&gt;scan: True&lt;/code&gt; option ensures that the bus is scanned for devices on every boot.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -1100,7 +1263,7 @@ You have to adapt the &lt;code&gt;config.toml&lt;/code&gt; to your own needs. An
 &lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;k&#34;&gt;delayed_on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;10ms&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;connecting-to-home-assistant&#34;&gt;Connecting to Home Assistant&lt;/h2&gt;
+&lt;/div&gt;&lt;h3 id=&#34;connecting-to-home-assistant&#34;&gt;Connecting to Home Assistant&lt;/h3&gt;
 &lt;p&gt;After the complete program has been loaded onto the microcontroller, the sensors must still be integrated in Home Assistant. The setup is done via the integration page in the Home Assistant settings.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-13.png&#34; alt=&#34;ESPHome Integration&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Enter the name of the project as the host address, in this case &lt;code&gt;umweltsensor.local&lt;/code&gt;.&lt;/p&gt;
@@ -1118,7 +1281,15 @@ You have to adapt the &lt;code&gt;config.toml&lt;/code&gt; to your own needs. An
                         
                         
                             
-                                <category domain="https://syralist.github.io/en/posts/smarthome/">posts\smarthome\</category>
+                                <category domain="https://syralist.github.io/en/posts/">posts</category>
+                            
+                        
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://syralist.github.io/en/posts/smarthome/">smarthome</category>
                             
                         
                     
@@ -1168,11 +1339,11 @@ You have to adapt the &lt;code&gt;config.toml&lt;/code&gt; to your own needs. An
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
                 
                     <description>&lt;p&gt;In this post I want to give a brief overview of my Smarthome Setup. In later posts I will go into more detail.&lt;/p&gt;
-&lt;h1 id=&#34;central-hub&#34;&gt;Central Hub&lt;/h1&gt;
+&lt;h2 id=&#34;central-hub&#34;&gt;Central Hub&lt;/h2&gt;
 &lt;p&gt;As my Smarthome Hub I&amp;rsquo;m running &lt;a href=&#34;http://www.home-assistant.io&#34; title=&#34;Home Assistant&#34;&gt;Home Assistant&lt;/a&gt; on a Raspberry Pi 3B+. I&amp;rsquo;m using the native Version with HassOS and the system boots directly from an SSD drive. There is a Conbee stick attached via USB for Zigbee connectivity. Additionally I run another Rasberry Pi 1 with &lt;a href=&#34;https://raspberrymatic.de/de/home/&#34; title=&#34;RaspberryMatic&#34;&gt;RaspberryMatic&lt;/a&gt; to connect my Homematic components.&lt;/p&gt;
 &lt;p&gt;My router is a FritzBox 7590 supported by a FritzRepeater 1750E for connecting WiFi components.&lt;/p&gt;
 &lt;p&gt;Both the Fritzbox and the main Raspberry are buffered by an uninterruptible power supply, because the fuse regularly blows in my flat when I switch on my power strip.&lt;/p&gt;
-&lt;h2 id=&#34;hardwarelist&#34;&gt;Hardwarelist&lt;/h2&gt;
+&lt;h3 id=&#34;hardwarelist&#34;&gt;Hardwarelist&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Raspberry Pi 3B+&lt;/strong&gt; with 2.4A power supply.&lt;/li&gt;
 &lt;li&gt;Intenso Portable &lt;strong&gt;SSD with 128GB&lt;/strong&gt;. Additional power supply with 2.4A and USB Y-cable.&lt;/li&gt;
@@ -1180,7 +1351,7 @@ You have to adapt the &lt;code&gt;config.toml&lt;/code&gt; to your own needs. An
 &lt;li&gt;Uninterruptible power supply &lt;strong&gt;APC BX700U-GR&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;Raspberry Pi 1 with &lt;strong&gt;HM-MOD-RPI-PCB&lt;/strong&gt; by &lt;a href=&#34;https://de.elv.com/elv-homematic-komplettbausatz-funkmodul-fuer-raspberry-pi-hm-mod-rpi-pcb-fuer-smart-home-hausautomation-142141?fs=2908134611&amp;amp;c=499&#34; title=&#34;ELV Shop&#34;&gt;ELV&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;software&#34;&gt;Software&lt;/h2&gt;
+&lt;h3 id=&#34;software&#34;&gt;Software&lt;/h3&gt;
 &lt;p&gt;When I moved to the SSD drive I decided against setting up for example Rasbian, but used the native installation. That way there is no extra operating system to maintain, but everything can be managed from the Home Assistant interface.
 Parallel to Home Assistant there are of course a bunch of Addons on the Raspberry:&lt;/p&gt;
 &lt;ul&gt;
@@ -1200,23 +1371,23 @@ Parallel to Home Assistant there are of course a bunch of Addons on the Raspberr
 &lt;li&gt;&lt;strong&gt;deCONZ&lt;/strong&gt; for managing the Zigbee components&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Of course &lt;a href=&#34;https://hacs.xyz/&#34; title=&#34;HACS&#34;&gt;HACS&lt;/a&gt; (Home Assistant Community Store) is also installed for custom components, lovelace plugins, and themes.&lt;/p&gt;
-&lt;h1 id=&#34;components&#34;&gt;Components&lt;/h1&gt;
+&lt;h2 id=&#34;components&#34;&gt;Components&lt;/h2&gt;
 &lt;p&gt;The advantage of Home Assistant is that components from a wide variety of manufacturers and with a wide variety of technologies can be integrated. Accordingly, various sensors and actuators are distributed in the apartment.&lt;/p&gt;
-&lt;h2 id=&#34;sensors&#34;&gt;Sensors&lt;/h2&gt;
+&lt;h3 id=&#34;sensors&#34;&gt;Sensors&lt;/h3&gt;
 &lt;p&gt;Temperature, humidity and air pressure are recorded in almost every room. On the one hand, the Aqara WSDCGQ11LM multi-sensors via Zigbee are used, on the other hand, I have connected ESP8266 with BME280 sensors via ESPhome.&lt;/p&gt;
 &lt;p&gt;Windows and doors are monitored with Aqara and Homematic door / window contacts. An IKEA Tradfri via Zigbee serves as the motion detector.&lt;/p&gt;
 &lt;p&gt;In the basement, a Sonoff POW monitors the power consumption of the washing machine.&lt;/p&gt;
-&lt;h2 id=&#34;light&#34;&gt;Light&lt;/h2&gt;
+&lt;h3 id=&#34;light&#34;&gt;Light&lt;/h3&gt;
 &lt;p&gt;The ceiling lighting is not yet smart in my apartment, but it usually stays off anyway because the light comes from decorative lights or indirect lighting.&lt;/p&gt;
 &lt;p&gt;The decorative lights almost all have a classic light source and are plugged into smart intermediate sockets. Most of them are from Teckin or Sonoff and flashed to Tasmota. Another comes from Osram and is connected via Zigbee.&lt;/p&gt;
 &lt;p&gt;There are also some directly connected lamps. A bulb from Eufy connected via their cloud service, an LED strip from Osram via Zigbee and two self-made LED lights connected via ESPhome.&lt;/p&gt;
-&lt;h2 id=&#34;heating&#34;&gt;Heating&lt;/h2&gt;
+&lt;h3 id=&#34;heating&#34;&gt;Heating&lt;/h3&gt;
 &lt;p&gt;Our Viessmann heating system is connected via the cloud; Homematic thermostats are mounted on the radiators.&lt;/p&gt;
-&lt;h2 id=&#34;shutters&#34;&gt;Shutters&lt;/h2&gt;
+&lt;h3 id=&#34;shutters&#34;&gt;Shutters&lt;/h3&gt;
 &lt;p&gt;For the control of the electric roller shutters, I installed Shelly 2.5 flush-mounted actuators and connected them locally via MQTT.&lt;/p&gt;
-&lt;h2 id=&#34;interaction&#34;&gt;Interaction&lt;/h2&gt;
+&lt;h3 id=&#34;interaction&#34;&gt;Interaction&lt;/h3&gt;
 &lt;p&gt;Most components can be controlled via Alexa voice input, all components can be controlled via the web interface or companion app on the mobile phone. There are also physical buttons for some actions. In addition to the Aqara WXKG11LM Zigbee button, a self-made button via ESPhome is also used here.&lt;/p&gt;
-&lt;h1 id=&#34;automation&#34;&gt;Automation&lt;/h1&gt;
+&lt;h2 id=&#34;automation&#34;&gt;Automation&lt;/h2&gt;
 &lt;p&gt;The automations are of course what makes the smart home smart. Here is just a brief overview:&lt;/p&gt;
 &lt;p&gt;In the living room, the light is switched on and off depending on the television. The radiators are linked to the windows and also regulate up or down according to the time of day.&lt;/p&gt;
 &lt;p&gt;When I go to bed, the computer and the NAS are shut down, the roller shutters are closed and the radiator is turned down.&lt;/p&gt;
@@ -1234,7 +1405,15 @@ Parallel to Home Assistant there are of course a bunch of Addons on the Raspberr
                         
                         
                             
-                                <category domain="https://syralist.github.io/en/posts/smarthome/">posts\smarthome\</category>
+                                <category domain="https://syralist.github.io/en/posts/">posts</category>
+                            
+                        
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://syralist.github.io/en/posts/smarthome/">smarthome</category>
                             
                         
                     

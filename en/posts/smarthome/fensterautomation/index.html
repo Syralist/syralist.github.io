@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.71.1" /><meta name="theme-color" content="#16171d" />
+    <meta name="generator" content="Hugo 0.74.1" /><meta name="theme-color" content="#16171d" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -14,11 +14,13 @@
 
     <title>Window Automation | Syralists Blog</title>
 
-    <link rel="stylesheet" href="https://syralist.github.io/en/css/meme.min.a34dcdefdd8271bce2275d1fb4d93830bf0936531cbe247bab7a8fbe4a5c3912.css" integrity="sha256-o03N792CcbziJ10ftNk4ML8JNlMcviR7q3qPvkpcORI=" />
+    <link rel="stylesheet" href="https://syralist.github.io/en/css/meme.min.2b6e2f52514481b059afba55f60e15c363109f452464777155ebab2ce6371f0a.css" integrity="sha256-K24vUlFEgbBZr7pV9g4Vw2MQn0UkZHdxVeurLOY3Hwo=" />
 
     
-    <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js" defer></script><script src="https://syralist.github.io/en/js/meme.min.bad003690992e93f83fb85df40f5ce28c85a9ff13b336191816e64a3a97bb4d5.js" integrity="sha256-utADaQmS6T&#43;D&#43;4XfQPXOKMhan/E7M2GRgW5ko6l7tNU="></script>
+    
+        <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js" defer></script><script src="https://syralist.github.io/en/js/meme.min.cfe2fbff9a7674297e23cf1f29ee6c535d3d9ef363ee3c8b26f8864095f0982c.js" integrity="sha256-z&#43;L7/5p2dCl&#43;I88fKe5sU109nvNj7jyLJviGQJXwmCw="></script>
 
+    
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -52,7 +54,7 @@
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2020-06-06T14:25:23+02:00",
-        "dateModified": "2020-06-06T16:48:26+02:00",
+        "dateModified": "2020-07-16T13:19:36+02:00",
         "url": "https://syralist.github.io/en/posts/smarthome/fensterautomation/",
         "headline": "Window Automation",
         "description": "Window Controls Radiator As I wrote in my article about my Smarthome setup, automation is what makes a smart home smart. Here I describe how I turn the radiator down when the window is opened and turn it back up again when the window is closed.",
@@ -106,7 +108,7 @@
         <meta property="og:image" content="https://syralist.github.io/images/2020-06-06-fensterkontakt.jpg" />
 <meta property="og:type" content="article" />
     <meta property="article:published_time" content="2020-06-06T14:25:23&#43;02:00" />
-    <meta property="article:modified_time" content="2020-06-06T16:48:26&#43;02:00" />
+    <meta property="article:modified_time" content="2020-07-16T13:19:36&#43;02:00" />
     
     <meta property="article:section" content="posts" />
 
@@ -274,10 +276,19 @@
                         
                     
                 
+                    
+                    
+                    
+                        
+                            
+                            
+                        
+                    
+                
             
             
             
-                <span class="post-meta-item category"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M464 128H272l-54.63-54.63c-6-6-14.14-9.37-22.63-9.37H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm0 272H48V112h140.12l54.63 54.63c6 6 14.14 9.37 22.63 9.37H464v224z"/></svg>&nbsp;<a href="https://syralist.github.io/en/posts/smarthome/" class="category-link">SmartHome</a></span>
+                <span class="post-meta-item category"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M464 128H272l-54.63-54.63c-6-6-14.14-9.37-22.63-9.37H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm0 272H48V112h140.12l54.63 54.63c6 6 14.14 9.37 22.63 9.37H464v224z"/></svg>&nbsp;<a href="https://syralist.github.io/en/posts/" class="category-link">Posts</a>/<a href="https://syralist.github.io/en/posts/smarthome/" class="category-link">SmartHome</a></span>
             
         
         
@@ -298,14 +309,18 @@
 
             <nav class="contents">
   <h2 id="contents" class="contents-title">Contents</h2><ol class="toc">
-    <li><a id="contents:involved-components" href="#involved-components">Involved Components</a></li>
-    <li><a id="contents:nodered" href="#nodered">NodeRed</a></li>
+    <li><a id="contents:window-controls-radiator" href="#window-controls-radiator">Window Controls Radiator</a>
+      <ol>
+        <li><a id="contents:involved-components" href="#involved-components">Involved Components</a></li>
+        <li><a id="contents:nodered" href="#nodered">NodeRed</a></li>
+      </ol>
+    </li>
   </ol>
 </nav><div class="post-body">
-              <h1 id="window-controls-radiator"><a href="#window-controls-radiator" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:window-controls-radiator" class="headings">Window Controls Radiator</a></h1>
+              <h2 id="window-controls-radiator"><a href="#window-controls-radiator" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:window-controls-radiator" class="headings">Window Controls Radiator</a></h2>
 <p style="text-indent:0"><span class="drop-cap">A</span>s I wrote in my article about my <a href="https://syralist.github.io/en/posts/smarthome/mein_setup/" target="_blank" rel="noopener" title="My Smarthome Setup">Smarthome setup</a>, automation is what makes a smart home smart.
 Here I describe how I turn the radiator down when the window is opened and turn it back up again when the window is closed.</p>
-<h2 id="involved-components"><a href="#involved-components" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:involved-components" class="headings">Involved Components</a></h2>
+<h3 id="involved-components"><a href="#involved-components" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:involved-components" class="headings">Involved Components</a></h3>
 <p>The window is monitored with a <strong>Xiaomi Aqara door/window contact</strong>. This sends the status via <strong>Zigbee</strong> to the Conbee Stick. The Conbee is integrated into Home Assistant via Deconz.</p>
 <p><img src="https://syralist.github.io/images/2020-06-06-fensterkontakt.jpg" alt="Xiaomi Aqara door/window contact"></p>
 <p>A <strong>Homematic radiator thermostat</strong> is mounted on the radiator. As Homematic central I have a Raspberry Pi with <em>Raspberrymatic</em> running.
@@ -313,7 +328,7 @@ The thermostats are always set to <em>manual</em>, because they are controlled e
 <p><img src="https://syralist.github.io/images/2020-06-06-thermostat.jpg" alt="Homematic Thermostat"></p>
 <p>The reduced temperature is set via an <em>input_number</em> entity.</p>
 <p><img src="https://syralist.github.io/images/2020-06-06-input-number.png" alt="input_number"></p>
-<h2 id="nodered"><a href="#nodered" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:nodered" class="headings">NodeRed</a></h2>
+<h3 id="nodered"><a href="#nodered" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:nodered" class="headings">NodeRed</a></h3>
 <p>The automation is implemented in NodeRed and consists of six nodes.</p>
 <p><img src="https://syralist.github.io/images/2020-06-06-nodered-01.png" alt="Complete Flow"></p>
 <p>The <em>state node</em> “Fenster” reacts to a change of state of the window contact.</p>
@@ -322,9 +337,9 @@ The thermostats are always set to <em>manual</em>, because they are controlled e
 <p><img src="https://syralist.github.io/images/2020-06-06-nodered-03.png" alt="Branching with the State"></p>
 <p>When the window has been opened, the first thing to do is to save the current status of the thermostat in a temporary scene with the <em>call service node</em>.
 In the <em>data</em> field, the name of the scene and a list of the entities to be saved must be passed.</p>
-<div class="highlight"><div class="chroma-dark">
+<div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma-dark"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -332,7 +347,7 @@ In the <em>data</em> field, the name of the scene and a list of the entities to 
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma-dark"><code class="language-json" data-lang="json"><span class="p">{</span>
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
 	<span class="nt">&#34;scene_id&#34;</span><span class="p">:</span> <span class="s2">&#34;thomas_snapshot&#34;</span><span class="p">,</span>
 	<span class="nt">&#34;snapshot_entities&#34;</span><span class="p">:</span> <span class="p">[</span>
 		<span class="s2">&#34;climate.0012999395e750&#34;</span>
@@ -344,28 +359,28 @@ In the <em>data</em> field, the name of the scene and a list of the entities to 
 <p>Next, the value of the <em>input_number</em> entity is read with a <em>current state node</em>.</p>
 <p><img src="https://syralist.github.io/images/2020-06-06-nodered-05.png" alt="reading the input_number"></p>
 <p>Finally, the thermostat is set to the readout value with a <em>call service node</em>. For this purpose <code>{{payload}}</code> is used as a template in the <em>data</em> field.</p>
-<div class="highlight"><div class="chroma-dark">
+<div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma-dark"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma-dark"><code class="language-json" data-lang="json"><span class="p">{</span>
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
 	<span class="nt">&#34;temperature&#34;</span><span class="p">:</span> <span class="p">{</span><span class="err">{payload</span><span class="p">}}</span>
 <span class="err">}</span>
 </code></pre></td></tr></table></div>
 </div>
 </div><p><img src="https://syralist.github.io/images/2020-06-06-nodered-06.png" alt="Setting the Thermostat"></p>
 <p>When the window is closed, the previously saved scene is activated with another <em>call service node</em>. Here only the name of the scene must be passed in the <em>Data</em> field.</p>
-<div class="highlight"><div class="chroma-dark">
+<div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma-dark"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma-dark"><code class="language-json" data-lang="json"><span class="p">{</span>
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
 	<span class="nt">&#34;entity_id&#34;</span><span class="p">:</span> <span class="s2">&#34;scene.thomas_snapshot&#34;</span>
 <span class="p">}</span>
 </code></pre></td></tr></table></div>
@@ -374,9 +389,9 @@ In the <em>data</em> field, the name of the scene and a list of the entities to 
 <p>Such a flow is used for every room in which a smart thermostat is installed. The advantage of this method with a temporary scene is that it can be expanded easily.
 If additional entities are to be considered, they only need to be added at one point.</p>
 <p>Here is the complete flow to import:</p>
-<div class="highlight"><div class="chroma-dark">
+<div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma-dark"><code><span class="lnt">  1
+<pre class="chroma"><code><span class="lnt">  1
 </span><span class="lnt">  2
 </span><span class="lnt">  3
 </span><span class="lnt">  4
@@ -558,7 +573,7 @@ If additional entities are to be considered, they only need to be added at one p
 </span><span class="lnt">180
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma-dark"><code class="language-json" data-lang="json"><span class="p">[</span>
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="p">[</span>
 	<span class="p">{</span>
 		<span class="nt">&#34;id&#34;</span><span class="p">:</span> <span class="s2">&#34;d302a18c.b4a5c&#34;</span><span class="p">,</span>
 		<span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;api-call-service&#34;</span><span class="p">,</span>
@@ -768,9 +783,9 @@ If additional entities are to be considered, they only need to be added at one p
 
         
     <div class="updated-badge-container">
-        <span title="Updated @ 2020-06-06 16:48:26 CEST" style="cursor:help">
+        <span title="Updated @ 2020-07-16 13:19:36 CEST" style="cursor:help">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2020-06-06</text><text x="915" y="140" textLength="650" transform="scale(.1)">2020-06-06</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2020-07-16</text><text x="915" y="140" textLength="650" transform="scale(.1)">2020-07-16</text></g></svg>
         </span></div>
 
 
