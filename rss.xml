@@ -10,7 +10,7 @@
         <title>Syralists Blog</title>
         <link>https://syralist.github.io/</link>
         <description>Syralists persöhnlicher Blog.</description>
-        <generator>Hugo 0.74.1 https://gohugo.io/</generator>
+        <generator>Hugo 0.73.0 https://gohugo.io/</generator>
         
             <language>de-DE</language>
         
@@ -23,10 +23,123 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
         
-        <lastBuildDate>Thu, 16 Jul 2020 13:26:12 &#43;0200</lastBuildDate>
+        <lastBuildDate>Sat, 08 Aug 2020 17:26:51 &#43;0200</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://syralist.github.io/rss.xml" />
         
+        
+            <item>
+                <title>Alfawise U50 – Modifizierungen und Zweiter Eindruck</title>
+                <link>https://syralist.github.io/posts/3d-druck/alfawise-u50-zweitereindruck/</link>
+                <guid isPermaLink="true">https://syralist.github.io/posts/3d-druck/alfawise-u50-zweitereindruck/</guid>
+                <pubDate>Sat, 08 Aug 2020 15:02:23 &#43;0200</pubDate>
+                
+                    <author>thomas.helmke@gmx.de (Thomas Helmke)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
+                
+                    <description>&lt;h2 id=&#34;der-eindruck-nach-drei-wochen&#34;&gt;Der Eindruck nach drei Wochen&lt;/h2&gt;
+&lt;p&gt;Seit drei Wochen habe ich nun einen Alfawise U50 zu hause. Den Beitrag zum Unboxing und Aufbau könnt Ihr &lt;a href=&#34;https://syralist.github.io/posts/3d-druck/alfawise-u50-unboxing/&#34; title=&#34;Alfawise U50 -- Unboxing und erster Eindruck&#34;&gt;hier nachlesen&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Bisher kann ich sagen, der Drucker funktioniert einfach nur. Ich drucke weiterhin ausschließlich über Octoprint und auch das funktioniert einwandfrei.
+In diesem Beitrag stelle ich vor, welche Modifikationen bzw. Anbauteile ich bisher hinzugefügt habe und was ich zum Umgang mit dem Drucker gelernt habe.&lt;/p&gt;
+&lt;h2 id=&#34;anbauten&#34;&gt;Anbauten&lt;/h2&gt;
+&lt;h3 id=&#34;x-achsen-abstandshalter&#34;&gt;X-Achsen Abstandshalter&lt;/h3&gt;
+&lt;p&gt;Die erste Modifikation, die ich gedruckt habe, ist ein Abstandshalter für den X-Achsen Endstop.
+Im Auslieferungszustand steht die Düse ausserhalb des Druckbetts, wenn der Endstop betätigt wird. Also habe ich einen Adapter in OpenSCAD konstruiert, der auf die vorhandene
+Metallfahne gesteckt werden kann und die Düse 4mm weiter innen stoppt.
+&lt;img src=&#34;https://syralist.github.io/images/2020-08-08-alfawise-u50-mods-11.png&#34; alt=&#34;Abstandshalter in OpenSCAD&#34;&gt;
+&lt;img src=&#34;https://syralist.github.io/images/2020-08-08-alfawise-u50-mods-10.jpg&#34; alt=&#34;Abstandshalter angebaut&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;kamerahalter&#34;&gt;Kamerahalter&lt;/h3&gt;
+&lt;p&gt;Das nächste Anbauteil ist ein Kamerahalter für eine Logitech C270 Webcam (&lt;a href=&#34;https://www.thingiverse.com/thing:2426231&#34; title=&#34;Camera Mount for Logitech C270 on 2020 Extrusion&#34;&gt;Thingiverse&lt;/a&gt;). Die Kamera habe ich damit oben auf der Querstrebe montiert,
+so dass ich das komplette Druckbett im Bild habe.
+&lt;img src=&#34;https://syralist.github.io/images/2020-08-08-alfawise-u50-mods-06.jpg&#34; alt=&#34;Kamerahalter&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;werkzeughalter&#34;&gt;Werkzeughalter&lt;/h3&gt;
+&lt;p&gt;Der Werkzeughalter (&lt;a href=&#34;https://www.thingiverse.com/thing:4543682&#34; title=&#34;Ender 3 Tool Holder for TPU&#34;&gt;Thingiverse&lt;/a&gt;) ist eigentlich für den Ender 3 gedacht, funktioniert aber genauso gut auch für den U50.
+Das fertige Teil wird einfach seitlich auf die obere Querstrebe aufgesteckt.
+&lt;img src=&#34;https://syralist.github.io/images/2020-08-08-alfawise-u50-mods-08.jpg&#34; alt=&#34;Werkzeughalter&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;z-achsen-stabilisator-und-filamentführung&#34;&gt;Z-Achsen Stabilisator und Filamentführung&lt;/h3&gt;
+&lt;p&gt;Die Gewindestange der Z-Achse hat im Auslieferungszustand am oberen Ende keine Halterung oder Führung. Ich habe zwar bisher kein Problem damit gehabt,
+weil ich noch nicht besonders hoch gedruckt habe, aber auf Thingiverse habe &lt;a href=&#34;https://www.thingiverse.com/thing:4215305&#34; title=&#34;Guide Axe Z Alfawise U50&#34;&gt;diese Halterung&lt;/a&gt; gefunden. Jetzt wird die Gewindestange oben mit einem
+Kugellager gehalten.
+&lt;img src=&#34;https://syralist.github.io/images/2020-08-08-alfawise-u50-mods-03.jpg&#34; alt=&#34;Z-Achsen Stabilisator und obere Filamentführung&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Die Filamentführung besteht aus zwei Teilen. Oben habe ich mich für den Arm (&lt;a href=&#34;https://www.thingiverse.com/thing:3950799&#34; title=&#34;Filament Guide - Ender 3 Pro&#34;&gt;Thingiverse&lt;/a&gt;) entschieden, den man auf dem letzten Bild sieht.
+Dabei musste ich das eine Bein mit der Zange kürzen, weil es sich mit der Z-Achsen Halterung in die Quere gekommen ist.&lt;/p&gt;
+&lt;p&gt;Unten habe ich eine Führung angebaut, die direkt für den U50 konstruiert wurde und ein Kugellager aufnimmt (&lt;a href=&#34;https://www.thingiverse.com/thing:4214964&#34; title=&#34;Guide Fil Alfawise U50&#34;&gt;Thingiverse&lt;/a&gt;).
+&lt;img src=&#34;https://syralist.github.io/images/2020-08-08-alfawise-u50-mods-04.jpg&#34; alt=&#34;untere Filamentführung&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;raspberry-case&#34;&gt;Raspberry Case&lt;/h3&gt;
+&lt;p&gt;Wie schon erwähnt drucke ich ausschießlich über Octoprint, das auf einem Raspberry Pi 3 läuft. Also habe ich ein Case gedruckt, dass im Rahmen unterhalb des Druckbetts
+montiert werden kann (&lt;a href=&#34;https://www.thingiverse.com/thing:2889371&#34; title=&#34;Ender 3 Raspberry Pi 2/3/4 mount with buck converter mount and toolbox&#34;&gt;Thingiverse&lt;/a&gt;).
+&lt;img src=&#34;https://syralist.github.io/images/2020-08-08-alfawise-u50-mods-07.jpg&#34; alt=&#34;Raspberry Pi Case&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;halterung-für-usb-hub&#34;&gt;Halterung für USB-Hub&lt;/h3&gt;
+&lt;p&gt;Zu Beginn hatte ich die Webcam und den Drucker direkt am Raspberry Pi angeschlossen. Das hat allerdings dazu geführt, dass das Netzteil immer mal wieder Aussetzer
+hatte, besonders beim Starten, wenn die Druckerelektronik noch nicht vom eigenen Netzteil versorgt wird.
+Daher habe ich jetzt einen USB-Hub mit eigenem Netzteil im Einsatz, der zwischen Drucker-Elektronik und Druckbett montiert ist. Die Halterung dafür habe ich
+in OpenSCAD selbst konstruiert.
+&lt;img src=&#34;https://syralist.github.io/images/2020-08-08-alfawise-u50-mods-12.png&#34; alt=&#34;USB-Hub-Halterung in OpenSCAD&#34;&gt;
+&lt;img src=&#34;https://syralist.github.io/images/2020-08-08-alfawise-u50-mods-02.jpg&#34; alt=&#34;USB-Hub-Halterung angebaut&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;kabelmanagement&#34;&gt;Kabelmanagement&lt;/h3&gt;
+&lt;p&gt;Damit die vielen zusätzlichen Kabel nicht wild herumfliegen und sich mit den beweglichen Teilen des Druckers verheddern habe ich eine handvoll
+Kabelführungen für Aluprofile (&lt;a href=&#34;https://www.thingiverse.com/thing:4068606&#34; title=&#34;Cable clamp/holder for alu profile&#34;&gt;Thingiverse&lt;/a&gt;) ausgedruckt.
+&lt;img src=&#34;https://syralist.github.io/images/2020-08-08-alfawise-u50-mods-05.jpg&#34; alt=&#34;Kabelmanagement im Druckerrahmen&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Für die Spannungsversorgung steckt alles in einer Dreifachsteckdose. Die drei Kabel für den Drucker, den Raspberry Pi und den USB-Hub sind mit einem Spiralschlauch
+zusammengefasst. Der Stecker vom Drucker steckt zusätzlich noch in einer Osram Smart Steckdose, damit ich den Drucker notfalls vom Netz trennen kann.
+Für die Anbindung in mein Smarthome folgt noch ein eigener Beitrag.
+&lt;img src=&#34;https://syralist.github.io/images/2020-08-08-alfawise-u50-mods-09.jpg&#34; alt=&#34;Kabelmanagement und Steckdose&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;erkenntnisse-beim-drucken&#34;&gt;Erkenntnisse beim Drucken&lt;/h2&gt;
+&lt;p&gt;Die erste wichtige Erkenntnis ist, vor jedem Druck das Leveling zu kontrollieren. Die Druckteile haften an dem mitgelieferten Druckbett bombenfest, so dass ich
+teilweise einige Kraft aufwenden muss, um die abzulösen. Dadurch wird oft das Leveling verändert.&lt;/p&gt;
+&lt;p&gt;Die zweite Erkenntnis ist, immer mit warmem Druckbett zu leveln. Sonst verändert sich durch die Temperatur wieder das Leveling.&lt;/p&gt;
+&lt;p&gt;„deutsch“
+“english”&lt;/p&gt;
+</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://syralist.github.io/posts/3d-druck/">posts\3d-druck\</category>
+                            
+                        
+                    
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://syralist.github.io/tags/3d-druck/">3D-Druck</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://syralist.github.io/tags/prototyping/">Prototyping</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://syralist.github.io/tags/raspberry-pi/">Raspberry Pi</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://syralist.github.io/tags/octoprint/">Octoprint</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>Alfawise U50 – Unboxing und erster Eindruck</title>
@@ -126,15 +239,7 @@ Wie oben schon geschrieben, ist es an einigen Stellen etwas fummelig, aber im Gr
                         
                         
                             
-                                <category domain="https://syralist.github.io/posts/">posts</category>
-                            
-                        
-                    
-                        
-                        
-                        
-                            
-                                <category domain="https://syralist.github.io/posts/3d-druck/">3d-druck</category>
+                                <category domain="https://syralist.github.io/posts/3d-druck/">posts\3d-druck\</category>
                             
                         
                     
@@ -160,6 +265,12 @@ Wie oben schon geschrieben, ist es an einigen Stellen etwas fummelig, aber im Gr
                                 
                                 
                                     <category domain="https://syralist.github.io/tags/raspberry-pi/">Raspberry Pi</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://syralist.github.io/tags/octoprint/">Octoprint</category>
                                 
                             
                         
@@ -626,15 +737,7 @@ Wenn weitere Entities berücksichtigt werden sollen, müssen sie nur an einer St
                         
                         
                             
-                                <category domain="https://syralist.github.io/posts/">posts</category>
-                            
-                        
-                    
-                        
-                        
-                        
-                            
-                                <category domain="https://syralist.github.io/posts/smarthome/">smarthome</category>
+                                <category domain="https://syralist.github.io/posts/smarthome/">posts\smarthome\</category>
                             
                         
                     
@@ -932,15 +1035,7 @@ Wenn oben konfiguriert ist, dass der Termin am Tag vor der Abfuhr erzeugt werden
                         
                         
                             
-                                <category domain="https://syralist.github.io/posts/">posts</category>
-                            
-                        
-                    
-                        
-                        
-                        
-                            
-                                <category domain="https://syralist.github.io/posts/programmieren/">programmieren</category>
+                                <category domain="https://syralist.github.io/posts/programmieren/">posts\programmieren\</category>
                             
                         
                     
@@ -1037,15 +1132,7 @@ Die &lt;code&gt;config.toml&lt;/code&gt; muss man an seine eigenen Bedürfnisse 
                         
                         
                             
-                                <category domain="https://syralist.github.io/posts/">posts</category>
-                            
-                        
-                    
-                        
-                        
-                        
-                            
-                                <category domain="https://syralist.github.io/posts/allgemein/">allgemein</category>
+                                <category domain="https://syralist.github.io/posts/allgemein/">posts\allgemein\</category>
                             
                         
                     
@@ -1281,15 +1368,7 @@ Die &lt;code&gt;config.toml&lt;/code&gt; muss man an seine eigenen Bedürfnisse 
                         
                         
                             
-                                <category domain="https://syralist.github.io/posts/">posts</category>
-                            
-                        
-                    
-                        
-                        
-                        
-                            
-                                <category domain="https://syralist.github.io/posts/smarthome/">smarthome</category>
+                                <category domain="https://syralist.github.io/posts/smarthome/">posts\smarthome\</category>
                             
                         
                     
@@ -1405,15 +1484,7 @@ Neben dem Home Assistant laufen allerdings noch einige Addons auf dem Raspberry:
                         
                         
                             
-                                <category domain="https://syralist.github.io/posts/">posts</category>
-                            
-                        
-                    
-                        
-                        
-                        
-                            
-                                <category domain="https://syralist.github.io/posts/smarthome/">smarthome</category>
+                                <category domain="https://syralist.github.io/posts/smarthome/">posts\smarthome\</category>
                             
                         
                     
@@ -1484,15 +1555,7 @@ Neben dem Home Assistant laufen allerdings noch einige Addons auf dem Raspberry:
                         
                         
                             
-                                <category domain="https://syralist.github.io/posts/">posts</category>
-                            
-                        
-                    
-                        
-                        
-                        
-                            
-                                <category domain="https://syralist.github.io/posts/allgemein/">allgemein</category>
+                                <category domain="https://syralist.github.io/posts/allgemein/">posts\allgemein\</category>
                             
                         
                     

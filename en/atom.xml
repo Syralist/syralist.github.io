@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">
     <title type="text">Syralists Blog</title>
     <subtitle type="html">Syralists persöhnlicher Blog.</subtitle>
-    <updated>2020-07-16T13:26:12&#43;02:00</updated>
+    <updated>2020-08-08T17:26:51&#43;02:00</updated>
     <id>https://syralist.github.io/en/</id>
     <link rel="alternate" type="text/html" href="https://syralist.github.io/en/" />
     <link rel="self" type="application/atom&#43;xml" href="https://syralist.github.io/en/atom.xml" />
@@ -15,12 +15,127 @@
                 <email>thomas.helmke@gmx.de</email>
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights>
-    <generator uri="https://gohugo.io/" version="0.74.1">Hugo</generator>
+    <generator uri="https://gohugo.io/" version="0.73.0">Hugo</generator>
+        <entry>
+            <title type="text">Alfawise U50 – Modifications and Second Impression</title>
+            <link rel="alternate" type="text/html" href="https://syralist.github.io/en/posts/3d-druck/alfawise-u50-zweitereindruck/" />
+            <id>https://syralist.github.io/en/posts/3d-druck/alfawise-u50-zweitereindruck/</id>
+            <updated>2020-08-08T17:25:39&#43;02:00</updated>
+            <published>2020-08-08T15:02:23&#43;02:00</published>
+            <author>
+                    <name>Thomas Helmke</name>
+                    <uri>https://syralist.github.io/en/</uri>
+                    <email>thomas.helmke@gmx.de</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Impressions after three weeks For three weeks now I have an Alfawise U50 at home. You can read the article about unboxing and assembly here.
+So far I can say that the printer just works. I still print exclusively with Octoprint and that works fine, too.</summary>
+            
+                <content type="html">&lt;h2 id=&#34;impressions-after-three-weeks&#34;&gt;Impressions after three weeks&lt;/h2&gt;
+&lt;p&gt;For three weeks now I have an Alfawise U50 at home. You can read the article about unboxing and assembly &lt;a href=&#34;https://syralist.github.io/en/posts/3d-druck/alfawise-u50-unboxing/&#34; title=&#34;Alfawise U50 -- Unboxing and First Impression&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;So far I can say that the printer just works. I still print exclusively with Octoprint and that works fine, too.
+In this article I present which modifications or add-ons I have added so far and what I have learned about handling the printer.&lt;/p&gt;
+&lt;h2 id=&#34;attachments&#34;&gt;Attachments&lt;/h2&gt;
+&lt;h3 id=&#34;x-axis-spacer&#34;&gt;X-Axis Spacer&lt;/h3&gt;
+&lt;p&gt;The first modification I printed is a spacer for the X-axis endstop. When delivered, the nozzle is outside the print bed when the endstop is pressed.
+So I designed an adapter in OpenSCAD that can be plugged onto the existing metal tag and stops the nozzle 4mm further inside.
+&lt;img src=&#34;https://syralist.github.io/images/2020-08-08-alfawise-u50-mods-11.png&#34; alt=&#34;Spacer in OpenSCAD&#34;&gt;
+&lt;img src=&#34;https://syralist.github.io/images/2020-08-08-alfawise-u50-mods-10.jpg&#34; alt=&#34;Spacer plugged in&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;camera-holder&#34;&gt;Camera Holder&lt;/h3&gt;
+&lt;p&gt;The next attachment is a camera holder for a Logitech C270 webcam (&lt;a href=&#34;https://www.thingiverse.com/thing:2426231&#34; title=&#34;Camera Mount for Logitech C270 on 2020 Extrusion&#34;&gt;Thingiverse&lt;/a&gt;).
+I mounted the camera on top of the crossbar, so that I have the complete printing bed in the picture.
+&lt;img src=&#34;https://syralist.github.io/images/2020-08-08-alfawise-u50-mods-06.jpg&#34; alt=&#34;Camera Holder&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;tool-holder&#34;&gt;Tool Holder&lt;/h3&gt;
+&lt;p&gt;The tool holder (&lt;a href=&#34;https://www.thingiverse.com/thing:4543682&#34; title=&#34;Ender 3 Tool Holder for TPU&#34;&gt;Thingiverse&lt;/a&gt;) is actually intended for the Ender 3, but works just as well for the U50.
+The finished part is simply put on the side of the upper crossbar.
+&lt;img src=&#34;https://syralist.github.io/images/2020-08-08-alfawise-u50-mods-08.jpg&#34; alt=&#34;Tool Holder&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;z-axis-stabilizer-and-filament-guide&#34;&gt;Z-Axis Stabilizer and Filament Guide&lt;/h3&gt;
+&lt;p&gt;The threaded rod of the Z-axis has no support or guide at the upper end when delivered.
+I haven&amp;rsquo;t had any problems with it, because I haven&amp;rsquo;t printed very high yet, but I found &lt;a href=&#34;https://www.thingiverse.com/thing:4215305&#34; title=&#34;Guide Axe Z Alfawise U50&#34;&gt;this bracket&lt;/a&gt; on Thingiverse.
+Now the threaded rod is held with a ball bearing at the top.
+&lt;img src=&#34;https://syralist.github.io/images/2020-08-08-alfawise-u50-mods-03.jpg&#34; alt=&#34;Z-Axis Stabilizer and Upper Filament Guide&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The filament guide consists of two parts. At the top I have chosen this arm (&lt;a href=&#34;https://www.thingiverse.com/thing:3950799&#34; title=&#34;Filament Guide - Ender 3 Pro&#34;&gt;Thingiverse&lt;/a&gt;), which you can see on the last picture.
+For this I had to shorten one leg with the pliers, because it got in the way with the Z-axis mount.&lt;/p&gt;
+&lt;p&gt;At the bottom I added a guide which was constructed directly for the U50 and holds a ball bearing (&lt;a href=&#34;https://www.thingiverse.com/thing:4214964&#34; title=&#34;Guide Fil Alfawise U50&#34;&gt;Thingiverse&lt;/a&gt;).
+&lt;img src=&#34;https://syralist.github.io/images/2020-08-08-alfawise-u50-mods-04.jpg&#34; alt=&#34;Lower Filament Guide&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;raspberry-case&#34;&gt;Raspberry Case&lt;/h3&gt;
+&lt;p&gt;As mentioned before, I print exclusively via Octoprint, which runs on a Raspberry Pi 3.
+So I printed a case that can be mounted in the frame below the printing bed (&lt;a href=&#34;https://www.thingiverse.com/thing:2889371&#34; title=&#34;Ender 3 Raspberry Pi 2/3/4 mount with buck converter mount and toolbox&#34;&gt;Thingiverse&lt;/a&gt;).
+&lt;img src=&#34;https://syralist.github.io/images/2020-08-08-alfawise-u50-mods-07.jpg&#34; alt=&#34;Raspberry Pi Case&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;holder-for-usb-hub&#34;&gt;Holder for USB-Hub&lt;/h3&gt;
+&lt;p&gt;In the beginning I had the webcam and printer connected directly to the Raspberry Pi. But this caused the power supply to drop out from time to time,
+especially during startup when the printer electronics are not yet supplied by its own power supply.
+Therefore I now use a USB hub with its own power supply, which is mounted between the printer electronics and the printing bed.
+I designed the mounting bracket for it myself in OpenSCAD.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-08-08-alfawise-u50-mods-12.png&#34; alt=&#34;USB-Hub Holder in OpenSCAD&#34;&gt;
+&lt;img src=&#34;https://syralist.github.io/images/2020-08-08-alfawise-u50-mods-02.jpg&#34; alt=&#34;USB-Hub Holder mounted&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;cablemanagement&#34;&gt;Cablemanagement&lt;/h3&gt;
+&lt;p&gt;To avoid the many additional cables flying around wildly and getting tangled up with the moving parts of the printer I printed out a handful of cable guides for aluminium profiles (&lt;a href=&#34;https://www.thingiverse.com/thing:4068606&#34; title=&#34;Cable clamp/holder for alu profile&#34;&gt;Thingiverse&lt;/a&gt;).
+&lt;img src=&#34;https://syralist.github.io/images/2020-08-08-alfawise-u50-mods-05.jpg&#34; alt=&#34;Cablemanagement inside the Printer Frame&#34;&gt;&lt;/p&gt;
+&lt;p&gt;For the power supply everything is plugged into a triple socket. The three cables for the printer, the Raspberry Pi and the USB hub are bundled together with a spiral hose.
+The printer plug is also plugged into an Osram Smart socket so that I can disconnect the printer from the mains if necessary.
+For the connection to my Smarthome there will be a separate article.
+&lt;img src=&#34;https://syralist.github.io/images/2020-08-08-alfawise-u50-mods-09.jpg&#34; alt=&#34;Cablemanagement and Sockets&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;insights-in-printing&#34;&gt;Insights in printing&lt;/h2&gt;
+&lt;p&gt;The first important thing to know is to check the leveling before each print. The printed parts stick extremely tight to the supplied printing bed,
+so that I sometimes have to use some force to remove them. This often changes the leveling.&lt;/p&gt;
+&lt;p&gt;The second insight is to always level with a warm printing bed. Otherwise the temperature will change the leveling again.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Translated with &lt;a href=&#34;http://www.DeepL.com/Translator&#34;&gt;www.DeepL.com/Translator&lt;/a&gt; (free version)&lt;/p&gt;
+</content>
+            
+            
+            
+                
+                
+                
+                    
+                    
+                    
+                        
+                            <category scheme="https://syralist.github.io/en/posts/3d-druck/" term="posts\3d-druck\" label="posts\3d-druck\" />
+                        
+                    
+                
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://syralist.github.io/en/tags/3d-printing/" term="3D Printing" label="3D Printing" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://syralist.github.io/en/tags/prototyping/" term="Prototyping" label="Prototyping" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://syralist.github.io/en/tags/raspberry-pi/" term="Raspberry Pi" label="Raspberry Pi" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://syralist.github.io/en/tags/octoprint/" term="Octoprint" label="Octoprint" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">Alfawise U50 – Unboxing and First Impression</title>
             <link rel="alternate" type="text/html" href="https://syralist.github.io/en/posts/3d-druck/alfawise-u50-unboxing/" />
             <id>https://syralist.github.io/en/posts/3d-druck/alfawise-u50-unboxing/</id>
-            <updated>2020-07-16T13:16:56&#43;02:00</updated>
+            <updated>2020-08-08T17:25:48&#43;02:00</updated>
             <published>2020-07-16T11:09:19&#43;00:00</published>
             <author>
                     <name>Thomas Helmke</name>
@@ -117,15 +232,7 @@ As already written above, it is a little fiddly in some places, but in general, 
                     
                     
                         
-                            <category scheme="https://syralist.github.io/en/posts/" term="posts" label="posts" />
-                        
-                    
-                
-                    
-                    
-                    
-                        
-                            <category scheme="https://syralist.github.io/en/posts/3d-druck/" term="3d-druck" label="3d-druck" />
+                            <category scheme="https://syralist.github.io/en/posts/3d-druck/" term="posts\3d-druck\" label="posts\3d-druck\" />
                         
                     
                 
@@ -138,7 +245,7 @@ As already written above, it is a little fiddly in some places, but in general, 
                             
                             
                             
-                                <category scheme="https://syralist.github.io/en/tags/3d-printing/" term="3D printing" label="3D printing" />
+                                <category scheme="https://syralist.github.io/en/tags/3d-printing/" term="3D Printing" label="3D Printing" />
                             
                         
                             
@@ -153,6 +260,12 @@ As already written above, it is a little fiddly in some places, but in general, 
                                 <category scheme="https://syralist.github.io/en/tags/raspberry-pi/" term="Raspberry Pi" label="Raspberry Pi" />
                             
                         
+                            
+                            
+                            
+                                <category scheme="https://syralist.github.io/en/tags/octoprint/" term="Octoprint" label="Octoprint" />
+                            
+                        
                     
                 
             
@@ -162,7 +275,7 @@ As already written above, it is a little fiddly in some places, but in general, 
             <title type="text">Window Automation</title>
             <link rel="alternate" type="text/html" href="https://syralist.github.io/en/posts/smarthome/fensterautomation/" />
             <id>https://syralist.github.io/en/posts/smarthome/fensterautomation/</id>
-            <updated>2020-07-16T13:19:36&#43;02:00</updated>
+            <updated>2020-07-21T19:45:06&#43;02:00</updated>
             <published>2020-06-06T14:25:23&#43;02:00</published>
             <author>
                     <name>Thomas Helmke</name>
@@ -620,15 +733,7 @@ If additional entities are to be considered, they only need to be added at one p
                     
                     
                         
-                            <category scheme="https://syralist.github.io/en/posts/" term="posts" label="posts" />
-                        
-                    
-                
-                    
-                    
-                    
-                        
-                            <category scheme="https://syralist.github.io/en/posts/smarthome/" term="smarthome" label="smarthome" />
+                            <category scheme="https://syralist.github.io/en/posts/smarthome/" term="posts\smarthome\" label="posts\smarthome\" />
                         
                     
                 
@@ -683,7 +788,7 @@ If additional entities are to be considered, they only need to be added at one p
             <title type="text">Processing Events with Python</title>
             <link rel="alternate" type="text/html" href="https://syralist.github.io/en/posts/programmieren/termine_aufbereiten/" />
             <id>https://syralist.github.io/en/posts/programmieren/termine_aufbereiten/</id>
-            <updated>2020-07-16T13:22:18&#43;02:00</updated>
+            <updated>2020-07-21T19:45:06&#43;02:00</updated>
             <published>2020-06-05T12:03:21&#43;00:00</published>
             <author>
                     <name>Thomas Helmke</name>
@@ -930,15 +1035,7 @@ If it is configured above that the appointment is to be created on the day befor
                     
                     
                         
-                            <category scheme="https://syralist.github.io/en/posts/" term="posts" label="posts" />
-                        
-                    
-                
-                    
-                    
-                    
-                        
-                            <category scheme="https://syralist.github.io/en/posts/programmieren/" term="programmieren" label="programmieren" />
+                            <category scheme="https://syralist.github.io/en/posts/programmieren/" term="posts\programmieren\" label="posts\programmieren\" />
                         
                     
                 
@@ -981,7 +1078,7 @@ If it is configured above that the appointment is to be created on the day befor
             <title type="text">Building a Website with Hugo – Basics</title>
             <link rel="alternate" type="text/html" href="https://syralist.github.io/en/posts/allgemein/website-mit-hugo/" />
             <id>https://syralist.github.io/en/posts/allgemein/website-mit-hugo/</id>
-            <updated>2020-07-16T13:21:59&#43;02:00</updated>
+            <updated>2020-07-21T19:45:06&#43;02:00</updated>
             <published>2020-05-19T20:20:55&#43;00:00</published>
             <author>
                     <name>Thomas Helmke</name>
@@ -1039,15 +1136,7 @@ You have to adapt the &lt;code&gt;config.toml&lt;/code&gt; to your own needs. An
                     
                     
                         
-                            <category scheme="https://syralist.github.io/en/posts/" term="posts" label="posts" />
-                        
-                    
-                
-                    
-                    
-                    
-                        
-                            <category scheme="https://syralist.github.io/en/posts/allgemein/" term="allgemein" label="allgemein" />
+                            <category scheme="https://syralist.github.io/en/posts/allgemein/" term="posts\allgemein\" label="posts\allgemein\" />
                         
                     
                 
@@ -1078,7 +1167,7 @@ You have to adapt the &lt;code&gt;config.toml&lt;/code&gt; to your own needs. An
             <title type="text">Environment Sensor with ESPHome in Home Assistant</title>
             <link rel="alternate" type="text/html" href="https://syralist.github.io/en/posts/smarthome/esphome-sensor/" />
             <id>https://syralist.github.io/en/posts/smarthome/esphome-sensor/</id>
-            <updated>2020-07-16T13:19:05&#43;02:00</updated>
+            <updated>2020-07-21T19:45:06&#43;02:00</updated>
             <published>2020-04-03T12:53:16&#43;02:00</published>
             <author>
                     <name>Thomas Helmke</name>
@@ -1287,15 +1376,7 @@ Preparation What ist ESPHome? According to the self-description on esphome.io, E
                     
                     
                         
-                            <category scheme="https://syralist.github.io/en/posts/" term="posts" label="posts" />
-                        
-                    
-                
-                    
-                    
-                    
-                        
-                            <category scheme="https://syralist.github.io/en/posts/smarthome/" term="smarthome" label="smarthome" />
+                            <category scheme="https://syralist.github.io/en/posts/smarthome/" term="posts\smarthome\" label="posts\smarthome\" />
                         
                     
                 
@@ -1338,7 +1419,7 @@ Preparation What ist ESPHome? According to the self-description on esphome.io, E
             <title type="text">My Smarthome Setup</title>
             <link rel="alternate" type="text/html" href="https://syralist.github.io/en/posts/smarthome/mein_setup/" />
             <id>https://syralist.github.io/en/posts/smarthome/mein_setup/</id>
-            <updated>2020-07-16T13:20:15&#43;02:00</updated>
+            <updated>2020-07-21T19:45:06&#43;02:00</updated>
             <published>2020-03-25T18:17:45&#43;00:00</published>
             <author>
                     <name>Thomas Helmke</name>
@@ -1415,15 +1496,7 @@ Parallel to Home Assistant there are of course a bunch of Addons on the Raspberr
                     
                     
                         
-                            <category scheme="https://syralist.github.io/en/posts/" term="posts" label="posts" />
-                        
-                    
-                
-                    
-                    
-                    
-                        
-                            <category scheme="https://syralist.github.io/en/posts/smarthome/" term="smarthome" label="smarthome" />
+                            <category scheme="https://syralist.github.io/en/posts/smarthome/" term="posts\smarthome\" label="posts\smarthome\" />
                         
                     
                 
