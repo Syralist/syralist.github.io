@@ -3,43 +3,38 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://syralist.github.io/tags/3d-druck/</loc>
-    <lastmod>2020-08-08T17:25:07+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://syralist.github.io/posts/3d-druck/alfawise-u50-zweitereindruck/</loc>
-    <lastmod>2020-08-08T17:25:07+02:00</lastmod>
+    <loc>https://syralist.github.io/tags/home-assistant/</loc>
+    <lastmod>2020-08-23T14:47:44+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://syralist.github.io/en/posts/3d-druck/alfawise-u50-zweitereindruck/"
+                href="https://syralist.github.io/en/tags/home-assistant/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="https://syralist.github.io/posts/3d-druck/alfawise-u50-zweitereindruck/"
+                href="https://syralist.github.io/tags/home-assistant/"
                 />
   </url>
   
   <url>
-    <loc>https://syralist.github.io/tags/octoprint/</loc>
-    <lastmod>2020-08-08T17:25:07+02:00</lastmod>
+    <loc>https://syralist.github.io/tags/node-red/</loc>
+    <lastmod>2020-08-23T14:47:44+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://syralist.github.io/en/tags/octoprint/"
+                href="https://syralist.github.io/en/tags/node-red/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="https://syralist.github.io/tags/octoprint/"
+                href="https://syralist.github.io/tags/node-red/"
                 />
   </url>
   
   <url>
     <loc>https://syralist.github.io/posts/</loc>
-    <lastmod>2020-08-08T17:25:07+02:00</lastmod>
+    <lastmod>2020-08-23T14:47:44+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -53,38 +48,23 @@
   </url>
   
   <url>
-    <loc>https://syralist.github.io/tags/prototyping/</loc>
-    <lastmod>2020-08-08T17:25:07+02:00</lastmod>
+    <loc>https://syralist.github.io/tags/smarthome/</loc>
+    <lastmod>2020-08-23T14:47:44+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://syralist.github.io/en/tags/prototyping/"
+                href="https://syralist.github.io/en/tags/smarthome/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="https://syralist.github.io/tags/prototyping/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://syralist.github.io/tags/raspberry-pi/</loc>
-    <lastmod>2020-08-08T17:25:07+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://syralist.github.io/en/tags/raspberry-pi/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://syralist.github.io/tags/raspberry-pi/"
+                href="https://syralist.github.io/tags/smarthome/"
                 />
   </url>
   
   <url>
     <loc>https://syralist.github.io/</loc>
-    <lastmod>2020-08-08T17:25:07+02:00</lastmod>
+    <lastmod>2020-08-23T14:47:44+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -99,7 +79,7 @@
   
   <url>
     <loc>https://syralist.github.io/tags/</loc>
-    <lastmod>2020-08-08T17:25:07+02:00</lastmod>
+    <lastmod>2020-08-23T14:47:44+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -109,6 +89,116 @@
                 rel="alternate"
                 hreflang="de"
                 href="https://syralist.github.io/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://syralist.github.io/tags/xiaomi/</loc>
+    <lastmod>2020-08-23T14:47:44+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://syralist.github.io/en/tags/xiaomi/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://syralist.github.io/tags/xiaomi/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://syralist.github.io/tags/zigbee/</loc>
+    <lastmod>2020-08-23T14:47:44+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://syralist.github.io/en/tags/zigbee/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://syralist.github.io/tags/zigbee/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://syralist.github.io/posts/smarthome/zigbeebutton-nodered/</loc>
+    <lastmod>2020-08-23T14:47:44+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://syralist.github.io/en/posts/smarthome/zigbeebutton-nodered/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://syralist.github.io/posts/smarthome/zigbeebutton-nodered/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://syralist.github.io/tags/3d-druck/</loc>
+    <lastmod>2020-08-23T13:42:36+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://syralist.github.io/posts/3d-druck/alfawise-u50-zweitereindruck/</loc>
+    <lastmod>2020-08-23T13:42:36+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://syralist.github.io/en/posts/3d-druck/alfawise-u50-zweitereindruck/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://syralist.github.io/posts/3d-druck/alfawise-u50-zweitereindruck/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://syralist.github.io/tags/octoprint/</loc>
+    <lastmod>2020-08-23T13:42:36+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://syralist.github.io/en/tags/octoprint/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://syralist.github.io/tags/octoprint/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://syralist.github.io/tags/prototyping/</loc>
+    <lastmod>2020-08-23T13:42:36+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://syralist.github.io/en/tags/prototyping/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://syralist.github.io/tags/prototyping/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://syralist.github.io/tags/raspberry-pi/</loc>
+    <lastmod>2020-08-23T13:42:36+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://syralist.github.io/en/tags/raspberry-pi/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://syralist.github.io/tags/raspberry-pi/"
                 />
   </url>
   
@@ -144,7 +234,7 @@
   
   <url>
     <loc>https://syralist.github.io/posts/smarthome/fensterautomation/</loc>
-    <lastmod>2020-07-21T19:45:06+02:00</lastmod>
+    <lastmod>2020-08-23T14:01:43+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -159,7 +249,7 @@
   
   <url>
     <loc>https://syralist.github.io/tags/homeassistant/</loc>
-    <lastmod>2020-07-21T19:45:06+02:00</lastmod>
+    <lastmod>2020-08-23T14:01:43+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -174,7 +264,7 @@
   
   <url>
     <loc>https://syralist.github.io/tags/homematic/</loc>
-    <lastmod>2020-07-21T19:45:06+02:00</lastmod>
+    <lastmod>2020-08-23T14:01:43+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -184,66 +274,6 @@
                 rel="alternate"
                 hreflang="de"
                 href="https://syralist.github.io/tags/homematic/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://syralist.github.io/tags/nodered/</loc>
-    <lastmod>2020-07-21T19:45:06+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://syralist.github.io/en/tags/nodered/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://syralist.github.io/tags/nodered/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://syralist.github.io/tags/smarthome/</loc>
-    <lastmod>2020-07-21T19:45:06+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://syralist.github.io/en/tags/smarthome/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://syralist.github.io/tags/smarthome/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://syralist.github.io/tags/xiaomi/</loc>
-    <lastmod>2020-07-21T19:45:06+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://syralist.github.io/en/tags/xiaomi/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://syralist.github.io/tags/xiaomi/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://syralist.github.io/tags/zigbee/</loc>
-    <lastmod>2020-07-21T19:45:06+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://syralist.github.io/en/tags/zigbee/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://syralist.github.io/tags/zigbee/"
                 />
   </url>
   
@@ -259,21 +289,6 @@
                 rel="alternate"
                 hreflang="de"
                 href="https://syralist.github.io/tags/datatransformation/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://syralist.github.io/tags/home-assistant/</loc>
-    <lastmod>2020-07-21T19:45:06+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://syralist.github.io/en/tags/home-assistant/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://syralist.github.io/tags/home-assistant/"
                 />
   </url>
   
