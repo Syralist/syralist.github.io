@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-	
-	<sitemap>
-	   	<loc>https://syralist.github.io/de/sitemap.xml</loc>
-		
-	   	<lastmod>2020-08-23T14:47:44+02:00</lastmod>
-		
-	</sitemap>
-	
-	<sitemap>
-	   	<loc>https://syralist.github.io/en/sitemap.xml</loc>
-		
-	   	<lastmod>2020-08-23T14:47:39+02:00</lastmod>
-		
-	</sitemap>
-	
+  
+  <sitemap>
+    <loc>https://syralist.github.io/de/sitemap.xml</loc>
+    
+      <lastmod>2020-10-11T17:12:28+02:00</lastmod>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>https://syralist.github.io/en/sitemap.xml</loc>
+    
+      <lastmod>2020-10-11T17:13:37+02:00</lastmod>
+    
+  </sitemap>
+  
 </sitemapindex>
