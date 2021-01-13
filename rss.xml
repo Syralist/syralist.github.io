@@ -10,7 +10,7 @@
         <title>Syralists Blog</title>
         <link>https://syralist.github.io/</link>
         <description>Syralists persöhnlicher Blog.</description>
-        <generator>Hugo 0.76.3 https://gohugo.io/</generator>
+        <generator>Hugo 0.80.0 https://gohugo.io/</generator>
         
             <language>de-DE</language>
         
@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
         
-        <lastBuildDate>Sun, 11 Oct 2020 17:14:09 &#43;0200</lastBuildDate>
+        <lastBuildDate>Wed, 13 Jan 2021 19:09:26 &#43;0100</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://syralist.github.io/rss.xml" />
         
@@ -936,6 +936,7 @@ Wie oben schon geschrieben, ist es an einigen Stellen etwas fummelig, aber im Gr
                     <description>&lt;h2 id=&#34;fenster-steuert-heizkörper&#34;&gt;Fenster steuert Heizkörper&lt;/h2&gt;
 &lt;p&gt;Wie ich schon in meinem Artikel über mein &lt;a href=&#34;https://syralist.github.io/posts/smarthome/mein_setup/&#34; title=&#34;Mein Smarthome Setup&#34;&gt;Smarthomesetup&lt;/a&gt; geschrieben habe, sind die Automationen das, was ein Smarthome erst smart macht.
 Hier beschreibe ich, wie ich den Heizkörper herunterregle, wenn das Fenster geöffnet wird und wieder zurückstelle, wenn das Fenster geschlossen wird.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update vom 13.01.2021:&lt;/strong&gt; Mittlerweile lasse ich die Automation nicht mehr über Node-Red laufen, sondern nutze dafür die in Home Assistant eingebauten &lt;a href=&#34;https://syralist.github.io/posts/smarthome/fensterautomation/#automation-in-home-assistant&#34;&gt;Automationen&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;beteiligte-komponenten&#34;&gt;Beteiligte Komponenten&lt;/h3&gt;
 &lt;p&gt;Das Fenster wird mit einem &lt;strong&gt;Xiaomi Aqara Tür-/Fensterkontakt&lt;/strong&gt; überwacht. Der sendet den Status per &lt;strong&gt;Zigbee&lt;/strong&gt; an den Conbee Stick. Der Conbee ist per Deconz in Home Assistant eingebunden.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-06-06-fensterkontakt.jpg&#34; alt=&#34;Xiaomi Aqara Tür-/Fensterkontakt&#34;&gt;&lt;/p&gt;
@@ -944,7 +945,80 @@ Die Thermostate stehen immer auf &lt;em&gt;manuell&lt;/em&gt;, weil sie ausschli
 &lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-06-06-thermostat.jpg&#34; alt=&#34;Homematic Thermostat&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Die Absenktemperatur wird über eine &lt;em&gt;input_number&lt;/em&gt; Entity eingestellt.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-06-06-input-number.png&#34; alt=&#34;input_number&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;nodered&#34;&gt;NodeRed&lt;/h3&gt;
+&lt;h3 id=&#34;automation-in-home-assistant&#34;&gt;Automation in Home Assistant&lt;/h3&gt;
+&lt;p&gt;Ich habe für jedes Fenster eine Automation erstellt. Die Automation läuft im Modus &lt;strong&gt;Neu Starten&lt;/strong&gt;, weil ich eine &lt;em&gt;Warten&lt;/em&gt;-Aktion verwende und gegebenenfalls noch laufende Instanzen der Automation so abgebrochen werden.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2021-01-13-automation-01.png&#34; alt=&#34;Automation erstellen&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Der Auslöser ist ganz einfach: Wenn der Fensterkontakt den Zustand zu &lt;code&gt;on&lt;/code&gt; wechselt, ist das Fenster geöffnet und die Automation soll starten.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2021-01-13-automation-02.png&#34; alt=&#34;Auslöser einstellen&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Ich habe hier noch eine Bedingung eingefügt, dass meine Heizungsanlage laufen muss. Wenn im Sommer die Heizung ausgeschaltet ist, soll die Automation nicht am Heizkörper rumdrehen.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2021-01-13-automation-03.png&#34; alt=&#34;optionale Bedingung&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Nun folgen die Aktionen, die ausgeführt werden sollen. Als erstes wird eine temporäre Szene erstellt, in der der Zustand des Thermostaten gespeichert wird.
+Dafür wird der Dienst &lt;code&gt;scene.create&lt;/code&gt; aufgerufen und eine &lt;code&gt;scene_id&lt;/code&gt; sowie die Entities übergeben.&lt;/p&gt;
+&lt;p&gt;Als nächstes wird der Dienst &lt;code&gt;climate.set_temperature&lt;/code&gt; aufgerufen. Die Temperatur ist nicht fest eingetragen, sondern wird mit Hilfe eines Templates aus dem &lt;em&gt;input_number&lt;/em&gt;-Helfer ausgelesen.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2021-01-13-automation-04.png&#34; alt=&#34;Aktionen Teil 1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Danach wird eine &lt;strong&gt;Auf Auslöser warten&lt;/strong&gt; Aktion gestartet, die die Automation pausiert bis der Fensterkontakt wieder geschlossen meldet. Es ist kein Timeout eingetragen, so dass die Automation theoretisch ewig aktiv bleibt.&lt;/p&gt;
+&lt;p&gt;Wenn das Fenster wieder geschlossen ist, folgt als letzte Aktion das Aktivieren der vorher gespeicherten Szene.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2021-01-13-automation-05.png&#34; alt=&#34;Aktionen Teil 2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Hier noch die Automation als YAML zum Importieren:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;nt&#34;&gt;alias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Fenster Büro&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;description&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;trigger&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;platform&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;state&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;entity_id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;binary_sensor.fenster_buero&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;on&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;condition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;condition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;state&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;entity_id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;binary_sensor.vicare_heizkreisaktiv&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;state&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;on&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;action&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;service&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;scene.create&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;scene_id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;buero_snapshot&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;snapshot_entities&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;climate.00201a49a039a4&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;service&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;climate.set_temperature&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;temperature&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;{{ states(&amp;#39;&amp;#39;input_number.temperatur_niedrig&amp;#39;&amp;#39;) }}&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;entity_id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;climate.00201a49a039a4&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;wait_for_trigger&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;platform&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;state&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;entity_id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;binary_sensor.fenster_buero&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;off&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;scene&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;scene.buero_snapshot&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;mode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;restart&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;nodered-nicht-mehr-genutzt&#34;&gt;NodeRed &lt;em&gt;(nicht mehr genutzt)&lt;/em&gt;&lt;/h3&gt;
 &lt;p&gt;Die Automation ist in NodeRed umgesetzt und besteht aus sechs Nodes.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-06-06-nodered-01.png&#34; alt=&#34;Kompletter Flow&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Die &lt;em&gt;state node&lt;/em&gt; „Fenster“ reagiert auf einen Zustandswechsel des Fensterkontakts.&lt;/p&gt;
