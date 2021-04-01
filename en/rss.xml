@@ -8,7 +8,7 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Syralists Blog</title>
-        <link>https://syralist.github.io/en/</link>
+        <link>https://blog.syralist.de/en/</link>
         <description>Syralists persöhnlicher Blog.</description>
         <generator>Hugo 0.80.0 https://gohugo.io/</generator>
         
@@ -23,15 +23,15 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
         
-        <lastBuildDate>Thu, 25 Mar 2021 21:17:44 &#43;0100</lastBuildDate>
+        <lastBuildDate>Thu, 01 Apr 2021 16:17:05 &#43;0200</lastBuildDate>
         
-            <atom:link rel="self" type="application/rss&#43;xml" href="https://syralist.github.io/en/rss.xml" />
+            <atom:link rel="self" type="application/rss&#43;xml" href="https://blog.syralist.de/en/rss.xml" />
         
         
             <item>
                 <title>Integration of my Doorbell in Home Assistant</title>
-                <link>https://syralist.github.io/en/posts/smarthome/klingel/</link>
-                <guid isPermaLink="true">https://syralist.github.io/en/posts/smarthome/klingel/</guid>
+                <link>https://blog.syralist.de/en/posts/smarthome/klingel/</link>
+                <guid isPermaLink="true">https://blog.syralist.de/en/posts/smarthome/klingel/</guid>
                 <pubDate>Sun, 11 Oct 2020 13:33:27 &#43;0200</pubDate>
                 
                     <author>thomas.helmke@gmx.de (Thomas Helmke)</author>
@@ -50,7 +50,7 @@ Here, all apartment units are connected in parallel to a proprietary bus and rea
 &lt;h3 id=&#34;understanding-the-doorbell-system&#34;&gt;Understanding the doorbell system&lt;/h3&gt;
 &lt;p&gt;The first step is to understand the electrical side. If you take the apartment unit of the bell from the wall,
 you will find only two wires. With the multimeter you measure 24V here, which will be reduced a bit when the bell is activated.
-&lt;img src=&#34;https://syralist.github.io/images/2020-10-11-klingel-02.jpg&#34; alt=&#34;Wiring behind the apartment unit&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://blog.syralist.de/images/2020-10-11-klingel-02.jpg&#34; alt=&#34;Wiring behind the apartment unit&#34;&gt;&lt;/p&gt;
 &lt;p&gt;From the few sources on the Internet about the TCS system, one learns that the 24V are pulled to 0V for one or two
 milliseconds to encode zeros and ones of a binary protocol. &lt;a href=&#34;https://github.com/atc1441/TCSintercomArduino&#34; title=&#34;Aaron Christophels Github&#34;&gt;Aaron Christophel&lt;/a&gt; has a video in which he
 reverse-engineered the protocol with an oscilloscope.&lt;/p&gt;
@@ -61,8 +61,8 @@ and are processed by a microcontroller in the apartment unit.&lt;/p&gt;
 &lt;p&gt;Since the bus is a voltage signal, we can simply connect to the bus in parallel and listen to the messages.
 To be able to listen to the bus, the 24V must be reduced to 3.3V, which an ESP8266 can process.
 In this case, a simple voltage divider made up of 1MΩ and 147kΩ is sufficient.
-&lt;img src=&#34;https://syralist.github.io/images/2020-10-11-klingel-06.png&#34; alt=&#34;Voltage Divider on ESP8266&#34;&gt;
-&lt;img src=&#34;https://syralist.github.io/images/2020-10-11-klingel-03.jpg&#34; alt=&#34;Voltage Divider on ESP8266&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://blog.syralist.de/images/2020-10-11-klingel-06.png&#34; alt=&#34;Voltage Divider on ESP8266&#34;&gt;
+&lt;img src=&#34;https://blog.syralist.de/images/2020-10-11-klingel-03.jpg&#34; alt=&#34;Voltage Divider on ESP8266&#34;&gt;&lt;/p&gt;
 &lt;p&gt;In my first version I had read the voltage level via the analog input and evaluated it directly in the loop().
 The problem was that the jitter was too high, so the length of the pulses was not reliably detected.
 Because of this the ringing was often not recognized.&lt;/p&gt;
@@ -113,8 +113,8 @@ To find the matching message, simply connect to the MQTT broker and see what is 
 topic when the bell is pressed.&lt;/p&gt;
 &lt;p&gt;With this configuration you have created a device in the Home Assistant without entities but with a MQTT Device Trigger,
 which can be used as a trigger for automations.
-&lt;img src=&#34;https://syralist.github.io/images/2020-10-11-klingel-04.png&#34; alt=&#34;Device in Home Assistant&#34;&gt;
-&lt;img src=&#34;https://syralist.github.io/images/2020-10-11-klingel-05.png&#34; alt=&#34;Device in Home Assistant&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://blog.syralist.de/images/2020-10-11-klingel-04.png&#34; alt=&#34;Device in Home Assistant&#34;&gt;
+&lt;img src=&#34;https://blog.syralist.de/images/2020-10-11-klingel-05.png&#34; alt=&#34;Device in Home Assistant&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;automations&#34;&gt;Automations&lt;/h3&gt;
 &lt;p&gt;I have linked two automations with the bell. On the one hand I get a notification on my cell phone via the Home Assistant App.
 On the other hand I let a LED bar flash green, but only if my PC is switched on. This way I can see the ringing even when I use headphones.&lt;/p&gt;
@@ -131,7 +131,7 @@ On the other hand I let a LED bar flash green, but only if my PC is switched on.
                         
                         
                             
-                                <category domain="https://syralist.github.io/en/posts/smarthome/">posts\smarthome\</category>
+                                <category domain="https://blog.syralist.de/en/posts/smarthome/">posts\smarthome\</category>
                             
                         
                     
@@ -144,25 +144,25 @@ On the other hand I let a LED bar flash green, but only if my PC is switched on.
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/smarthome/">Smarthome</category>
+                                    <category domain="https://blog.syralist.de/en/tags/smarthome/">Smarthome</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/homeassistant/">HomeAssistant</category>
+                                    <category domain="https://blog.syralist.de/en/tags/homeassistant/">HomeAssistant</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/esphome/">ESPHome</category>
+                                    <category domain="https://blog.syralist.de/en/tags/esphome/">ESPHome</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/mqtt/">MQTT</category>
+                                    <category domain="https://blog.syralist.de/en/tags/mqtt/">MQTT</category>
                                 
                             
                         
@@ -172,8 +172,8 @@ On the other hand I let a LED bar flash green, but only if my PC is switched on.
         
             <item>
                 <title>Zigbee Button in Node-RED</title>
-                <link>https://syralist.github.io/en/posts/smarthome/zigbeebutton-nodered/</link>
-                <guid isPermaLink="true">https://syralist.github.io/en/posts/smarthome/zigbeebutton-nodered/</guid>
+                <link>https://blog.syralist.de/en/posts/smarthome/zigbeebutton-nodered/</link>
+                <guid isPermaLink="true">https://blog.syralist.de/en/posts/smarthome/zigbeebutton-nodered/</guid>
                 <pubDate>Sun, 23 Aug 2020 13:44:48 &#43;0200</pubDate>
                 
                     <author>thomas.helmke@gmx.de (Thomas Helmke)</author>
@@ -187,12 +187,12 @@ On the other hand I let a LED bar flash green, but only if my PC is switched on.
 These events can then be used as triggers for automations.&lt;/p&gt;
 &lt;h2 id=&#34;usage-in-node-red&#34;&gt;Usage in Node-RED&lt;/h2&gt;
 &lt;p&gt;The Flow in Node-RED consists of three necessary nodes and four optional nodes.
-&lt;img src=&#34;https://syralist.github.io/images/2020-08-23-NodeRed-01.png&#34; alt=&#34;Flow Overview&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://blog.syralist.de/images/2020-08-23-NodeRed-01.png&#34; alt=&#34;Flow Overview&#34;&gt;&lt;/p&gt;
 &lt;p&gt;First, I use an &lt;em&gt;events: all&lt;/em&gt; node to catch the events of type “deconz_event”.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-08-23-NodeRed-02.png&#34; alt=&#34;Event Node&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-08-23-NodeRed-02.png&#34; alt=&#34;Event Node&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Next, a &lt;em&gt;switch&lt;/em&gt; node is used to filter for the button&amp;rsquo;s Id in &amp;lsquo;msg.payload.event.id&amp;rsquo;.
 The id is derived from the name given in the Phoscon interface.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-08-23-NodeRed-03.png&#34; alt=&#34;Switch Node for Button ID&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-08-23-NodeRed-03.png&#34; alt=&#34;Switch Node for Button ID&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Thirdly, the type of event is filtered with another &lt;em&gt;switch&lt;/em&gt; node. The Aqara button returns these four events:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -220,7 +220,7 @@ The id is derived from the name given in the Phoscon interface.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-08-23-NodeRed-04.png&#34; alt=&#34;Switch Node for Event Nummer&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-08-23-NodeRed-04.png&#34; alt=&#34;Switch Node for Event Nummer&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Now you can connect your flows directly to the corresponding outputs of the second &lt;em&gt;switch&lt;/em&gt; node.
 But since I can never remember which number stands for which click, I added &lt;em&gt;delay&lt;/em&gt; nodes, which are configured to &lt;em&gt;rate limit&lt;/em&gt;.
 This does not affect the flow, they are just to make programming easier for me.&lt;/p&gt;
@@ -630,7 +630,7 @@ This does not affect the flow, they are just to make programming easier for me.&
                         
                         
                             
-                                <category domain="https://syralist.github.io/en/posts/smarthome/">posts\smarthome\</category>
+                                <category domain="https://blog.syralist.de/en/posts/smarthome/">posts\smarthome\</category>
                             
                         
                     
@@ -643,31 +643,31 @@ This does not affect the flow, they are just to make programming easier for me.&
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/smarthome/">Smarthome</category>
+                                    <category domain="https://blog.syralist.de/en/tags/smarthome/">Smarthome</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/zigbee/">Zigbee</category>
+                                    <category domain="https://blog.syralist.de/en/tags/zigbee/">Zigbee</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/node-red/">Node-RED</category>
+                                    <category domain="https://blog.syralist.de/en/tags/node-red/">Node-RED</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/home-assistant/">Home Assistant</category>
+                                    <category domain="https://blog.syralist.de/en/tags/home-assistant/">Home Assistant</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/xiaomi/">Xiaomi</category>
+                                    <category domain="https://blog.syralist.de/en/tags/xiaomi/">Xiaomi</category>
                                 
                             
                         
@@ -677,8 +677,8 @@ This does not affect the flow, they are just to make programming easier for me.&
         
             <item>
                 <title>Alfawise U50 – Modifications and Second Impression</title>
-                <link>https://syralist.github.io/en/posts/3d-druck/alfawise-u50-zweitereindruck/</link>
-                <guid isPermaLink="true">https://syralist.github.io/en/posts/3d-druck/alfawise-u50-zweitereindruck/</guid>
+                <link>https://blog.syralist.de/en/posts/3d-druck/alfawise-u50-zweitereindruck/</link>
+                <guid isPermaLink="true">https://blog.syralist.de/en/posts/3d-druck/alfawise-u50-zweitereindruck/</guid>
                 <pubDate>Sat, 08 Aug 2020 15:02:23 &#43;0200</pubDate>
                 
                     <author>thomas.helmke@gmx.de (Thomas Helmke)</author>
@@ -686,50 +686,50 @@ This does not affect the flow, they are just to make programming easier for me.&
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
                 
                     <description>&lt;h2 id=&#34;impressions-after-three-weeks&#34;&gt;Impressions after three weeks&lt;/h2&gt;
-&lt;p&gt;For three weeks now I have an Alfawise U50 at home. You can read the article about unboxing and assembly &lt;a href=&#34;https://syralist.github.io/en/posts/3d-druck/alfawise-u50-unboxing/&#34; title=&#34;Alfawise U50 -- Unboxing and First Impression&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For three weeks now I have an Alfawise U50 at home. You can read the article about unboxing and assembly &lt;a href=&#34;https://blog.syralist.de/en/posts/3d-druck/alfawise-u50-unboxing/&#34; title=&#34;Alfawise U50 -- Unboxing and First Impression&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;So far I can say that the printer just works. I still print exclusively with Octoprint and that works fine, too.
 In this article I present which modifications or add-ons I have added so far and what I have learned about handling the printer.&lt;/p&gt;
 &lt;h2 id=&#34;attachments&#34;&gt;Attachments&lt;/h2&gt;
 &lt;h3 id=&#34;x-axis-spacer&#34;&gt;X-Axis Spacer&lt;/h3&gt;
 &lt;p&gt;The first modification I printed is a spacer for the X-axis endstop. When delivered, the nozzle is outside the print bed when the endstop is pressed.
 So I designed an adapter in OpenSCAD that can be plugged onto the existing metal tag and stops the nozzle 4mm further inside.
-&lt;img src=&#34;https://syralist.github.io/images/2020-08-08-alfawise-u50-mods-11.png&#34; alt=&#34;Spacer in OpenSCAD&#34;&gt;
-&lt;img src=&#34;https://syralist.github.io/images/2020-08-08-alfawise-u50-mods-10.jpg&#34; alt=&#34;Spacer plugged in&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://blog.syralist.de/images/2020-08-08-alfawise-u50-mods-11.png&#34; alt=&#34;Spacer in OpenSCAD&#34;&gt;
+&lt;img src=&#34;https://blog.syralist.de/images/2020-08-08-alfawise-u50-mods-10.jpg&#34; alt=&#34;Spacer plugged in&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;camera-holder&#34;&gt;Camera Holder&lt;/h3&gt;
 &lt;p&gt;The next attachment is a camera holder for a Logitech C270 webcam (&lt;a href=&#34;https://www.thingiverse.com/thing:2426231&#34; title=&#34;Camera Mount for Logitech C270 on 2020 Extrusion&#34;&gt;Thingiverse&lt;/a&gt;).
 I mounted the camera on top of the crossbar, so that I have the complete printing bed in the picture.
-&lt;img src=&#34;https://syralist.github.io/images/2020-08-08-alfawise-u50-mods-06.jpg&#34; alt=&#34;Camera Holder&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://blog.syralist.de/images/2020-08-08-alfawise-u50-mods-06.jpg&#34; alt=&#34;Camera Holder&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;tool-holder&#34;&gt;Tool Holder&lt;/h3&gt;
 &lt;p&gt;The tool holder (&lt;a href=&#34;https://www.thingiverse.com/thing:4543682&#34; title=&#34;Ender 3 Tool Holder for TPU&#34;&gt;Thingiverse&lt;/a&gt;) is actually intended for the Ender 3, but works just as well for the U50.
 The finished part is simply put on the side of the upper crossbar.
-&lt;img src=&#34;https://syralist.github.io/images/2020-08-08-alfawise-u50-mods-08.jpg&#34; alt=&#34;Tool Holder&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://blog.syralist.de/images/2020-08-08-alfawise-u50-mods-08.jpg&#34; alt=&#34;Tool Holder&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;z-axis-stabilizer-and-filament-guide&#34;&gt;Z-Axis Stabilizer and Filament Guide&lt;/h3&gt;
 &lt;p&gt;The threaded rod of the Z-axis has no support or guide at the upper end when delivered.
 I haven&amp;rsquo;t had any problems with it, because I haven&amp;rsquo;t printed very high yet, but I found &lt;a href=&#34;https://www.thingiverse.com/thing:4215305&#34; title=&#34;Guide Axe Z Alfawise U50&#34;&gt;this bracket&lt;/a&gt; on Thingiverse.
 Now the threaded rod is held with a ball bearing at the top.
-&lt;img src=&#34;https://syralist.github.io/images/2020-08-08-alfawise-u50-mods-03.jpg&#34; alt=&#34;Z-Axis Stabilizer and Upper Filament Guide&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://blog.syralist.de/images/2020-08-08-alfawise-u50-mods-03.jpg&#34; alt=&#34;Z-Axis Stabilizer and Upper Filament Guide&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The filament guide consists of two parts. At the top I have chosen this arm (&lt;a href=&#34;https://www.thingiverse.com/thing:3950799&#34; title=&#34;Filament Guide - Ender 3 Pro&#34;&gt;Thingiverse&lt;/a&gt;), which you can see on the last picture.
 For this I had to shorten one leg with the pliers, because it got in the way with the Z-axis mount.&lt;/p&gt;
 &lt;p&gt;At the bottom I added a guide which was constructed directly for the U50 and holds a ball bearing (&lt;a href=&#34;https://www.thingiverse.com/thing:4214964&#34; title=&#34;Guide Fil Alfawise U50&#34;&gt;Thingiverse&lt;/a&gt;).
-&lt;img src=&#34;https://syralist.github.io/images/2020-08-08-alfawise-u50-mods-04.jpg&#34; alt=&#34;Lower Filament Guide&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://blog.syralist.de/images/2020-08-08-alfawise-u50-mods-04.jpg&#34; alt=&#34;Lower Filament Guide&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;raspberry-case&#34;&gt;Raspberry Case&lt;/h3&gt;
 &lt;p&gt;As mentioned before, I print exclusively via Octoprint, which runs on a Raspberry Pi 3.
 So I printed a case that can be mounted in the frame below the printing bed (&lt;a href=&#34;https://www.thingiverse.com/thing:2889371&#34; title=&#34;Ender 3 Raspberry Pi 2/3/4 mount with buck converter mount and toolbox&#34;&gt;Thingiverse&lt;/a&gt;).
-&lt;img src=&#34;https://syralist.github.io/images/2020-08-08-alfawise-u50-mods-07.jpg&#34; alt=&#34;Raspberry Pi Case&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://blog.syralist.de/images/2020-08-08-alfawise-u50-mods-07.jpg&#34; alt=&#34;Raspberry Pi Case&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;holder-for-usb-hub&#34;&gt;Holder for USB-Hub&lt;/h3&gt;
 &lt;p&gt;In the beginning I had the webcam and printer connected directly to the Raspberry Pi. But this caused the power supply to drop out from time to time,
 especially during startup when the printer electronics are not yet supplied by its own power supply.
 Therefore I now use a USB hub with its own power supply, which is mounted between the printer electronics and the printing bed.
 I designed the mounting bracket for it myself in OpenSCAD.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-08-08-alfawise-u50-mods-12.png&#34; alt=&#34;USB-Hub Holder in OpenSCAD&#34;&gt;
-&lt;img src=&#34;https://syralist.github.io/images/2020-08-08-alfawise-u50-mods-02.jpg&#34; alt=&#34;USB-Hub Holder mounted&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-08-08-alfawise-u50-mods-12.png&#34; alt=&#34;USB-Hub Holder in OpenSCAD&#34;&gt;
+&lt;img src=&#34;https://blog.syralist.de/images/2020-08-08-alfawise-u50-mods-02.jpg&#34; alt=&#34;USB-Hub Holder mounted&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;cablemanagement&#34;&gt;Cablemanagement&lt;/h3&gt;
 &lt;p&gt;To avoid the many additional cables flying around wildly and getting tangled up with the moving parts of the printer I printed out a handful of cable guides for aluminium profiles (&lt;a href=&#34;https://www.thingiverse.com/thing:4068606&#34; title=&#34;Cable clamp/holder for alu profile&#34;&gt;Thingiverse&lt;/a&gt;).
-&lt;img src=&#34;https://syralist.github.io/images/2020-08-08-alfawise-u50-mods-05.jpg&#34; alt=&#34;Cablemanagement inside the Printer Frame&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://blog.syralist.de/images/2020-08-08-alfawise-u50-mods-05.jpg&#34; alt=&#34;Cablemanagement inside the Printer Frame&#34;&gt;&lt;/p&gt;
 &lt;p&gt;For the power supply everything is plugged into a triple socket. The three cables for the printer, the Raspberry Pi and the USB hub are bundled together with a spiral hose.
 The printer plug is also plugged into an Osram Smart socket so that I can disconnect the printer from the mains if necessary.
 For the connection to my Smarthome there will be a separate article.
-&lt;img src=&#34;https://syralist.github.io/images/2020-08-08-alfawise-u50-mods-09.jpg&#34; alt=&#34;Cablemanagement and Sockets&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://blog.syralist.de/images/2020-08-08-alfawise-u50-mods-09.jpg&#34; alt=&#34;Cablemanagement and Sockets&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;insights-in-printing&#34;&gt;Insights in printing&lt;/h2&gt;
 &lt;p&gt;The first important thing to know is to check the leveling before each print. The printed parts stick extremely tight to the supplied printing bed,
 so that I sometimes have to use some force to remove them. This often changes the leveling.&lt;/p&gt;
@@ -747,7 +747,7 @@ so that I sometimes have to use some force to remove them. This often changes th
                         
                         
                             
-                                <category domain="https://syralist.github.io/en/posts/3d-druck/">posts\3d-druck\</category>
+                                <category domain="https://blog.syralist.de/en/posts/3d-druck/">posts\3d-druck\</category>
                             
                         
                     
@@ -760,25 +760,25 @@ so that I sometimes have to use some force to remove them. This often changes th
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/3d-printing/">3D Printing</category>
+                                    <category domain="https://blog.syralist.de/en/tags/3d-printing/">3D Printing</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/prototyping/">Prototyping</category>
+                                    <category domain="https://blog.syralist.de/en/tags/prototyping/">Prototyping</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/raspberry-pi/">Raspberry Pi</category>
+                                    <category domain="https://blog.syralist.de/en/tags/raspberry-pi/">Raspberry Pi</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/octoprint/">Octoprint</category>
+                                    <category domain="https://blog.syralist.de/en/tags/octoprint/">Octoprint</category>
                                 
                             
                         
@@ -788,8 +788,8 @@ so that I sometimes have to use some force to remove them. This often changes th
         
             <item>
                 <title>Alfawise U50 – Unboxing and First Impression</title>
-                <link>https://syralist.github.io/en/posts/3d-druck/alfawise-u50-unboxing/</link>
-                <guid isPermaLink="true">https://syralist.github.io/en/posts/3d-druck/alfawise-u50-unboxing/</guid>
+                <link>https://blog.syralist.de/en/posts/3d-druck/alfawise-u50-unboxing/</link>
+                <guid isPermaLink="true">https://blog.syralist.de/en/posts/3d-druck/alfawise-u50-unboxing/</guid>
                 <pubDate>Thu, 16 Jul 2020 11:09:19 &#43;0000</pubDate>
                 
                     <author>thomas.helmke@gmx.de (Thomas Helmke)</author>
@@ -802,70 +802,70 @@ After a video from &lt;a href=&#34;https://www.youtube.com/watch?v=nQ3ZTZvvC3M&#
 &lt;h2 id=&#34;the-unboxing&#34;&gt;The Unboxing&lt;/h2&gt;
 &lt;h3 id=&#34;the-packaging&#34;&gt;The Packaging&lt;/h3&gt;
 &lt;p&gt;The printer arrives from China well protected in foam packaging.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-01.jpg&#34; alt=&#34;Packaged in foam&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-07-15-alfawise-u50-unboxing-01.jpg&#34; alt=&#34;Packaged in foam&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Underneath the foam is the already assembled bottom part of the printer and a box with screws and tools.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-02.jpg&#34; alt=&#34;Bottom part and tool box&#34;&gt;
-&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-03.jpg&#34; alt=&#34;Bottom part and tool box&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-07-15-alfawise-u50-unboxing-02.jpg&#34; alt=&#34;Bottom part and tool box&#34;&gt;
+&lt;img src=&#34;https://blog.syralist.de/images/2020-07-15-alfawise-u50-unboxing-03.jpg&#34; alt=&#34;Bottom part and tool box&#34;&gt;&lt;/p&gt;
 &lt;p&gt;You need five(!) different hexagon socket wrenches for assembly. Fortunately all sizes are included.
 In addition there is a scraper and a side cutter to remove the printed parts from the bed later and to trim them, as well as a Micro-SD card with USB adapter. On the card you find an old version of Cura including a configuration file, the assembly instructions in digital form and some example 3D models.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-04.jpg&#34; alt=&#34;Tools and screws&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-07-15-alfawise-u50-unboxing-04.jpg&#34; alt=&#34;Tools and screws&#34;&gt;&lt;/p&gt;
 &lt;p&gt;In the lower foam half you will find the remaining attachments, which are also already partly assembled.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-05.jpg&#34; alt=&#34;Attachments&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-07-15-alfawise-u50-unboxing-05.jpg&#34; alt=&#34;Attachments&#34;&gt;&lt;/p&gt;
 &lt;p&gt;These parts must now be assembled according to the instructions.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-06.jpg&#34; alt=&#34;Alle the parts&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-07-15-alfawise-u50-unboxing-06.jpg&#34; alt=&#34;Alle the parts&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;the-assembly&#34;&gt;The Assembly&lt;/h3&gt;
 &lt;p&gt;The text of the manual is translated into reasonably understandable English, but the pictures are sometimes a bit small.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-07.jpg&#34; alt=&#34;The Manual&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-07-15-alfawise-u50-unboxing-07.jpg&#34; alt=&#34;The Manual&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The first part to be assembled is the combination of X-axis drive and extruder drive. The construct has to be screwed to the X-axis strut and the screw has to be fiddled into the hole from behind.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-08.jpg&#34; alt=&#34;X-axis and extruder drive&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-07-15-alfawise-u50-unboxing-08.jpg&#34; alt=&#34;X-axis and extruder drive&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The hotend is then simply fitted onto the rail and the second Z-axis guide is screwed on the other side.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-09.jpg&#34; alt=&#34;Hotend and Z-axis guide&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-07-15-alfawise-u50-unboxing-09.jpg&#34; alt=&#34;Hotend and Z-axis guide&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The toothed belt that moves the hot end is fixed with printed clips. We will see how long they last.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-10.jpg&#34; alt=&#34;X-axis belt&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-07-15-alfawise-u50-unboxing-10.jpg&#34; alt=&#34;X-axis belt&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The vertical aluminium profiles are fixed from below with one screw each. The right side is additionally fixed with a T-profile.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-11.jpg&#34; alt=&#34;T-profile&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-07-15-alfawise-u50-unboxing-11.jpg&#34; alt=&#34;T-profile&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The left side is more fiddly again, because here you have to mount the attachment with the Z-axis drive.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-12.jpg&#34; alt=&#34;Z-axis drive&#34;&gt;
-&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-13.jpg&#34; alt=&#34;Z-axis drive&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-07-15-alfawise-u50-unboxing-12.jpg&#34; alt=&#34;Z-axis drive&#34;&gt;
+&lt;img src=&#34;https://blog.syralist.de/images/2020-07-15-alfawise-u50-unboxing-13.jpg&#34; alt=&#34;Z-axis drive&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The Y-axis drive is now mounted at the rear. Of course you need two different types of screws and the matching hexagon socket wrenches.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-14.jpg&#34; alt=&#34;Y-axis drive&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-07-15-alfawise-u50-unboxing-14.jpg&#34; alt=&#34;Y-axis drive&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The belt for the Y-axis is fixed under the printing bed with cable ties. But I had to loosen one side of it to connect the belt to the drive.
 When fixing it again one of the printed clamps broke.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-15.jpg&#34; alt=&#34;Y-axis belt&#34;&gt;
-&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-16.jpg&#34; alt=&#34;Y-axis belt&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-07-15-alfawise-u50-unboxing-15.jpg&#34; alt=&#34;Y-axis belt&#34;&gt;
+&lt;img src=&#34;https://blog.syralist.de/images/2020-07-15-alfawise-u50-unboxing-16.jpg&#34; alt=&#34;Y-axis belt&#34;&gt;&lt;/p&gt;
 &lt;p&gt;And this is what it looks like before the wiring.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-17.jpg&#34; alt=&#34;Completely assembled - rear view&#34;&gt;
-&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-18.jpg&#34; alt=&#34;Completely assembled - front view&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-07-15-alfawise-u50-unboxing-17.jpg&#34; alt=&#34;Completely assembled - rear view&#34;&gt;
+&lt;img src=&#34;https://blog.syralist.de/images/2020-07-15-alfawise-u50-unboxing-18.jpg&#34; alt=&#34;Completely assembled - front view&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;the-wiring&#34;&gt;The Wiring&lt;/h3&gt;
 &lt;p&gt;All components are wired with plug-in connectors.
 Due to the different size, servo connection and limit switch connection cannot be confused. Due to the shape of the plug, reverse polarity is also basically impossible.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-19.jpg&#34; alt=&#34;Cable for X-axis and extruder&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-07-15-alfawise-u50-unboxing-19.jpg&#34; alt=&#34;Cable for X-axis and extruder&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The individual cables are well labelled and combined in cable sleeves.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-20.jpg&#34; alt=&#34;Cable for Z-axis&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-07-15-alfawise-u50-unboxing-20.jpg&#34; alt=&#34;Cable for Z-axis&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The connection for the hot end is secured by a screw connection.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-21.jpg&#34; alt=&#34;Cabel for the hotend&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-07-15-alfawise-u50-unboxing-21.jpg&#34; alt=&#34;Cabel for the hotend&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The connection for the Y limit switch is the only one that requires some fiddling to connect.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-22.jpg&#34; alt=&#34;Cable for Y-axis&#34;&gt;
-&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-23.jpg&#34; alt=&#34;Cable for Y-axis&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-07-15-alfawise-u50-unboxing-22.jpg&#34; alt=&#34;Cable for Y-axis&#34;&gt;
+&lt;img src=&#34;https://blog.syralist.de/images/2020-07-15-alfawise-u50-unboxing-23.jpg&#34; alt=&#34;Cable for Y-axis&#34;&gt;&lt;/p&gt;
 &lt;p&gt;This is how the assembly looks like with the wiring finished. The wires from the hotend are located very unfavorably and grind as you can see on the printing bed.
 Meanwhile I have fixed them with cable ties to the top.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-24.jpg&#34; alt=&#34;Fully wired&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-07-15-alfawise-u50-unboxing-24.jpg&#34; alt=&#34;Fully wired&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;switching-on-for-the-first-time&#34;&gt;Switching on for the first time&lt;/h3&gt;
 &lt;p&gt;After everything was wired, I could switch on for the first time and since no MagicSmoke™ has escaped anywhere, I obviously put everything together correctly.
 Here you can already see the glued on printing bed.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-25.jpg&#34; alt=&#34;Switched on for the first time&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-07-15-alfawise-u50-unboxing-25.jpg&#34; alt=&#34;Switched on for the first time&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The menu offers functions for manual control of all axes, temperature preselection and direct printing from the SD card.
 The pre-installed firmware with version 195 had the problem that the speed of the axes could not be adjusted because the input field did not work.
 In a French &lt;a href=&#34;https://www.lesimprimantes3d.fr/forum/topic/30009-mise-a-jour-firmware-u50/&#34; title=&#34;Les Imprimantes 3D Forum&#34;&gt;3D printing forum&lt;/a&gt; I found a firmware update to version 217, which fixes the problem. Unfortunately the rar archive could not be unpacked under Linux, but only under Windows.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-26.jpg&#34; alt=&#34;Main menu&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-07-15-alfawise-u50-unboxing-26.jpg&#34; alt=&#34;Main menu&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The extruder can only be moved via the menu when the hot end is heated up. I have not tested whether this is also blocked with external control.
 Before the extruder drive, the filament is threaded through a chamber with a limit switch, which detects when the filament has run out.
 After the extruder drive, the filament runs through a tube to the hot end. Here I had to cut a cable tie, because otherwise the filament could not be threaded to the end.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-27.jpg&#34; alt=&#34;Filament arrives at the bottom&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-07-15-alfawise-u50-unboxing-27.jpg&#34; alt=&#34;Filament arrives at the bottom&#34;&gt;&lt;/p&gt;
 &lt;p&gt;When moving to the home position to adjust the printing bed, I noticed that the X limit switch is positioned too far outwards, so that the hotend is no longer above the printing bed.
 Unfortunately the limit switch can not be adjusted, so I glued a temporary spacer to the switch lug.
 In the meantime I have printed a suitable adapter for it. There will be a separate article on this later.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-07-15-alfawise-u50-unboxing-28.jpg&#34; alt=&#34;Temporary spacer&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-07-15-alfawise-u50-unboxing-28.jpg&#34; alt=&#34;Temporary spacer&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;my-first-impression&#34;&gt;My first Impression&lt;/h2&gt;
 &lt;p&gt;After I ordered the printer, I came across two blog posts at &lt;a href=&#34;https://www.china-gadgets.de/test-alfawise-u50-3d-drucker/&#34; title=&#34;China-Gadgets.de&#34;&gt;China-Gadets&lt;/a&gt; and &lt;a href=&#34;https://drucktipps3d.de/ein-ue-ei/&#34; title=&#34;Drucktipps3D.de&#34;&gt;Drucktipps3D&lt;/a&gt; that tore the U50 up quite a bit.
 Of course I don&amp;rsquo;t have that much experience with other printers but I&amp;rsquo;m quite satisfied with the construction and quality so far.&lt;/p&gt;
@@ -884,7 +884,7 @@ As already written above, it is a little fiddly in some places, but in general, 
                         
                         
                             
-                                <category domain="https://syralist.github.io/en/posts/3d-druck/">posts\3d-druck\</category>
+                                <category domain="https://blog.syralist.de/en/posts/3d-druck/">posts\3d-druck\</category>
                             
                         
                     
@@ -897,25 +897,25 @@ As already written above, it is a little fiddly in some places, but in general, 
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/3d-printing/">3D Printing</category>
+                                    <category domain="https://blog.syralist.de/en/tags/3d-printing/">3D Printing</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/prototyping/">Prototyping</category>
+                                    <category domain="https://blog.syralist.de/en/tags/prototyping/">Prototyping</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/raspberry-pi/">Raspberry Pi</category>
+                                    <category domain="https://blog.syralist.de/en/tags/raspberry-pi/">Raspberry Pi</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/octoprint/">Octoprint</category>
+                                    <category domain="https://blog.syralist.de/en/tags/octoprint/">Octoprint</category>
                                 
                             
                         
@@ -925,8 +925,8 @@ As already written above, it is a little fiddly in some places, but in general, 
         
             <item>
                 <title>Window Automation</title>
-                <link>https://syralist.github.io/en/posts/smarthome/fensterautomation/</link>
-                <guid isPermaLink="true">https://syralist.github.io/en/posts/smarthome/fensterautomation/</guid>
+                <link>https://blog.syralist.de/en/posts/smarthome/fensterautomation/</link>
+                <guid isPermaLink="true">https://blog.syralist.de/en/posts/smarthome/fensterautomation/</guid>
                 <pubDate>Sat, 06 Jun 2020 14:25:23 &#43;0200</pubDate>
                 
                     <author>thomas.helmke@gmx.de (Thomas Helmke)</author>
@@ -934,31 +934,31 @@ As already written above, it is a little fiddly in some places, but in general, 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
                 
                     <description>&lt;h2 id=&#34;window-controls-radiator&#34;&gt;Window Controls Radiator&lt;/h2&gt;
-&lt;p&gt;As I wrote in my article about my &lt;a href=&#34;https://syralist.github.io/en/posts/smarthome/mein_setup/&#34; title=&#34;My Smarthome Setup&#34;&gt;Smarthome setup&lt;/a&gt;, automation is what makes a smart home smart.
+&lt;p&gt;As I wrote in my article about my &lt;a href=&#34;https://blog.syralist.de/en/posts/smarthome/mein_setup/&#34; title=&#34;My Smarthome Setup&#34;&gt;Smarthome setup&lt;/a&gt;, automation is what makes a smart home smart.
 Here I describe how I turn the radiator down when the window is opened and turn it back up again when the window is closed.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Update 2021-01-13:&lt;/strong&gt; In the meantime, I no longer run the automation via Node-Red, but instead use the &lt;a href=&#34;https://syralist.github.io/en/posts/smarthome/fensterautomation/#automation-in-home-assistant&#34;&gt;automations&lt;/a&gt; natively built into Home Assistant.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update 2021-01-13:&lt;/strong&gt; In the meantime, I no longer run the automation via Node-Red, but instead use the &lt;a href=&#34;https://blog.syralist.de/en/posts/smarthome/fensterautomation/#automation-in-home-assistant&#34;&gt;automations&lt;/a&gt; natively built into Home Assistant.&lt;/p&gt;
 &lt;h3 id=&#34;involved-components&#34;&gt;Involved Components&lt;/h3&gt;
 &lt;p&gt;The window is monitored with a &lt;strong&gt;Xiaomi Aqara door/window contact&lt;/strong&gt;. This sends the status via &lt;strong&gt;Zigbee&lt;/strong&gt; to the Conbee Stick. The Conbee is integrated into Home Assistant via Deconz.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-06-06-fensterkontakt.jpg&#34; alt=&#34;Xiaomi Aqara door/window contact&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-06-06-fensterkontakt.jpg&#34; alt=&#34;Xiaomi Aqara door/window contact&#34;&gt;&lt;/p&gt;
 &lt;p&gt;A &lt;strong&gt;Homematic radiator thermostat&lt;/strong&gt; is mounted on the radiator. As Homematic central I have a Raspberry Pi with &lt;em&gt;Raspberrymatic&lt;/em&gt; running.
 The thermostats are always set to &lt;em&gt;manual&lt;/em&gt;, because they are controlled exclusively via Home Assistant.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-06-06-thermostat.jpg&#34; alt=&#34;Homematic Thermostat&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-06-06-thermostat.jpg&#34; alt=&#34;Homematic Thermostat&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The reduced temperature is set via an &lt;em&gt;input_number&lt;/em&gt; entity.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-06-06-input-number.png&#34; alt=&#34;input_number&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-06-06-input-number.png&#34; alt=&#34;input_number&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;automation-in-home-assistant&#34;&gt;Automation in Home Assistant&lt;/h3&gt;
 &lt;p&gt;I have created an automation for each window. The automation runs in &lt;strong&gt;Restart&lt;/strong&gt; mode because I use a &lt;em&gt;Wait&lt;/em&gt; action and any instances of the automation that are still running will be cancelled as a result.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2021-01-13-automation-01.png&#34; alt=&#34;create the automation&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2021-01-13-automation-01.png&#34; alt=&#34;create the automation&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The trigger is quite simple: When the window contact changes state to &lt;code&gt;on&lt;/code&gt;, the window is open and the automation should start.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2021-01-13-automation-02.png&#34; alt=&#34;set the trigger&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2021-01-13-automation-02.png&#34; alt=&#34;set the trigger&#34;&gt;&lt;/p&gt;
 &lt;p&gt;I have added a condition here that my heating system must be running. When the heating is switched off in summer, the automation should not mess with the radiator.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2021-01-13-automation-03.png&#34; alt=&#34;optional condition&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2021-01-13-automation-03.png&#34; alt=&#34;optional condition&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Now follow the actions that are to be carried out. First, a temporary scene is created in which the state of the thermostat is saved.
 For this, the service &lt;code&gt;scene.create&lt;/code&gt; is called and a &lt;code&gt;scene_id&lt;/code&gt; and the entities are passed.&lt;/p&gt;
 &lt;p&gt;Next, the service &lt;code&gt;climate.set_temperature&lt;/code&gt; is called. The temperature is not entered as a fixed value, but is read from the &lt;em&gt;input_number&lt;/em&gt; helper with the help of a template.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2021-01-13-automation-04.png&#34; alt=&#34;actions part 1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2021-01-13-automation-04.png&#34; alt=&#34;actions part 1&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Next, a &lt;strong&gt;Wait for trigger&lt;/strong&gt; action is started, which pauses the automation until the window contact reports closed again. No timeout is entered, so that the automation theoretically remains active forever.&lt;/p&gt;
 &lt;p&gt;When the window is closed again, the last action is to activate the previously saved scene.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2021-01-13-automation-05.png&#34; alt=&#34;actions part 2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2021-01-13-automation-05.png&#34; alt=&#34;actions part 2&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Here is the complete YAML for import:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -1020,11 +1020,11 @@ For this, the service &lt;code&gt;scene.create&lt;/code&gt; is called and a &lt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;nodered-no-longer-used&#34;&gt;NodeRed &lt;em&gt;(no longer used)&lt;/em&gt;&lt;/h3&gt;
 &lt;p&gt;The automation is implemented in NodeRed and consists of six nodes.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-06-06-nodered-01.png&#34; alt=&#34;Complete Flow&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-06-06-nodered-01.png&#34; alt=&#34;Complete Flow&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The &lt;em&gt;state node&lt;/em&gt; “Fenster” reacts to a change of state of the window contact.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-06-06-nodered-02.png&#34; alt=&#34;Window State&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-06-06-nodered-02.png&#34; alt=&#34;Window State&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The &lt;em&gt;switch node&lt;/em&gt; branches into the upper or lower path, depending on the state. The binary sensor of the window contact has the state &lt;code&gt;on&lt;/code&gt; when the window is open and &lt;code&gt;off&lt;/code&gt; when the window is closed.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-06-06-nodered-03.png&#34; alt=&#34;Branching with the State&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-06-06-nodered-03.png&#34; alt=&#34;Branching with the State&#34;&gt;&lt;/p&gt;
 &lt;p&gt;When the window has been opened, the first thing to do is to save the current status of the thermostat in a temporary scene with the &lt;em&gt;call service node&lt;/em&gt;.
 In the &lt;em&gt;data&lt;/em&gt; field, the name of the scene and a list of the entities to be saved must be passed.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -1045,9 +1045,9 @@ In the &lt;em&gt;data&lt;/em&gt; field, the name of the scene and a list of the 
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-06-06-nodered-04.png&#34; alt=&#34;Saving the State&#34;&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-06-06-nodered-04.png&#34; alt=&#34;Saving the State&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Next, the value of the &lt;em&gt;input_number&lt;/em&gt; entity is read with a &lt;em&gt;current state node&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-06-06-nodered-05.png&#34; alt=&#34;reading the input_number&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-06-06-nodered-05.png&#34; alt=&#34;reading the input_number&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Finally, the thermostat is set to the readout value with a &lt;em&gt;call service node&lt;/em&gt;. For this purpose &lt;code&gt;{{payload}}&lt;/code&gt; is used as a template in the &lt;em&gt;data&lt;/em&gt; field.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -1061,7 +1061,7 @@ In the &lt;em&gt;data&lt;/em&gt; field, the name of the scene and a list of the 
 &lt;span class=&#34;err&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-06-06-nodered-06.png&#34; alt=&#34;Setting the Thermostat&#34;&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-06-06-nodered-06.png&#34; alt=&#34;Setting the Thermostat&#34;&gt;&lt;/p&gt;
 &lt;p&gt;When the window is closed, the previously saved scene is activated with another &lt;em&gt;call service node&lt;/em&gt;. Here only the name of the scene must be passed in the &lt;em&gt;Data&lt;/em&gt; field.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -1075,7 +1075,7 @@ In the &lt;em&gt;data&lt;/em&gt; field, the name of the scene and a list of the 
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-06-06-nodered-07.png&#34; alt=&#34;Resetting the Thermostat&#34;&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-06-06-nodered-07.png&#34; alt=&#34;Resetting the Thermostat&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Such a flow is used for every room in which a smart thermostat is installed. The advantage of this method with a temporary scene is that it can be expanded easily.
 If additional entities are to be considered, they only need to be added at one point.&lt;/p&gt;
 &lt;p&gt;Here is the complete flow to import:&lt;/p&gt;
@@ -1456,7 +1456,7 @@ If additional entities are to be considered, they only need to be added at one p
                         
                         
                             
-                                <category domain="https://syralist.github.io/en/posts/smarthome/">posts\smarthome\</category>
+                                <category domain="https://blog.syralist.de/en/posts/smarthome/">posts\smarthome\</category>
                             
                         
                     
@@ -1469,37 +1469,37 @@ If additional entities are to be considered, they only need to be added at one p
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/smarthome/">Smarthome</category>
+                                    <category domain="https://blog.syralist.de/en/tags/smarthome/">Smarthome</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/node-red/">Node-RED</category>
+                                    <category domain="https://blog.syralist.de/en/tags/node-red/">Node-RED</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/home-assistant/">Home Assistant</category>
+                                    <category domain="https://blog.syralist.de/en/tags/home-assistant/">Home Assistant</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/zigbee/">Zigbee</category>
+                                    <category domain="https://blog.syralist.de/en/tags/zigbee/">Zigbee</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/xiaomi/">Xiaomi</category>
+                                    <category domain="https://blog.syralist.de/en/tags/xiaomi/">Xiaomi</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/homematic/">Homematic</category>
+                                    <category domain="https://blog.syralist.de/en/tags/homematic/">Homematic</category>
                                 
                             
                         
@@ -1509,8 +1509,8 @@ If additional entities are to be considered, they only need to be added at one p
         
             <item>
                 <title>Processing Events with Python</title>
-                <link>https://syralist.github.io/en/posts/programmieren/termine_aufbereiten/</link>
-                <guid isPermaLink="true">https://syralist.github.io/en/posts/programmieren/termine_aufbereiten/</guid>
+                <link>https://blog.syralist.de/en/posts/programmieren/termine_aufbereiten/</link>
+                <guid isPermaLink="true">https://blog.syralist.de/en/posts/programmieren/termine_aufbereiten/</guid>
                 <pubDate>Fri, 05 Jun 2020 12:03:21 &#43;0000</pubDate>
                 
                     <author>thomas.helmke@gmx.de (Thomas Helmke)</author>
@@ -1754,7 +1754,7 @@ If it is configured above that the appointment is to be created on the day befor
                         
                         
                             
-                                <category domain="https://syralist.github.io/en/posts/programmieren/">posts\programmieren\</category>
+                                <category domain="https://blog.syralist.de/en/posts/programmieren/">posts\programmieren\</category>
                             
                         
                     
@@ -1767,25 +1767,25 @@ If it is configured above that the appointment is to be created on the day befor
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/python/">Python</category>
+                                    <category domain="https://blog.syralist.de/en/tags/python/">Python</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/home-assistant/">Home Assistant</category>
+                                    <category domain="https://blog.syralist.de/en/tags/home-assistant/">Home Assistant</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/datatransformation/">Datatransformation</category>
+                                    <category domain="https://blog.syralist.de/en/tags/datatransformation/">Datatransformation</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/ics/">ICS</category>
+                                    <category domain="https://blog.syralist.de/en/tags/ics/">ICS</category>
                                 
                             
                         
@@ -1795,8 +1795,8 @@ If it is configured above that the appointment is to be created on the day befor
         
             <item>
                 <title>Building a Website with Hugo – Basics</title>
-                <link>https://syralist.github.io/en/posts/allgemein/website-mit-hugo/</link>
-                <guid isPermaLink="true">https://syralist.github.io/en/posts/allgemein/website-mit-hugo/</guid>
+                <link>https://blog.syralist.de/en/posts/allgemein/website-mit-hugo/</link>
+                <guid isPermaLink="true">https://blog.syralist.de/en/posts/allgemein/website-mit-hugo/</guid>
                 <pubDate>Tue, 19 May 2020 20:20:55 &#43;0000</pubDate>
                 
                     <author>thomas.helmke@gmx.de (Thomas Helmke)</author>
@@ -1851,7 +1851,7 @@ You have to adapt the &lt;code&gt;config.toml&lt;/code&gt; to your own needs. An
                         
                         
                             
-                                <category domain="https://syralist.github.io/en/posts/allgemein/">posts\allgemein\</category>
+                                <category domain="https://blog.syralist.de/en/posts/allgemein/">posts\allgemein\</category>
                             
                         
                     
@@ -1864,13 +1864,13 @@ You have to adapt the &lt;code&gt;config.toml&lt;/code&gt; to your own needs. An
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/hugo/">Hugo</category>
+                                    <category domain="https://blog.syralist.de/en/tags/hugo/">Hugo</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/website/">Website</category>
+                                    <category domain="https://blog.syralist.de/en/tags/website/">Website</category>
                                 
                             
                         
@@ -1880,8 +1880,8 @@ You have to adapt the &lt;code&gt;config.toml&lt;/code&gt; to your own needs. An
         
             <item>
                 <title>Environment Sensor with ESPHome in Home Assistant</title>
-                <link>https://syralist.github.io/en/posts/smarthome/esphome-sensor/</link>
-                <guid isPermaLink="true">https://syralist.github.io/en/posts/smarthome/esphome-sensor/</guid>
+                <link>https://blog.syralist.de/en/posts/smarthome/esphome-sensor/</link>
+                <guid isPermaLink="true">https://blog.syralist.de/en/posts/smarthome/esphome-sensor/</guid>
                 <pubDate>Fri, 03 Apr 2020 12:53:16 &#43;0200</pubDate>
                 
                     <author>thomas.helmke@gmx.de (Thomas Helmke)</author>
@@ -1889,7 +1889,7 @@ You have to adapt the &lt;code&gt;config.toml&lt;/code&gt; to your own needs. An
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
                 
                     <description>&lt;p&gt;In this post I show the steps to recreate my environmental sensor with a button. The sensor measures temperature, humidity and air pressure and has a button to trigger any action.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-hardware-01.jpg&#34; alt=&#34;Complete Box&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-04-03-esphome-hardware-01.jpg&#34; alt=&#34;Complete Box&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;preparation&#34;&gt;Preparation&lt;/h2&gt;
 &lt;h3 id=&#34;what-ist-esphome&#34;&gt;What ist ESPHome?&lt;/h3&gt;
 &lt;p&gt;According to the self-description on &lt;a href=&#34;https://esphome.io/&#34; title=&#34;ESPHome&#34;&gt;esphome.io&lt;/a&gt;, ESPHome is a system for programming ESP8266 or ESP32 microcontrollers using simple configuration files.&lt;/p&gt;
@@ -1900,7 +1900,7 @@ You have to adapt the &lt;code&gt;config.toml&lt;/code&gt; to your own needs. An
 &lt;li&gt;BME280 sensor - with I²C breakout board&lt;/li&gt;
 &lt;li&gt;push button&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-hardware-02.jpg&#34; alt=&#34;Complete Box Open&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-04-03-esphome-hardware-02.jpg&#34; alt=&#34;Complete Box Open&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The housing is lasered from 3mm MDF. A generator for such housings is for example &lt;a href=&#34;https://www.festi.info/boxes.py/&#34; title=&#34;boxes.py&#34;&gt;boxes.py&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;connect-sensor-and-button&#34;&gt;Connect Sensor and Button&lt;/h3&gt;
 &lt;p&gt;The BME280 is connected via I²C, for this we need the following pins:&lt;/p&gt;
@@ -1911,23 +1911,23 @@ You have to adapt the &lt;code&gt;config.toml&lt;/code&gt; to your own needs. An
 &lt;li&gt;D5 → SCL&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;You can freely choose the pin for the button, but there are some pins that trigger special functions when booting. I used pin D3 here, the second pin of the button is connected to GND.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-hardware-04.jpg&#34; alt=&#34;Circuit Board from the bottom&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-04-03-esphome-hardware-04.jpg&#34; alt=&#34;Circuit Board from the bottom&#34;&gt;&lt;/p&gt;
 &lt;p&gt;I built the whole thing with plinths on a breadboard in order to be able to easily disassemble the components.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-hardware-03.jpg&#34; alt=&#34;Circuit Board from the top&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-04-03-esphome-hardware-03.jpg&#34; alt=&#34;Circuit Board from the top&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;esphome-project-in-home-assistant&#34;&gt;ESPHome Project in Home Assistant&lt;/h2&gt;
 &lt;h3 id=&#34;create-project&#34;&gt;Create Project&lt;/h3&gt;
 &lt;p&gt;Click on the friendly red button with the plus on the web interface to open the wizard for new projects.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-01.png&#34; alt=&#34;ESPHome Web UI&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-04-03-esphome-01.png&#34; alt=&#34;ESPHome Web UI&#34;&gt;&lt;/p&gt;
 &lt;p&gt;First you give a name.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-02.png&#34; alt=&#34;ESPHome Wizard Step 1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-04-03-esphome-02.png&#34; alt=&#34;ESPHome Wizard Step 1&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The second step is the selection of the microcontroller. I use the Wemos D1 mini for most projects.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-03.png&#34; alt=&#34;ESPHome Wizard Step 2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-04-03-esphome-03.png&#34; alt=&#34;ESPHome Wizard Step 2&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The last step is the specification of the WiFi data and the password for the over-the-air update. I use the &lt;code&gt;!secret&lt;/code&gt; notation known from Home Assistant. Details on this below.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-04.png&#34; alt=&#34;ESPHome Wizard Step 3&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-04-03-esphome-04.png&#34; alt=&#34;ESPHome Wizard Step 3&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The wizard is now complete and shows us the next steps to program the microcontroller.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-05.png&#34; alt=&#34;ESPHome Wizard Step 4&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-04-03-esphome-05.png&#34; alt=&#34;ESPHome Wizard Step 4&#34;&gt;&lt;/p&gt;
 &lt;p&gt;After closing the wizard with &lt;strong&gt;Submit&lt;/strong&gt;, the interface selection in the upper corner is pointed out.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-06.png&#34; alt=&#34;ESPHome Wizard Step 5&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-04-03-esphome-06.png&#34; alt=&#34;ESPHome Wizard Step 5&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;fileorganisation-and-secrets&#34;&gt;Fileorganisation and !secrets&lt;/h3&gt;
 &lt;p&gt;In Home Assistant, the project files are in the directory &lt;code&gt;/config/esphome&lt;/code&gt;. The example given has created the &lt;code&gt;umweltsensor.yaml&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -1975,20 +1975,20 @@ You have to adapt the &lt;code&gt;config.toml&lt;/code&gt; to your own needs. An
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;I created a &lt;code&gt;secrets.yaml&lt;/code&gt; in the same directory. The entries in it can be imported into other &lt;code&gt;.yaml&lt;/code&gt; files with&lt;code&gt;!secret&lt;/code&gt;. This has the advantage that you can share the project file with others, like me here, without having to pass on your credentials.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-07.png&#34; alt=&#34;ESPHome secrets.yaml&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-04-03-esphome-07.png&#34; alt=&#34;ESPHome secrets.yaml&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;flashing-for-the-first-time&#34;&gt;Flashing for the First Time&lt;/h3&gt;
 &lt;p&gt;For the first flashing, the microcontroller must be connected via USB to the computer on which ESPHome is running. In my case, the Raspberry Pi where Home Assistant is installed.&lt;/p&gt;
 &lt;p&gt;Most of the time, the port of the microcontroller is not displayed immediately when the USB cable is connected. This is related to the Docker system based on the Home Assistant. The workaround is to restart the addon after the microcontroller is connected.&lt;/p&gt;
 &lt;p&gt;If nothing else is connected, &lt;code&gt;/dev/ttyUSB0&lt;/code&gt; is probably displayed, in my case the microcontroller is at &lt;code&gt;/dev/ttyUSB1&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-08.png&#34; alt=&#34;ESPHome Port Selection&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-04-03-esphome-08.png&#34; alt=&#34;ESPHome Port Selection&#34;&gt;&lt;/p&gt;
 &lt;p&gt;In order for the access data to be imported correctly, we still have to edit the generated &lt;code&gt;.yaml&lt;/code&gt; file and remove the quotation marks from all entries with &lt;code&gt;!secret&lt;/code&gt;. To do this, click on &lt;strong&gt;EDIT&lt;/strong&gt; under the corresponding entry.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-09.png&#34; alt=&#34;ESPHome Edit Button&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-04-03-esphome-09.png&#34; alt=&#34;ESPHome Edit Button&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Finally you click &lt;strong&gt;UPLOAD&lt;/strong&gt; to start the flashing.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-10.png&#34; alt=&#34;ESPHome Upload&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-04-03-esphome-10.png&#34; alt=&#34;ESPHome Upload&#34;&gt;&lt;/p&gt;
 &lt;p&gt;If everything worked correctly, the Arduino code should now be generated from the &lt;code&gt;.yaml&lt;/code&gt; file. All the necessary libraries are downloaded in the background, the code compiled and the upload started.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-11.png&#34; alt=&#34;ESPHome Upload&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-04-03-esphome-11.png&#34; alt=&#34;ESPHome Upload&#34;&gt;&lt;/p&gt;
 &lt;p&gt;In the following logging output you can check whether you have entered the WiFi data correctly.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-12.png&#34; alt=&#34;ESPHome Upload&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-04-03-esphome-12.png&#34; alt=&#34;ESPHome Upload&#34;&gt;&lt;/p&gt;
 &lt;p&gt;From now on you can disconnect the microcontroller from the Raspberry Pi and program it via WiFi. To do this, switch the interface above to over-the-air.&lt;/p&gt;
 &lt;h3 id=&#34;configure-sensor-and-button&#34;&gt;Configure Sensor and Button&lt;/h3&gt;
 &lt;p&gt;For the sensor to be addressed the I²C component is loaded first. The &lt;code&gt;scan: True&lt;/code&gt; option ensures that the bus is scanned for devices on every boot.&lt;/p&gt;
@@ -2071,11 +2071,11 @@ You have to adapt the &lt;code&gt;config.toml&lt;/code&gt; to your own needs. An
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;connecting-to-home-assistant&#34;&gt;Connecting to Home Assistant&lt;/h3&gt;
 &lt;p&gt;After the complete program has been loaded onto the microcontroller, the sensors must still be integrated in Home Assistant. The setup is done via the integration page in the Home Assistant settings.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-13.png&#34; alt=&#34;ESPHome Integration&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-04-03-esphome-13.png&#34; alt=&#34;ESPHome Integration&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Enter the name of the project as the host address, in this case &lt;code&gt;umweltsensor.local&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-14.png&#34; alt=&#34;ESPHome Integration&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-04-03-esphome-14.png&#34; alt=&#34;ESPHome Integration&#34;&gt;&lt;/p&gt;
 &lt;p&gt;After the API password query, the entities for the configured sensors are automatically added to Home Assitant.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://syralist.github.io/images/2020-04-03-esphome-15.png&#34; alt=&#34;ESPHome Integration&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.syralist.de/images/2020-04-03-esphome-15.png&#34; alt=&#34;ESPHome Integration&#34;&gt;&lt;/p&gt;
 </description>
                 
                 
@@ -2087,7 +2087,7 @@ You have to adapt the &lt;code&gt;config.toml&lt;/code&gt; to your own needs. An
                         
                         
                             
-                                <category domain="https://syralist.github.io/en/posts/smarthome/">posts\smarthome\</category>
+                                <category domain="https://blog.syralist.de/en/posts/smarthome/">posts\smarthome\</category>
                             
                         
                     
@@ -2100,25 +2100,25 @@ You have to adapt the &lt;code&gt;config.toml&lt;/code&gt; to your own needs. An
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/smarthome/">Smarthome</category>
+                                    <category domain="https://blog.syralist.de/en/tags/smarthome/">Smarthome</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/home-assistant/">Home Assistant</category>
+                                    <category domain="https://blog.syralist.de/en/tags/home-assistant/">Home Assistant</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/esphome/">ESPHome</category>
+                                    <category domain="https://blog.syralist.de/en/tags/esphome/">ESPHome</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/esp8266/">ESP8266</category>
+                                    <category domain="https://blog.syralist.de/en/tags/esp8266/">ESP8266</category>
                                 
                             
                         
@@ -2128,8 +2128,8 @@ You have to adapt the &lt;code&gt;config.toml&lt;/code&gt; to your own needs. An
         
             <item>
                 <title>My Smarthome Setup</title>
-                <link>https://syralist.github.io/en/posts/smarthome/mein_setup/</link>
-                <guid isPermaLink="true">https://syralist.github.io/en/posts/smarthome/mein_setup/</guid>
+                <link>https://blog.syralist.de/en/posts/smarthome/mein_setup/</link>
+                <guid isPermaLink="true">https://blog.syralist.de/en/posts/smarthome/mein_setup/</guid>
                 <pubDate>Wed, 25 Mar 2020 18:17:45 &#43;0000</pubDate>
                 
                     <author>thomas.helmke@gmx.de (Thomas Helmke)</author>
@@ -2203,7 +2203,7 @@ Parallel to Home Assistant there are of course a bunch of Addons on the Raspberr
                         
                         
                             
-                                <category domain="https://syralist.github.io/en/posts/smarthome/">posts\smarthome\</category>
+                                <category domain="https://blog.syralist.de/en/posts/smarthome/">posts\smarthome\</category>
                             
                         
                     
@@ -2216,31 +2216,31 @@ Parallel to Home Assistant there are of course a bunch of Addons on the Raspberr
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/smarthome/">Smarthome</category>
+                                    <category domain="https://blog.syralist.de/en/tags/smarthome/">Smarthome</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/home-assistant/">Home Assistant</category>
+                                    <category domain="https://blog.syralist.de/en/tags/home-assistant/">Home Assistant</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/zigbee/">Zigbee</category>
+                                    <category domain="https://blog.syralist.de/en/tags/zigbee/">Zigbee</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/homematic/">Homematic</category>
+                                    <category domain="https://blog.syralist.de/en/tags/homematic/">Homematic</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://syralist.github.io/en/tags/raspberry-pi/">Raspberry Pi</category>
+                                    <category domain="https://blog.syralist.de/en/tags/raspberry-pi/">Raspberry Pi</category>
                                 
                             
                         
