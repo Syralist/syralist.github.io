@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">
     <title type="text">Syralists Blog</title>
     <subtitle type="html">Syralists persöhnlicher Blog.</subtitle>
-    <updated>2021-05-13T00:02:18&#43;02:00</updated>
+    <updated>2021-05-16T19:03:54&#43;02:00</updated>
     <id>https://blog.syralist.de/en/</id>
     <link rel="alternate" type="text/html" href="https://blog.syralist.de/en/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.syralist.de/en/atom.xml" />
@@ -16,6 +16,95 @@
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights>
     <generator uri="https://gohugo.io/" version="0.83.1">Hugo</generator>
+        <entry>
+            <title type="text">Scene Selection via Button</title>
+            <link rel="alternate" type="text/html" href="https://blog.syralist.de/en/posts/smarthome/szenenanwahl/" />
+            <id>https://blog.syralist.de/en/posts/smarthome/szenenanwahl/</id>
+            <updated>2021-05-16T18:56:04&#43;02:00</updated>
+            <published>2021-05-16T16:45:22&#43;02:00</published>
+            <author>
+                    <name>Thomas Helmke</name>
+                    <uri>https://blog.syralist.de/en/</uri>
+                    <email>thomas.helmke@gmx.de</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">In this article, I show how you can switch through several scenes with one button in Home Assistant.
+Set up the Scenes First, you create the scenes that you want to switch through. You make things easier if you do not use spaces or other special characters for the names, but only lower case letters and numbers.</summary>
+            
+                <content type="html">&lt;p&gt;In this article, I show how you can switch through several scenes with one button in Home Assistant.&lt;/p&gt;
+&lt;h2 id=&#34;set-up-the-scenes&#34;&gt;Set up the Scenes&lt;/h2&gt;
+&lt;p&gt;First, you create the scenes that you want to switch through. You make things easier if you do not use
+spaces or other special characters for the names, but only lower case letters and numbers.
+This way, the name is the same as the entity id that we will need later.
+&lt;img src=&#34;https://blog.syralist.de/images/2021-05-16-szenenanwahl-02.png&#34; alt=&#34;Szenen&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;set-up-an-input_select-helper&#34;&gt;Set up an input_select Helper&lt;/h2&gt;
+&lt;p&gt;The main trick is to create a input_select helper where the options are named the same as the scenes you
+want to switch through. More precisely, the options must be named like the entity ids of the scenes.
+Hence the tip above about the names of the scenes.
+&lt;img src=&#34;https://blog.syralist.de/images/2021-05-16-szenenanwahl-01.png&#34; alt=&#34;Dropdown Helfer&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;set-up-the-automation&#34;&gt;Set up the Automation&lt;/h2&gt;
+&lt;p&gt;The Automation is relatively simple. You enter the button as the trigger. In my example here, it is a
+Zigbee button, which is connected via Deconz, so I have to trigger on the appropriate event.
+Of course you can also use any other any other trigger.
+&lt;img src=&#34;https://blog.syralist.de/images/2021-05-16-szenenanwahl-03.png&#34; alt=&#34;Automation Trigger&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The first action in the automation switches the dropdown helper to the next entry. To do this,
+the appropriate service is called. It is important that the option &lt;code&gt;Cycle&lt;/code&gt; is activated so that the list
+is always repeated from the beginning.&lt;/p&gt;
+&lt;p&gt;The second action contains a template, so you have to edit the action as YAML.
+To do this, click on the three dots and select the appropriate option.
+&lt;img src=&#34;https://blog.syralist.de/images/2021-05-16-szenenanwahl-04.png&#34; alt=&#34;Automation Aktionen&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The template reads the current option of the input_select helper and composes the entitiy id of the scene from it,
+which is then activated.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;nt&#34;&gt;service&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;scene.turn_on&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;target&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;entity_id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;scene.{{ states.input_select.szenenwahl.state }}&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Translated with &lt;a href=&#34;http://www.DeepL.com/Translator&#34;&gt;www.DeepL.com/Translator&lt;/a&gt; (free version)&lt;/p&gt;
+</content>
+            
+            
+            
+                
+                
+                
+                    
+                    
+                    
+                        
+                            <category scheme="https://blog.syralist.de/en/posts/smarthome/" term="posts\smarthome\" label="posts\smarthome\" />
+                        
+                    
+                
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.syralist.de/en/tags/smarthome/" term="Smarthome" label="Smarthome" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.syralist.de/en/tags/home-assistant/" term="Home Assistant" label="Home Assistant" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">Monitoring plants with Home Assistant</title>
             <link rel="alternate" type="text/html" href="https://blog.syralist.de/en/posts/smarthome/pflanzenstatus/" />

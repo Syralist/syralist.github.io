@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de-DE">
     <title type="text">Syralists Blog</title>
     <subtitle type="html">Syralists persöhnlicher Blog.</subtitle>
-    <updated>2021-05-13T00:02:18&#43;02:00</updated>
+    <updated>2021-05-16T19:03:54&#43;02:00</updated>
     <id>https://blog.syralist.de/</id>
     <link rel="alternate" type="text/html" href="https://blog.syralist.de/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.syralist.de/atom.xml" />
@@ -16,6 +16,93 @@
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights>
     <generator uri="https://gohugo.io/" version="0.83.1">Hugo</generator>
+        <entry>
+            <title type="text">Szenenanwahl per Taster</title>
+            <link rel="alternate" type="text/html" href="https://blog.syralist.de/posts/smarthome/szenenanwahl/" />
+            <id>https://blog.syralist.de/posts/smarthome/szenenanwahl/</id>
+            <updated>2021-05-16T18:56:14&#43;02:00</updated>
+            <published>2021-05-16T16:45:22&#43;02:00</published>
+            <author>
+                    <name>Thomas Helmke</name>
+                    <uri>https://blog.syralist.de/</uri>
+                    <email>thomas.helmke@gmx.de</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">In diesem Beitrag zeige ich, wie man in Home Assistant mehrere Szenen mit einem Taster durchschalten kann.
+Szenen anlegen Als erstes legt man sich die Szenen an, die man Durchschalten möchte. Man macht sich dabei die Sache einfacher, wenn man für die Namen keine Leerzeichen oder andere Sonderzeichen benutzt, sondern nur Kleinbuchstaben und Zahlen.</summary>
+            
+                <content type="html">&lt;p&gt;In diesem Beitrag zeige ich, wie man in Home Assistant mehrere Szenen mit einem Taster durchschalten kann.&lt;/p&gt;
+&lt;h2 id=&#34;szenen-anlegen&#34;&gt;Szenen anlegen&lt;/h2&gt;
+&lt;p&gt;Als erstes legt man sich die Szenen an, die man Durchschalten möchte. Man macht sich dabei die Sache einfacher,
+wenn man für die Namen keine Leerzeichen oder andere Sonderzeichen benutzt, sondern nur Kleinbuchstaben und Zahlen.
+Dadurch ist der Name dann das gleiche wie die Entity-Id, die wir später brauchen.
+&lt;img src=&#34;https://blog.syralist.de/images/2021-05-16-szenenanwahl-02.png&#34; alt=&#34;Szenen&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;dropdown-helfer-anlegen&#34;&gt;Dropdown Helfer anlegen&lt;/h2&gt;
+&lt;p&gt;Der eigentliche Trick ist, einen Dropdown Helfer (input_select) anzulegen, bei dem die Optionen genauso heißen, wie die
+Szenen, die man durchschalten möchte. Genauer gesagt, müssen die Optionen so heißen, wie die Entity-IDs der Szenen.
+Daher der Tipp weiter oben zu den Namen der Szenen.
+&lt;img src=&#34;https://blog.syralist.de/images/2021-05-16-szenenanwahl-01.png&#34; alt=&#34;Dropdown Helfer&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;automation-anlegen&#34;&gt;Automation anlegen&lt;/h2&gt;
+&lt;p&gt;Die Automation ist relativ einfach. Als Auslöser trägt man den Taster ein. In meinem Beispiel hier ist es ein Zigbee-Taster,
+der über Deconz angebunden ist, daher muss ich auf das passende Event triggern. Selbstverständlich kann man auch jeden
+beliebigen anderen Auslöser verwenden.
+&lt;img src=&#34;https://blog.syralist.de/images/2021-05-16-szenenanwahl-03.png&#34; alt=&#34;Automation Trigger&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Die erste Aktion in der Automation schaltet den Dropdown Helfer auf den nächten Eintrag. Dazu wird der passende Dienst
+aufgerufen. Wichtig ist hierbei, dass die Option &lt;code&gt;Cycle&lt;/code&gt; aktiviert wird, damit die Liste immer wieder von vorne duchlaufen wird.&lt;/p&gt;
+&lt;p&gt;Die zweite Aktion beinhaltet ein Template, deshalb muss man die Aktion als YAML bearbeiten. Dazu klickt man auf die drei Punkte
+und wählt die entsprechende Option.
+&lt;img src=&#34;https://blog.syralist.de/images/2021-05-16-szenenanwahl-04.png&#34; alt=&#34;Automation Aktionen&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Das Template liest die aktuelle Option des Dropdown Helfers und setzt daraus die Entitiy-Id der Szene zusammen, die
+dann aktiviert wird.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;nt&#34;&gt;service&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;scene.turn_on&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;target&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;entity_id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;scene.{{ states.input_select.szenenwahl.state }}&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</content>
+            
+            
+            
+                
+                
+                
+                    
+                    
+                    
+                        
+                            <category scheme="https://blog.syralist.de/posts/smarthome/" term="posts\smarthome\" label="posts\smarthome\" />
+                        
+                    
+                
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.syralist.de/tags/smarthome/" term="Smarthome" label="Smarthome" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.syralist.de/tags/home-assistant/" term="Home Assistant" label="Home Assistant" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">Pflanzen mit Home Assistant überwachen</title>
             <link rel="alternate" type="text/html" href="https://blog.syralist.de/posts/smarthome/pflanzenstatus/" />

@@ -2,6 +2,84 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.syralist.de/tags/home-assistant/</loc>
+    <lastmod>2021-05-16T18:56:14+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.syralist.de/en/tags/home-assistant/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://blog.syralist.de/tags/home-assistant/"
+                />
+  </url><url>
+    <loc>https://blog.syralist.de/posts/</loc>
+    <lastmod>2021-05-16T18:56:14+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.syralist.de/en/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://blog.syralist.de/posts/"
+                />
+  </url><url>
+    <loc>https://blog.syralist.de/tags/smarthome/</loc>
+    <lastmod>2021-05-16T18:56:14+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.syralist.de/en/tags/smarthome/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://blog.syralist.de/tags/smarthome/"
+                />
+  </url><url>
+    <loc>https://blog.syralist.de/</loc>
+    <lastmod>2021-05-16T18:56:14+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.syralist.de/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://blog.syralist.de/"
+                />
+  </url><url>
+    <loc>https://blog.syralist.de/posts/smarthome/szenenanwahl/</loc>
+    <lastmod>2021-05-16T18:56:14+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.syralist.de/en/posts/smarthome/szenenanwahl/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://blog.syralist.de/posts/smarthome/szenenanwahl/"
+                />
+  </url><url>
+    <loc>https://blog.syralist.de/tags/</loc>
+    <lastmod>2021-05-16T18:56:14+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.syralist.de/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://blog.syralist.de/tags/"
+                />
+  </url><url>
     <loc>https://blog.syralist.de/tags/esp32/</loc>
     <lastmod>2021-05-12T23:47:49+02:00</lastmod>
     <xhtml:link
@@ -28,19 +106,6 @@
                 href="https://blog.syralist.de/tags/esphome/"
                 />
   </url><url>
-    <loc>https://blog.syralist.de/tags/home-assistant/</loc>
-    <lastmod>2021-05-12T23:47:49+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.syralist.de/en/tags/home-assistant/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://blog.syralist.de/tags/home-assistant/"
-                />
-  </url><url>
     <loc>https://blog.syralist.de/posts/smarthome/pflanzenstatus/</loc>
     <lastmod>2021-05-12T23:47:49+02:00</lastmod>
     <xhtml:link
@@ -52,58 +117,6 @@
                 rel="alternate"
                 hreflang="de"
                 href="https://blog.syralist.de/posts/smarthome/pflanzenstatus/"
-                />
-  </url><url>
-    <loc>https://blog.syralist.de/posts/</loc>
-    <lastmod>2021-05-12T23:47:49+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.syralist.de/en/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://blog.syralist.de/posts/"
-                />
-  </url><url>
-    <loc>https://blog.syralist.de/tags/smarthome/</loc>
-    <lastmod>2021-05-12T23:47:49+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.syralist.de/en/tags/smarthome/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://blog.syralist.de/tags/smarthome/"
-                />
-  </url><url>
-    <loc>https://blog.syralist.de/</loc>
-    <lastmod>2021-05-12T23:47:49+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.syralist.de/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://blog.syralist.de/"
-                />
-  </url><url>
-    <loc>https://blog.syralist.de/tags/</loc>
-    <lastmod>2021-05-12T23:47:49+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.syralist.de/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://blog.syralist.de/tags/"
                 />
   </url><url>
     <loc>https://blog.syralist.de/posts/smarthome/klingel/</loc>
