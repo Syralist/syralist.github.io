@@ -2,68 +2,81 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blog.syralist.de/tags/home-assistant/</loc>
-    <lastmod>2021-05-16T18:56:14+02:00</lastmod>
+    <loc>https://blog.syralist.de/posts/selfhosting/</loc>
+    <lastmod>2023-10-31T13:39:56+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="https://blog.syralist.de/en/tags/home-assistant/"
+                hreflang="en-US"
+                href="https://blog.syralist.de/en/posts/selfhosting/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
-                href="https://blog.syralist.de/tags/home-assistant/"
+                hreflang="de-DE"
+                href="https://blog.syralist.de/posts/selfhosting/"
+                />
+  </url><url>
+    <loc>https://blog.syralist.de/</loc>
+    <lastmod>2023-10-31T13:38:33+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://blog.syralist.de/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de-DE"
+                href="https://blog.syralist.de/"
                 />
   </url><url>
     <loc>https://blog.syralist.de/posts/</loc>
-    <lastmod>2021-05-16T18:56:14+02:00</lastmod>
+    <lastmod>2023-10-31T11:07:56+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/posts/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/posts/"
+                />
+  </url><url>
+    <loc>https://blog.syralist.de/tags/home-assistant/</loc>
+    <lastmod>2021-05-16T18:56:14+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://blog.syralist.de/en/tags/home-assistant/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de-DE"
+                href="https://blog.syralist.de/tags/home-assistant/"
                 />
   </url><url>
     <loc>https://blog.syralist.de/tags/smarthome/</loc>
     <lastmod>2021-05-16T18:56:14+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/tags/smarthome/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/tags/smarthome/"
-                />
-  </url><url>
-    <loc>https://blog.syralist.de/</loc>
-    <lastmod>2021-05-16T18:56:14+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.syralist.de/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://blog.syralist.de/"
                 />
   </url><url>
     <loc>https://blog.syralist.de/posts/smarthome/szenenanwahl/</loc>
     <lastmod>2021-05-16T18:56:14+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/posts/smarthome/szenenanwahl/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/posts/smarthome/szenenanwahl/"
                 />
   </url><url>
@@ -71,12 +84,12 @@
     <lastmod>2021-05-16T18:56:14+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/tags/"
                 />
   </url><url>
@@ -84,12 +97,12 @@
     <lastmod>2021-05-12T23:47:49+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/tags/esp32/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/tags/esp32/"
                 />
   </url><url>
@@ -97,12 +110,12 @@
     <lastmod>2021-05-12T23:47:49+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/tags/esphome/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/tags/esphome/"
                 />
   </url><url>
@@ -110,12 +123,12 @@
     <lastmod>2021-05-12T23:47:49+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/posts/smarthome/pflanzenstatus/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/posts/smarthome/pflanzenstatus/"
                 />
   </url><url>
@@ -123,12 +136,12 @@
     <lastmod>2020-10-11T17:12:28+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/posts/smarthome/klingel/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/posts/smarthome/klingel/"
                 />
   </url><url>
@@ -136,12 +149,12 @@
     <lastmod>2020-10-11T17:12:28+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/tags/homeassistant/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/tags/homeassistant/"
                 />
   </url><url>
@@ -149,12 +162,12 @@
     <lastmod>2020-10-11T17:12:28+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/tags/mqtt/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/tags/mqtt/"
                 />
   </url><url>
@@ -162,12 +175,12 @@
     <lastmod>2021-01-13T17:22:06+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/tags/node-red/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/tags/node-red/"
                 />
   </url><url>
@@ -175,12 +188,12 @@
     <lastmod>2021-01-13T17:22:06+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/tags/xiaomi/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/tags/xiaomi/"
                 />
   </url><url>
@@ -188,12 +201,12 @@
     <lastmod>2021-01-13T17:22:06+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/tags/zigbee/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/tags/zigbee/"
                 />
   </url><url>
@@ -201,12 +214,12 @@
     <lastmod>2020-08-23T14:47:44+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/posts/smarthome/zigbeebutton-nodered/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/posts/smarthome/zigbeebutton-nodered/"
                 />
   </url><url>
@@ -217,12 +230,12 @@
     <lastmod>2020-08-23T13:42:36+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/posts/3d-druck/alfawise-u50-zweitereindruck/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/posts/3d-druck/alfawise-u50-zweitereindruck/"
                 />
   </url><url>
@@ -230,12 +243,12 @@
     <lastmod>2020-08-23T13:42:36+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/tags/octoprint/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/tags/octoprint/"
                 />
   </url><url>
@@ -243,12 +256,12 @@
     <lastmod>2020-08-23T13:42:36+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/tags/prototyping/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/tags/prototyping/"
                 />
   </url><url>
@@ -256,12 +269,12 @@
     <lastmod>2020-08-23T13:42:36+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/tags/raspberry-pi/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/tags/raspberry-pi/"
                 />
   </url><url>
@@ -269,12 +282,12 @@
     <lastmod>2020-07-21T19:45:06+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/posts/3d-druck/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/posts/3d-druck/"
                 />
   </url><url>
@@ -282,12 +295,12 @@
     <lastmod>2020-08-08T15:08:14+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/posts/3d-druck/alfawise-u50-unboxing/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/posts/3d-druck/alfawise-u50-unboxing/"
                 />
   </url><url>
@@ -295,12 +308,12 @@
     <lastmod>2021-01-13T17:22:06+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/posts/smarthome/fensterautomation/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/posts/smarthome/fensterautomation/"
                 />
   </url><url>
@@ -308,12 +321,12 @@
     <lastmod>2021-01-13T17:22:06+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/tags/homematic/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/tags/homematic/"
                 />
   </url><url>
@@ -321,12 +334,12 @@
     <lastmod>2020-07-21T19:45:06+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/tags/datatransformation/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/tags/datatransformation/"
                 />
   </url><url>
@@ -334,12 +347,12 @@
     <lastmod>2020-07-21T19:45:06+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/tags/ics/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/tags/ics/"
                 />
   </url><url>
@@ -347,12 +360,12 @@
     <lastmod>2020-07-21T19:45:06+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/tags/python/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/tags/python/"
                 />
   </url><url>
@@ -360,12 +373,12 @@
     <lastmod>2020-07-21T19:45:06+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/posts/programmieren/termine_aufbereiten/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/posts/programmieren/termine_aufbereiten/"
                 />
   </url><url>
@@ -373,12 +386,12 @@
     <lastmod>2020-07-21T19:45:06+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/tags/hugo/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/tags/hugo/"
                 />
   </url><url>
@@ -386,12 +399,12 @@
     <lastmod>2020-07-21T19:45:06+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/tags/website/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/tags/website/"
                 />
   </url><url>
@@ -399,12 +412,12 @@
     <lastmod>2020-07-21T19:45:06+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/posts/allgemein/website-mit-hugo/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/posts/allgemein/website-mit-hugo/"
                 />
   </url><url>
@@ -412,12 +425,12 @@
     <lastmod>2020-07-21T19:45:06+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/tags/esp8266/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/tags/esp8266/"
                 />
   </url><url>
@@ -425,12 +438,12 @@
     <lastmod>2020-07-21T19:45:06+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/posts/smarthome/esphome-sensor/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/posts/smarthome/esphome-sensor/"
                 />
   </url><url>
@@ -438,12 +451,12 @@
     <lastmod>2020-07-21T19:45:06+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/posts/smarthome/mein_setup/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/posts/smarthome/mein_setup/"
                 />
   </url><url>
@@ -454,12 +467,12 @@
     <lastmod>2020-03-22T19:07:14+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/about/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/about/"
                 />
   </url><url>
@@ -467,12 +480,12 @@
     <lastmod>2020-03-22T19:07:14+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/posts/allgemein/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/posts/allgemein/"
                 />
   </url><url>
@@ -480,12 +493,12 @@
     <lastmod>2020-03-22T19:07:14+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/posts/smarthome/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/posts/smarthome/"
                 />
   </url><url>
@@ -493,12 +506,12 @@
     <lastmod>2020-06-05T14:04:38+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/posts/programmieren/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/posts/programmieren/"
                 />
   </url><url>
@@ -506,12 +519,12 @@
     <lastmod>2020-03-25T19:06:52+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="https://blog.syralist.de/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
+                hreflang="de-DE"
                 href="https://blog.syralist.de/categories/"
                 />
   </url>
