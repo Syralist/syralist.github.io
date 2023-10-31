@@ -23,10 +23,98 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
         
-        <lastBuildDate>Tue, 31 Oct 2023 16:27:49 &#43;0100</lastBuildDate>
+        <lastBuildDate>Tue, 31 Oct 2023 16:37:50 &#43;0100</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://blog.syralist.de/rss.xml" />
         
+        
+            <item>
+                <title>Von „Ich probier nur mal Jellyfin aus“ zu „Ich baue einen Mediaserver“</title>
+                <link>https://blog.syralist.de/posts/selfhosting/mediaserver-begining/</link>
+                <guid isPermaLink="true">https://blog.syralist.de/posts/selfhosting/mediaserver-begining/</guid>
+                <pubDate>Tue, 31 Oct 2023 13:41:07 &#43;0100</pubDate>
+                
+                    <author>thomas.helmke@gmx.de (Thomas Helmke)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
+                
+                    <description>&lt;h2 id=&#34;die-vorgeschichte&#34;&gt;Die Vorgeschichte&lt;/h2&gt;
+&lt;p&gt;Eigentlich habe ich immer gedacht, wozu brauche ich einen eigenen Mediaserver?
+Es gibt doch alles, was ich schauen möchte auf Netflix, Disney, Paramount oder sonst wo zu streamen.&lt;/p&gt;
+&lt;p&gt;Allerdings bin ich dann immer mal wieder auf Filme gestoßen, die ich gerne schauen wollte, die aber nirgendwo gestreamt wurden.
+Grade ältere Filme sind meist nicht verfügbar. Dann hab ich mir halt die BluRay gekauft. Also wozu ein Mediaserver?&lt;/p&gt;
+&lt;p&gt;Ich höre regelmäßig den &lt;a href=&#34;http://selfhosted.show&#34; title=&#34;Selfhosted Podcast&#34;&gt;Selfhosted Podcast&lt;/a&gt; und dort wird in fast jeder Folge über &lt;a href=&#34;http://jellyfin.org&#34; title=&#34;Jellyfin Homepage&#34;&gt;Jellyfin&lt;/a&gt; gesprochen.
+Jellyfin ist eine Software, die selbst gehostete Filmdateien in einer Streaming-App auf fast jedes Endgerät bringen kann.
+Man braucht erstmal keinen Server dafür, sondern kann es einfach unter Windows installieren und sofort loslegen. Also dachte ich mir, probier ich mal aus.&lt;/p&gt;
+&lt;p&gt;Natürlich braucht man Mediendateien, die Jellyfin ausspielen kann. In meiner Erinnerung war es immer so, dass BluRay rippen Hexenwerk und mächtig kompliziert ist.&lt;/p&gt;
+&lt;p&gt;Spoiler: Ist es natürlich nicht mehr.&lt;/p&gt;
+&lt;p&gt;Mit &lt;a href=&#34;https://www.makemkv.com/&#34; title=&#34;MakeMKV Homepage&#34;&gt;MakeMKV&lt;/a&gt; gibt es ein simples Werkzeug, um eine Sicherheitskopie eurer gekauften BluRays und DVDs zu machen.
+Man muss nur darauf achten, dass das Laufwerk auch für UHD zertifiziert ist, wenn man 4K Filme kopieren möchte.&lt;/p&gt;
+&lt;p&gt;Alles in allem war das erste Testsetup extrem einfach aufzusetzen!
+Wenn man sich an die vorgeschlagene Namensgebung aus der Jellyfin Doku hält, muss man eigentlich nichts weiter tun, als die Dateien in einem Ordner abzulegen,
+der Jellyfin bekannt gemacht wurde. Die Software holt sich dann Metadaten, Coverbilder etc. aus dem Internet und stellt alles in einer übersichtlichen App dar.&lt;/p&gt;
+&lt;h2 id=&#34;das-rabbithole&#34;&gt;Das Rabbithole&lt;/h2&gt;
+&lt;p&gt;Nachdem ich dann einige Filme auf die Festplatte gezogen hatte, hab ich sehr schnell gemerkt: ich brauche mehr Speicher. Viel mehr Speicher!&lt;/p&gt;
+&lt;p&gt;Ich habe schon seit längerer Zeit immer mal wieder drüber nachgedacht, mein Synology NAS abzulösen.
+Das tut zwar noch seinen Zweck als Netzwerkspeicher für Dateien, ist aber nicht leistungsfähig genug, um mehr damit machen zu können.&lt;/p&gt;
+&lt;p&gt;Also nochmal zurück auf Anfang: braucht man einen Mediaserver? Nein! Will ich jetzt trotzdem einen bauen? Ja!&lt;/p&gt;
+&lt;p&gt;Und damit fing der unübersichtliche Teil der Recherche an. Denn grade beim Thema Selfhosting gibt es tausende Beiträge im Internet.
+Erster Anlaufpunkt für mich war die Seite &lt;a href=&#34;https://perfectmediaserver.com/&#34; title=&#34;Perfect Media Server Homepage&#34;&gt;Perfect Media Server&lt;/a&gt;, die ich aus dem schon genannten &lt;a href=&#34;http://selfhosted.show&#34; title=&#34;Selfhosted Podcast&#34;&gt;Selfhosted Podcast&lt;/a&gt; kannte.
+Leider ist auch diese Seite an einigen Stellen schon etwas veraltet, so dass ich viele Stunden versenkt habe auf diversen Seiten und Foren.&lt;/p&gt;
+&lt;h2 id=&#34;wie-gehts-weiter&#34;&gt;Wie gehts weiter?&lt;/h2&gt;
+&lt;p&gt;Mittlerweile habe ich Hardware bestellt, um einen Server aufzubauen, und mich auf einen grundlegenden Softwarestack festgelegt.
+Ich habe mich für Proxmox als Basis-Betriebssystem entschieden, weil ich glaube damit lässt sich der Server am besten erweitern.
+Jellyfin werde ich als LXC Container installieren und die Festplatten werde ich mit MergerFS zusammenfassen.&lt;/p&gt;
+&lt;p&gt;Ich werde versuchen möglichst viel hier im Blog festzuhalten, auch als Gedächtnisstütze für mich selbst.&lt;/p&gt;
+</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://blog.syralist.de/posts/selfhosting/">posts\selfhosting\</category>
+                            
+                        
+                    
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.syralist.de/tags/selfhosted/">Selfhosted</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.syralist.de/tags/mediaserver/">Mediaserver</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.syralist.de/tags/proxmox/">Proxmox</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.syralist.de/tags/jellyfin/">Jellyfin</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>Szenenanwahl per Taster</title>

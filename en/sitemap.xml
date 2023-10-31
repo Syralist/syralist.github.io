@@ -2,6 +2,84 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.syralist.de/en/posts/selfhosting/mediaserver-begining/</loc>
+    <lastmod>2023-10-31T16:37:31+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de-DE"
+                href="https://blog.syralist.de/posts/selfhosting/mediaserver-begining/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://blog.syralist.de/en/posts/selfhosting/mediaserver-begining/"
+                />
+  </url><url>
+    <loc>https://blog.syralist.de/en/tags/jellyfin/</loc>
+    <lastmod>2023-10-31T16:37:31+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de-DE"
+                href="https://blog.syralist.de/tags/jellyfin/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://blog.syralist.de/en/tags/jellyfin/"
+                />
+  </url><url>
+    <loc>https://blog.syralist.de/en/tags/mediaserver/</loc>
+    <lastmod>2023-10-31T16:37:31+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de-DE"
+                href="https://blog.syralist.de/tags/mediaserver/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://blog.syralist.de/en/tags/mediaserver/"
+                />
+  </url><url>
+    <loc>https://blog.syralist.de/en/tags/proxmox/</loc>
+    <lastmod>2023-10-31T16:37:31+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de-DE"
+                href="https://blog.syralist.de/tags/proxmox/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://blog.syralist.de/en/tags/proxmox/"
+                />
+  </url><url>
+    <loc>https://blog.syralist.de/en/tags/selfhosted/</loc>
+    <lastmod>2023-10-31T16:37:31+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de-DE"
+                href="https://blog.syralist.de/tags/selfhosted/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://blog.syralist.de/en/tags/selfhosted/"
+                />
+  </url><url>
+    <loc>https://blog.syralist.de/en/tags/</loc>
+    <lastmod>2023-10-31T16:37:31+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de-DE"
+                href="https://blog.syralist.de/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://blog.syralist.de/en/tags/"
+                />
+  </url><url>
     <loc>https://blog.syralist.de/en/posts/selfhosting/</loc>
     <lastmod>2023-10-31T13:39:35+01:00</lastmod>
     <xhtml:link
@@ -78,19 +156,6 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://blog.syralist.de/en/tags/smarthome/"
-                />
-  </url><url>
-    <loc>https://blog.syralist.de/en/tags/</loc>
-    <lastmod>2021-05-16T18:56:04+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de-DE"
-                href="https://blog.syralist.de/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://blog.syralist.de/en/tags/"
                 />
   </url><url>
     <loc>https://blog.syralist.de/en/tags/esp32/</loc>
